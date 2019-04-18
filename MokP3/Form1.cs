@@ -132,6 +132,8 @@ namespace MokP3
 
 
 
+
+
         // Can be used multiple times
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -145,6 +147,12 @@ namespace MokP3
             me.LinkVisited = true;
 
             System.Diagnostics.Process.Start(me.Text);
+        }
+
+        private void homeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            panel_home.Hide();
+            panel_home.Show();
         }
     }
 }
