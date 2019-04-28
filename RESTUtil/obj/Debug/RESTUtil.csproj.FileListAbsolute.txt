@@ -1,0 +1,12 @@
+C:\Users\brand\Downloads\MokP3\RESTUtil\obj\Debug\RESTUtil.csprojAssemblyReference.cache
+C:\Users\brand\Downloads\MokP3\RESTUtil\obj\Debug\RESTUtil.csproj.CoreCompileInputs.cache
+C:\Users\brand\Downloads\MokP3\RESTUtil\bin\Debug\RESTUtil.dll
+C:\Users\brand\Downloads\MokP3\RESTUtil\bin\Debug\RESTUtil.pdb
+C:\Users\brand\Downloads\MokP3\RESTUtil\obj\Debug\RESTUtil.dll
+C:\Users\brand\Downloads\MokP3\RESTUtil\obj\Debug\RESTUtil.pdb
+C:\Users\brand\Desktop\MokP3\RESTUtil\bin\Debug\RESTUtil.dll
+C:\Users\brand\Desktop\MokP3\RESTUtil\bin\Debug\RESTUtil.pdb
+C:\Users\brand\Desktop\MokP3\RESTUtil\obj\Debug\RESTUtil.csprojAssemblyReference.cache
+C:\Users\brand\Desktop\MokP3\RESTUtil\obj\Debug\RESTUtil.csproj.CoreCompileInputs.cache
+C:\Users\brand\Desktop\MokP3\RESTUtil\obj\Debug\RESTUtil.dll
+C:\Users\brand\Desktop\MokP3\RESTUtil\obj\Debug\RESTUtil.pdb

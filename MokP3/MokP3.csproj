@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Newtonsoft.Json.dll</HintPath>
@@ -52,7 +55,25 @@
   <ItemGroup>
     <Compile Include="About.cs" />
     <Compile Include="Degrees.cs" />
+    <Compile Include="EachDegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EachDegree.Designer.cs">
+      <DependentUpon>EachDegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EachMinor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EachMinor.Designer.cs">
+      <DependentUpon>EachMinor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employment.cs" />
+    <Compile Include="FacStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacStaff.Designer.cs">
+      <DependentUpon>FacStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Footer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -61,14 +82,38 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Minors.cs" />
+    <Compile Include="MoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreInfo.Designer.cs">
+      <DependentUpon>MoreInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="News.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Research.cs" />
     <Compile Include="Resources.cs" />
+    <Compile Include="Tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables.Designer.cs">
+      <DependentUpon>Tables.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EachDegree.resx">
+      <DependentUpon>EachDegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EachMinor.resx">
+      <DependentUpon>EachMinor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacStaff.resx">
+      <DependentUpon>FacStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreInfo.resx">
+      <DependentUpon>MoreInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +124,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tables.resx">
+      <DependentUpon>Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RESTUtil\RESTUtil.csproj">
+      <Project>{B0C5BA4C-EA88-4F84-873C-C752F33E7019}</Project>
+      <Name>RESTUtil</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
