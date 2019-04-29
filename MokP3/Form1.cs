@@ -18,7 +18,7 @@ using MaterialSkin.Controls;
 
 namespace MokP3
 {
-    public partial class Form1 : MaterialForm     //Form
+    public partial class Form1 : MaterialForm     
     {
         // Instantiate my rest class
         REST rj = new REST("http://ist.rit.edu/api");
@@ -33,9 +33,6 @@ namespace MokP3
         //Resources resources;
         //News news;
         //Footer footer;
-
-
-        Stopwatch sw = new Stopwatch();
 
 
         public Form1()

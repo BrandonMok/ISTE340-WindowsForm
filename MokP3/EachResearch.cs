@@ -28,10 +28,17 @@ namespace MokP3
             ml_eachResearch_sectionTitle.Text = bia.areaName;
 
 
+            setListViewProps();
 
-
+            ListViewItem lviResearch;
+            for(int i = 0; i < bia.citations.Count; i++)
+            {
+                lviResearch = new ListViewItem(new String[] {
+                    bia.citations[i]
+                });
+                materialListView1.Items.Add(lviResearch);
+            }
         }
-
 
         // ByFaculty overloaded constructor
         public EachResearch(ByFaculty bf) 
@@ -46,13 +53,28 @@ namespace MokP3
             // Set the section heading to this faculty's name
             ml_eachResearch_sectionTitle.Text = bf.facultyName;
 
+            setListViewProps();
+
+            ListViewItem lviResearch;
+            for (int i = 0; i < bf.citations.Count; i++)
+            {
+                lviResearch = new ListViewItem(new String[] {
+                    bf.citations[i]
+                });
+                materialListView1.Items.Add(lviResearch);
+            }
+
         }
+
+
 
 
 
         // Sets the forms style to MaterialForm
         public void setFormStyle()
         {
+            this.Size = new Size(900, 500);
+
             // Styling
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -62,6 +84,16 @@ namespace MokP3
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
+        }
+
+        // Sets the ListView properties
+        public void setListViewProps()
+        {
+            materialListView1.View = View.Details;
+            materialListView1.GridLines = true;
+            materialListView1.FullRowSelect = true;
+            materialListView1.Width = 800;
+            materialListView1.Columns.Add("Research", 750);
         }
     }
 }
