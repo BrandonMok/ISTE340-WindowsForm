@@ -454,7 +454,7 @@ namespace MokP3
             }
         }
 
-        // Interest Area
+        // Interest Area - for the main form
         private void getResearchInterestArea()
         {
             // Clear panel contents before changing content
@@ -470,25 +470,13 @@ namespace MokP3
             // Cycle through all!
             for(int i = 0; i < interestList.Count; i++)
             {
-                Panel iaPanel = new Panel();
-                iaPanel.Size = new Size(90, 90);
-                iaPanel.Name = "panel_" + interestList[i].areaName;
-                iaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                Button btnNew = new Button();
+                btnNew.Size = new Size(90, 90);
+                btnNew.Name = "btn_" + interestList[i].areaName;
+                btnNew.Text = interestList[i].areaName;
 
-                Label lbl_iaName = new Label();
-                lbl_iaName.Text = interestList[i].areaName;
-                lbl_iaName.Location = new Point(5,30);
-                iaPanel.Controls.Add(lbl_iaName); // add label to panel
-
-                iaPanel.Cursor = Cursors.Hand; // change cursor 
-
-                // set an onclick to pass in the username to find that data
-             //   iaPanel.Click += new EventHandler(getResearchByInterestArea);
-                //iaPanel.Click += delegate
-                //{
-                //    getResearchByInterestArea(interestList[i].areaName);
-                //};
-
+                btnNew.Cursor = Cursors.Hand;
+                btnNew.Click += new EventHandler(getResearch);
 
 
                 // If not the first person box, then move the next one over
@@ -505,14 +493,15 @@ namespace MokP3
                 }
 
                 // Set Location of each panel
-                iaPanel.Location = new Point(xCoord, yCoord);
+               // iaPanel.Location = new Point(xCoord, yCoord);
+                btnNew.Location = new Point(xCoord, yCoord);
 
                 // Finally add the new dynamic panel to the main panel
-                panel_research_container.Controls.Add(iaPanel);
+                panel_research_container.Controls.Add(btnNew);
             }
         }
 
-        // By Faculty
+        // By Faculty - for the main form
         private void getResearchFaculty()
         {
             // Clear panel contents before changing content
@@ -528,19 +517,13 @@ namespace MokP3
             // Loop through all in the list
             for(int i = 0; i < byFacultyList.Count; i++)
             {
-                Panel facPanel = new Panel();
-                facPanel.Size = new Size(90, 90);
-                facPanel.Name = "panel_" + byFacultyList[i].username;
-                facPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                Button btnNew = new Button();
+                btnNew.Size = new Size(90, 90);
+                btnNew.Name = "btn_" + byFacultyList[i].username;
+                btnNew.Text = byFacultyList[i].username;
 
-                Label lbl_facName = new Label();
-                lbl_facName.Text = byFacultyList[i].username;
-                lbl_facName.Location = new Point(10, 10);
-                facPanel.Controls.Add(lbl_facName); // add label to panel
-
-                facPanel.Cursor = Cursors.Hand;
-
-                //facPanel.Click += new EventHandler(null);
+                btnNew.Cursor = Cursors.Hand;
+                btnNew.Click += new EventHandler(getResearch);
 
 
                 if (i != 0)
@@ -555,15 +538,16 @@ namespace MokP3
                     yCoordinate += 100;
                 }
 
-                facPanel.Location = new Point(xCoordinate, yCoordinate);
-                panel_research_container.Controls.Add(facPanel);
+                btnNew.Location = new Point(xCoordinate, yCoordinate);
+                panel_research_container.Controls.Add(btnNew);
             }
         }
 
-        private void getResearchByInterestArea(object sender, EventArgs e)
+        // Get
+        private void getResearch(object sender, EventArgs e) 
         {
-            Panel panel = sender as Panel;
-            // Make a new form for the research information
+            Button clickedButton = sender as Button;
+            Console.WriteLine(clickedButton.Name);
         }
         #endregion
 
