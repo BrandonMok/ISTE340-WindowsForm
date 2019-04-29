@@ -83,8 +83,6 @@ namespace MokP3
             }
             else
             {
-
-
                 // STAFF OBJ
                 ml_people_username.Text = staff.username;
                 lbl_people_name.Text = staff.name;

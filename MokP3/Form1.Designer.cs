@@ -922,9 +922,9 @@
             this.cb_research.Items.AddRange(new object[] {
             "ByInterestArea",
             "ByFaculty"});
-            this.cb_research.Location = new System.Drawing.Point(495, 70);
+            this.cb_research.Location = new System.Drawing.Point(478, 66);
             this.cb_research.Name = "cb_research";
-            this.cb_research.Size = new System.Drawing.Size(121, 30);
+            this.cb_research.Size = new System.Drawing.Size(164, 30);
             this.cb_research.TabIndex = 2;
             this.cb_research.SelectedIndexChanged += new System.EventHandler(this.cb_research_change);
             // 

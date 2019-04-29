@@ -389,11 +389,11 @@ namespace MokP3
 
             string userName = filepath.Substring(lastSlash,6);
 
-
+            // BOTH objects look for the username, will check which is null to know where it is
             Faculty fac = people.faculty.Find(x => x.username == userName);
             Staff staff = people.staff.Find(x => x.username == userName);
 
-            FacStaff fs;
+            FacStaff fs; // facultyStaff separate form
            
 
             if(staff != null)
@@ -420,24 +420,6 @@ namespace MokP3
                 fs = new FacStaff(fac, null);
                 fs.ShowDialog();
             }
-
-
-
-            // If faculty
-            //if(fac != null)
-            //{
-            //    Console.WriteLine("Faculty");
-            //    fs = new FacStaff(fac, null);
-            //}
-            //else // if staff
-            //{
-            //    Console.WriteLine("STAFF");
-            //    fs = new FacStaff(null, staff);
-            //}
-
-            //Faculty fac = people.faculty.Find(x => x.username == userName);
-            //FacStaff fs = new FacStaff(fac, null);
-            //fs.ShowDialog();
         }
         #endregion
 
@@ -449,11 +431,10 @@ namespace MokP3
             string jsonResearch = rj.getRESTDataJSON("/research/");
             research = JToken.Parse(jsonResearch).ToObject<Research>();
 
-            getResearchInterestArea();
-
-            //cb_research.SelectedIndex = 1;
+            cb_research.SelectedItem = "ByInterestArea"; // By Default show ByInterestArea
         }
 
+        // When change on combobox options
         private void cb_research_change(object sender, EventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
@@ -496,13 +477,19 @@ namespace MokP3
 
                 Label lbl_iaName = new Label();
                 lbl_iaName.Text = interestList[i].areaName;
-                lbl_iaName.Location = new Point(10,10);
+                lbl_iaName.Location = new Point(5,30);
                 iaPanel.Controls.Add(lbl_iaName); // add label to panel
 
                 iaPanel.Cursor = Cursors.Hand; // change cursor 
 
                 // set an onclick to pass in the username to find that data
- //               iaPanel.Click += new EventHandler(null);
+             //   iaPanel.Click += new EventHandler(getResearchByInterestArea);
+                //iaPanel.Click += delegate
+                //{
+                //    getResearchByInterestArea(interestList[i].areaName);
+                //};
+
+
 
                 // If not the first person box, then move the next one over
                 if (i != 0)
@@ -538,6 +525,7 @@ namespace MokP3
             // List of faculty research
             List<ByFaculty> byFacultyList = research.byFaculty;
 
+            // Loop through all in the list
             for(int i = 0; i < byFacultyList.Count; i++)
             {
                 Panel facPanel = new Panel();
@@ -550,8 +538,10 @@ namespace MokP3
                 lbl_facName.Location = new Point(10, 10);
                 facPanel.Controls.Add(lbl_facName); // add label to panel
 
-
                 facPanel.Cursor = Cursors.Hand;
+
+                //facPanel.Click += new EventHandler(null);
+
 
                 if (i != 0)
                 {
@@ -566,20 +556,15 @@ namespace MokP3
                 }
 
                 facPanel.Location = new Point(xCoordinate, yCoordinate);
-
-
-
-
-
                 panel_research_container.Controls.Add(facPanel);
             }
-
         }
 
-
-
-
-
+        private void getResearchByInterestArea(object sender, EventArgs e)
+        {
+            Panel panel = sender as Panel;
+            // Make a new form for the research information
+        }
         #endregion
 
 
