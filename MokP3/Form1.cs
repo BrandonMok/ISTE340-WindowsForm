@@ -473,10 +473,12 @@ namespace MokP3
                 Button btnNew = new Button();
                 btnNew.Size = new Size(90, 90);
                 btnNew.Name = "btn_" + interestList[i].areaName;
+                //btnNew.Name = interestList[i].areaName;
                 btnNew.Text = interestList[i].areaName;
 
                 btnNew.Cursor = Cursors.Hand;
                 btnNew.Click += new EventHandler(getResearch);
+
 
 
                 // If not the first person box, then move the next one over
@@ -520,6 +522,7 @@ namespace MokP3
                 Button btnNew = new Button();
                 btnNew.Size = new Size(90, 90);
                 btnNew.Name = "btn_" + byFacultyList[i].username;
+                //btnNew.Name = byFacultyList[i].username;
                 btnNew.Text = byFacultyList[i].username;
 
                 btnNew.Cursor = Cursors.Hand;
@@ -530,6 +533,7 @@ namespace MokP3
                 {
                     xCoordinate += 100;
                 }
+                
 
                 // if reaches a certain point, reset the x coordinate and change the y coordinate
                 if (xCoordinate >= 800)
@@ -547,7 +551,38 @@ namespace MokP3
         private void getResearch(object sender, EventArgs e) 
         {
             Button clickedButton = sender as Button;
-            Console.WriteLine(clickedButton.Name);
+            //Console.WriteLine(clickedButton.Name);
+
+
+            // If wanted to make it reusable, if there are more areas added in future!
+            // get length of string
+            // get last index of bit
+            // length - index
+            // substring(lastIndex, length-lastIndex)
+            string buttonName = clickedButton.Name;
+            int btnSection = buttonName.LastIndexOf("_") + 1;
+            int nameLength = buttonName.Length;
+            int name = nameLength - btnSection;
+            string researchName = buttonName.Substring(btnSection, name);
+            Console.WriteLine(researchName);
+
+            // Make objects to find. See which one is not null to send over
+            ByInterestArea bia = research.byInterestArea.Find(x => x.areaName == researchName);
+            ByFaculty byFac = research.byFaculty.Find(x => x.username == researchName);
+
+            // Have one form obj
+            EachResearch er = null;
+
+            // Find which is the clicked one and pass info
+            if(bia != null)
+            {
+                er = new EachResearch(bia);
+            }
+            else if(byFac != null)
+            {
+                er = new EachResearch(byFac);
+            }
+            er.ShowDialog();
         }
         #endregion
 

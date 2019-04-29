@@ -67,6 +67,12 @@
     <Compile Include="EachMinor.Designer.cs">
       <DependentUpon>EachMinor.cs</DependentUpon>
     </Compile>
+    <Compile Include="EachResearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EachResearch.Designer.cs">
+      <DependentUpon>EachResearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employment.cs" />
     <Compile Include="FacStaff.cs">
       <SubType>Form</SubType>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EachMinor.resx">
       <DependentUpon>EachMinor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EachResearch.resx">
+      <DependentUpon>EachResearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacStaff.resx">
       <DependentUpon>FacStaff.cs</DependentUpon>
