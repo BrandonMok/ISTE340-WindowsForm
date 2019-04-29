@@ -664,9 +664,7 @@ namespace MokP3
         private void btn_studyAbroad_Click(object sender, EventArgs e)
         {
             StudyAbroad sa = resources.studyAbroad; // get the studyAbroad
-
-            EachResource er = new EachResource(sa);
-            er.ShowDialog();
+    
         }
     }
 }
