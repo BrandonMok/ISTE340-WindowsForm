@@ -30,7 +30,7 @@ namespace MokP3
         Employment employment;
         People people;
         Research research;
-        //Resources resources;
+        Resources resources;
         //News news;
         //Footer footer;
 
@@ -80,12 +80,6 @@ namespace MokP3
             // FOOTER
             // string jsonFooter = rj.getRESTDataJSON("/footer/");
             // footer = JToken.Parse(jsonFooter).ToObject<Footer>();
-
-            // RESOURCES
-            //string jsonResources = rj.getRESTDataJSON("/resources/");
-            //resources = JToken.Parse(jsonResources).ToObject<Resources>();
-            ////populate the link label with the RIT JobZoneLink!
-            //linkLabel1.Text = resources.coopEnrollment.RITJobZoneGuidelink;
         }
 
 
@@ -584,6 +578,28 @@ namespace MokP3
         #endregion
 
 
+        #region ResourcesPage
+        private void resourcesPage_Enter(object sender, EventArgs e)
+        {
+            if (resources == null)
+            {
+                string jsonResources = rj.getRESTDataJSON("/resources/");
+                resources = JToken.Parse(jsonResources).ToObject<Resources>();
+                ////populate the link label with the RIT JobZoneLink!
+                //linkLabel1.Text = resources.coopEnrollment.RITJobZoneGuidelink;
+            }
+
+            // Set the subtitle
+            lbl_studentRes_subTitle.Text = resources.subTitle;
+        }
+        #endregion
+
+
+
+
+
+
+
 
 
 
@@ -644,5 +660,13 @@ namespace MokP3
 
 
         #endregion
+
+        private void btn_studyAbroad_Click(object sender, EventArgs e)
+        {
+            StudyAbroad sa = resources.studyAbroad; // get the studyAbroad
+
+            EachResource er = new EachResource(sa);
+            er.ShowDialog();
+        }
     }
 }
