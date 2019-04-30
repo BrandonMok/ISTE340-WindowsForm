@@ -111,7 +111,7 @@
             this.btn_forms = new System.Windows.Forms.Button();
             this.btn_studentAmbassadors = new System.Windows.Forms.Button();
             this.btn_tutorsAndLabInformation = new System.Windows.Forms.Button();
-            this.btn_istMinorAdvising = new System.Windows.Forms.Button();
+            this.btn_coopEnrollment = new System.Windows.Forms.Button();
             this.btn_facultyAdvisors = new System.Windows.Forms.Button();
             this.btn_studyAbroad = new System.Windows.Forms.Button();
             this.lbl_studentRes_subTitle = new System.Windows.Forms.Label();
@@ -964,7 +964,7 @@
             this.ResourcesPage.Controls.Add(this.btn_forms);
             this.ResourcesPage.Controls.Add(this.btn_studentAmbassadors);
             this.ResourcesPage.Controls.Add(this.btn_tutorsAndLabInformation);
-            this.ResourcesPage.Controls.Add(this.btn_istMinorAdvising);
+            this.ResourcesPage.Controls.Add(this.btn_coopEnrollment);
             this.ResourcesPage.Controls.Add(this.btn_facultyAdvisors);
             this.ResourcesPage.Controls.Add(this.btn_studyAbroad);
             this.ResourcesPage.Controls.Add(this.lbl_studentRes_subTitle);
@@ -980,7 +980,7 @@
             // 
             // btn_forms
             // 
-            this.btn_forms.Location = new System.Drawing.Point(876, 397);
+            this.btn_forms.Location = new System.Drawing.Point(483, 397);
             this.btn_forms.Name = "btn_forms";
             this.btn_forms.Size = new System.Drawing.Size(291, 177);
             this.btn_forms.TabIndex = 7;
@@ -989,7 +989,7 @@
             // 
             // btn_studentAmbassadors
             // 
-            this.btn_studentAmbassadors.Location = new System.Drawing.Point(483, 397);
+            this.btn_studentAmbassadors.Location = new System.Drawing.Point(101, 397);
             this.btn_studentAmbassadors.Name = "btn_studentAmbassadors";
             this.btn_studentAmbassadors.Size = new System.Drawing.Size(291, 177);
             this.btn_studentAmbassadors.TabIndex = 6;
@@ -998,21 +998,22 @@
             // 
             // btn_tutorsAndLabInformation
             // 
-            this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(101, 397);
+            this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(876, 123);
             this.btn_tutorsAndLabInformation.Name = "btn_tutorsAndLabInformation";
             this.btn_tutorsAndLabInformation.Size = new System.Drawing.Size(291, 177);
             this.btn_tutorsAndLabInformation.TabIndex = 5;
             this.btn_tutorsAndLabInformation.Text = "Tutors / Lab Information";
             this.btn_tutorsAndLabInformation.UseVisualStyleBackColor = true;
+            this.btn_tutorsAndLabInformation.Click += new System.EventHandler(this.btn_tutorsAndLabInformation_Click);
             // 
-            // btn_istMinorAdvising
+            // btn_coopEnrollment
             // 
-            this.btn_istMinorAdvising.Location = new System.Drawing.Point(876, 123);
-            this.btn_istMinorAdvising.Name = "btn_istMinorAdvising";
-            this.btn_istMinorAdvising.Size = new System.Drawing.Size(291, 177);
-            this.btn_istMinorAdvising.TabIndex = 4;
-            this.btn_istMinorAdvising.Text = "IstMinorAdvising";
-            this.btn_istMinorAdvising.UseVisualStyleBackColor = true;
+            this.btn_coopEnrollment.Location = new System.Drawing.Point(876, 397);
+            this.btn_coopEnrollment.Name = "btn_coopEnrollment";
+            this.btn_coopEnrollment.Size = new System.Drawing.Size(291, 177);
+            this.btn_coopEnrollment.TabIndex = 4;
+            this.btn_coopEnrollment.Text = "Co-op Enrollment";
+            this.btn_coopEnrollment.UseVisualStyleBackColor = true;
             // 
             // btn_facultyAdvisors
             // 
@@ -1020,7 +1021,7 @@
             this.btn_facultyAdvisors.Name = "btn_facultyAdvisors";
             this.btn_facultyAdvisors.Size = new System.Drawing.Size(291, 177);
             this.btn_facultyAdvisors.TabIndex = 3;
-            this.btn_facultyAdvisors.Text = "Faculty Advisors";
+            this.btn_facultyAdvisors.Text = "Advising";
             this.btn_facultyAdvisors.UseVisualStyleBackColor = true;
             this.btn_facultyAdvisors.Click += new System.EventHandler(this.btn_facultyAdvisors_Click);
             // 
@@ -1229,7 +1230,7 @@
         private System.Windows.Forms.Button btn_forms;
         private System.Windows.Forms.Button btn_studentAmbassadors;
         private System.Windows.Forms.Button btn_tutorsAndLabInformation;
-        private System.Windows.Forms.Button btn_istMinorAdvising;
+        private System.Windows.Forms.Button btn_coopEnrollment;
         private System.Windows.Forms.Button btn_facultyAdvisors;
         private System.Windows.Forms.TabPage NewsPage;
     }

@@ -607,6 +607,13 @@ namespace MokP3
             StudentServicesForm ss = new StudentServicesForm(resources.studentServices);
             ss.ShowDialog();
         }
+
+        // TUTORS / LAB
+        private void btn_tutorsAndLabInformation_Click(object sender, EventArgs e)
+        {
+            LabsTutorsForm ltf = new LabsTutorsForm(resources.tutorsAndLabInformation);
+            ltf.ShowDialog();
+        }
         #endregion
 
 
