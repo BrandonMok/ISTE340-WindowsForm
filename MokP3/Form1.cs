@@ -614,6 +614,13 @@ namespace MokP3
             LabsTutorsForm ltf = new LabsTutorsForm(resources.tutorsAndLabInformation);
             ltf.ShowDialog();
         }
+
+        // STUDENT AMBASSADORS
+        private void btn_studentAmbassadors_Click(object sender, EventArgs e)
+        {
+            StudentAmbassadorsForm saf = new StudentAmbassadorsForm(resources.studentAmbassadors);
+            saf.ShowDialog();
+        }
         #endregion
 
 

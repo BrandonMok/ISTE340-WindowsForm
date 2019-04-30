@@ -36,3 +36,4 @@ C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.EachResearch.resources
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.StudyAbroadForm.resources
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.StudentServicesForm.resources
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.LabsTutorsForm.resources
+C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.StudentAmbassadorsForm.resources

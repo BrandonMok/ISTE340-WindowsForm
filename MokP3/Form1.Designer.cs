@@ -995,6 +995,7 @@
             this.btn_studentAmbassadors.TabIndex = 6;
             this.btn_studentAmbassadors.Text = "Student Ambassadors";
             this.btn_studentAmbassadors.UseVisualStyleBackColor = true;
+            this.btn_studentAmbassadors.Click += new System.EventHandler(this.btn_studentAmbassadors_Click);
             // 
             // btn_tutorsAndLabInformation
             // 
