@@ -88,6 +88,7 @@
             this.mb_professionalAdvisors.TabIndex = 4;
             this.mb_professionalAdvisors.Text = "Professional Advisors";
             this.mb_professionalAdvisors.UseVisualStyleBackColor = true;
+            this.mb_professionalAdvisors.Click += new System.EventHandler(this.mb_professionalAdvisors_Click);
             // 
             // mb_facultyAdvisors
             // 
