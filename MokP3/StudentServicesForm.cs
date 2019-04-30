@@ -20,7 +20,8 @@ namespace MokP3
         private Panel facultyAdvisorsPanel;
         private Panel istMinorAdvisingPanel;
 
-        private List<Panel> panelList = null;
+        private List<Panel> panelList;
+
 
         // Constructor
         public StudentServicesForm(StudentServices ss)
@@ -30,13 +31,23 @@ namespace MokP3
             InitializeComponent();
 
             setFormStyle(); // Set Form Style
-            
+
+            // Initialize panel list
+            panelList = new List<Panel>();
+
+
+            // Load all info for all panels here
+            // methods here, but don't show yet
+            loadAcademicAdvisors();
+            loadProfessionalAdvisors();
+
+
             // Keep a list of all panels
             // Will use to show/hide based on clicked button
             panelList.Add(academicAdvisorPanel);
             panelList.Add(professonalAdvisorsPanel);
-            panelList.Add(facultyAdvisorsPanel);
-            panelList.Add(istMinorAdvisingPanel);
+            //panelList.Add(facultyAdvisorsPanel);
+            //panelList.Add(istMinorAdvisingPanel);
         }
 
 
@@ -44,7 +55,12 @@ namespace MokP3
         // Academic Advisors Click Button
         private void mb_academicAdvisor_Click(object sender, EventArgs e)
         {
-            // Check if panel doesn't exist
+            hideShowPanels(academicAdvisorPanel);
+            academicAdvisorPanel.Visible = !academicAdvisorPanel.Visible;
+        }
+
+        private void loadAcademicAdvisors()
+        {
             // First time! Only ran once
             if (academicAdvisorPanel == null)
             {
@@ -77,24 +93,7 @@ namespace MokP3
                 academicAdvisorPanel.Controls.Add(ll);
 
                 panel_advisors_container.Controls.Add(academicAdvisorPanel);
-                academicAdvisorPanel.Show();
-
-                if (professonalAdvisorsPanel != null)
-                {
-                    professonalAdvisorsPanel.Visible = false;
-                }
-
-            }
-            else 
-            {
-                if (professonalAdvisorsPanel != null)
-                {
-                    professonalAdvisorsPanel.Visible = false;
-                }
-
-
-                // Toggle visibility
-                academicAdvisorPanel.Visible = !academicAdvisorPanel.Visible;
+                academicAdvisorPanel.Visible = false; // HIDE IT initially
             }
         }
 
@@ -106,10 +105,19 @@ namespace MokP3
         #endregion
 
 
+
+
+
         #region ProfessionalAdvisors
         private void mb_professionalAdvisors_Click(object sender, EventArgs e)
         {
-            if(professonalAdvisorsPanel == null)
+            hideShowPanels(professonalAdvisorsPanel);
+            professonalAdvisorsPanel.Visible = !professonalAdvisorsPanel.Visible;
+        }
+
+        private void loadProfessionalAdvisors()
+        {
+            if (professonalAdvisorsPanel == null)
             {
                 professonalAdvisorsPanel = new Panel();
                 professonalAdvisorsPanel.Dock = DockStyle.Fill;
@@ -124,7 +132,7 @@ namespace MokP3
                 int xCoord = 100;
 
                 List<AdvisorInformation> advisorsList = ss.professonalAdvisors.advisorInformation;
-                for(int i = 0, len = advisorsList.Count; i < len; i++)
+                for (int i = 0, len = advisorsList.Count; i < len; i++)
                 {
                     Panel advisorPanel = new Panel();
                     advisorPanel.Size = new Size(200, 200);
@@ -139,29 +147,32 @@ namespace MokP3
 
                     advisorPanel.Location = new Point(xCoord, 60);
                     professonalAdvisorsPanel.Controls.Add(advisorPanel);
-                    if (academicAdvisorPanel != null)
-                    {
-                        academicAdvisorPanel.Visible = false;
-                    }
                 }
 
 
                 panel_advisors_container.Controls.Add(professonalAdvisorsPanel);
-                professonalAdvisorsPanel.Show();
-            }
-            else
-            {
-                if(academicAdvisorPanel != null)
-                {
-                    academicAdvisorPanel.Visible = false;
-                }
-
-                // Toggle
-                professonalAdvisorsPanel.Visible = !professonalAdvisorsPanel.Visible;
+                professonalAdvisorsPanel.Visible = false;
             }
         }
         #endregion
 
+
+
+
+        // Hides all other panels besides the one passed in
+        private void hideShowPanels(Panel currPanel)
+        {
+            // Loop through all panels and set all other panels to hide
+            // use len to cycle, calculated ONCE so all can use
+            int len = panelList.Count;
+            for (int i  = 0; i < len; i++)
+            {
+                if(panelList[i] != currPanel)
+                {
+                    panelList[i].Visible = false;
+                }
+            }
+        }
 
 
 
