@@ -108,17 +108,17 @@
             this.panel_research_container = new System.Windows.Forms.Panel();
             this.ml_research_sectionHeading = new MaterialSkin.Controls.MaterialLabel();
             this.ResourcesPage = new System.Windows.Forms.TabPage();
+            this.btn_forms = new System.Windows.Forms.Button();
+            this.btn_studentAmbassadors = new System.Windows.Forms.Button();
+            this.btn_tutorsAndLabInformation = new System.Windows.Forms.Button();
+            this.btn_istMinorAdvising = new System.Windows.Forms.Button();
+            this.btn_facultyAdvisors = new System.Windows.Forms.Button();
+            this.btn_studyAbroad = new System.Windows.Forms.Button();
+            this.lbl_studentRes_subTitle = new System.Windows.Forms.Label();
+            this.ml_studentRes_Title = new MaterialSkin.Controls.MaterialLabel();
+            this.NewsPage = new System.Windows.Forms.TabPage();
             this.FooterPage = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ml_studentRes_Title = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_studentRes_subTitle = new System.Windows.Forms.Label();
-            this.btn_studyAbroad = new System.Windows.Forms.Button();
-            this.btn_facultyAdvisors = new System.Windows.Forms.Button();
-            this.btn_istMinorAdvising = new System.Windows.Forms.Button();
-            this.btn_tutorsAndLabInformation = new System.Windows.Forms.Button();
-            this.btn_studentAmbassadors = new System.Windows.Forms.Button();
-            this.btn_forms = new System.Windows.Forms.Button();
-            this.NewsPage = new System.Windows.Forms.TabPage();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -978,15 +978,69 @@
             this.ResourcesPage.UseVisualStyleBackColor = true;
             this.ResourcesPage.Enter += new System.EventHandler(this.resourcesPage_Enter);
             // 
-            // FooterPage
+            // btn_forms
             // 
-            this.FooterPage.Location = new System.Drawing.Point(4, 31);
-            this.FooterPage.Name = "FooterPage";
-            this.FooterPage.Padding = new System.Windows.Forms.Padding(3);
-            this.FooterPage.Size = new System.Drawing.Size(1265, 753);
-            this.FooterPage.TabIndex = 7;
-            this.FooterPage.Text = "Footer";
-            this.FooterPage.UseVisualStyleBackColor = true;
+            this.btn_forms.Location = new System.Drawing.Point(876, 397);
+            this.btn_forms.Name = "btn_forms";
+            this.btn_forms.Size = new System.Drawing.Size(291, 177);
+            this.btn_forms.TabIndex = 7;
+            this.btn_forms.Text = "Forms";
+            this.btn_forms.UseVisualStyleBackColor = true;
+            // 
+            // btn_studentAmbassadors
+            // 
+            this.btn_studentAmbassadors.Location = new System.Drawing.Point(483, 397);
+            this.btn_studentAmbassadors.Name = "btn_studentAmbassadors";
+            this.btn_studentAmbassadors.Size = new System.Drawing.Size(291, 177);
+            this.btn_studentAmbassadors.TabIndex = 6;
+            this.btn_studentAmbassadors.Text = "Student Ambassadors";
+            this.btn_studentAmbassadors.UseVisualStyleBackColor = true;
+            // 
+            // btn_tutorsAndLabInformation
+            // 
+            this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(101, 397);
+            this.btn_tutorsAndLabInformation.Name = "btn_tutorsAndLabInformation";
+            this.btn_tutorsAndLabInformation.Size = new System.Drawing.Size(291, 177);
+            this.btn_tutorsAndLabInformation.TabIndex = 5;
+            this.btn_tutorsAndLabInformation.Text = "Tutors / Lab Information";
+            this.btn_tutorsAndLabInformation.UseVisualStyleBackColor = true;
+            // 
+            // btn_istMinorAdvising
+            // 
+            this.btn_istMinorAdvising.Location = new System.Drawing.Point(876, 123);
+            this.btn_istMinorAdvising.Name = "btn_istMinorAdvising";
+            this.btn_istMinorAdvising.Size = new System.Drawing.Size(291, 177);
+            this.btn_istMinorAdvising.TabIndex = 4;
+            this.btn_istMinorAdvising.Text = "IstMinorAdvising";
+            this.btn_istMinorAdvising.UseVisualStyleBackColor = true;
+            // 
+            // btn_facultyAdvisors
+            // 
+            this.btn_facultyAdvisors.Location = new System.Drawing.Point(483, 123);
+            this.btn_facultyAdvisors.Name = "btn_facultyAdvisors";
+            this.btn_facultyAdvisors.Size = new System.Drawing.Size(291, 177);
+            this.btn_facultyAdvisors.TabIndex = 3;
+            this.btn_facultyAdvisors.Text = "Faculty Advisors";
+            this.btn_facultyAdvisors.UseVisualStyleBackColor = true;
+            // 
+            // btn_studyAbroad
+            // 
+            this.btn_studyAbroad.Location = new System.Drawing.Point(101, 123);
+            this.btn_studyAbroad.Name = "btn_studyAbroad";
+            this.btn_studyAbroad.Size = new System.Drawing.Size(291, 177);
+            this.btn_studyAbroad.TabIndex = 2;
+            this.btn_studyAbroad.Text = "StudyAbroad";
+            this.btn_studyAbroad.UseVisualStyleBackColor = true;
+            this.btn_studyAbroad.Click += new System.EventHandler(this.btn_studyAbroad_Click);
+            // 
+            // lbl_studentRes_subTitle
+            // 
+            this.lbl_studentRes_subTitle.AutoSize = true;
+            this.lbl_studentRes_subTitle.Location = new System.Drawing.Point(404, 69);
+            this.lbl_studentRes_subTitle.Name = "lbl_studentRes_subTitle";
+            this.lbl_studentRes_subTitle.Size = new System.Drawing.Size(67, 22);
+            this.lbl_studentRes_subTitle.TabIndex = 1;
+            this.lbl_studentRes_subTitle.Text = "subtitle";
             // 
             // ml_studentRes_Title
             // 
@@ -1001,70 +1055,6 @@
             this.ml_studentRes_Title.TabIndex = 0;
             this.ml_studentRes_Title.Text = "Student Resources";
             // 
-            // lbl_studentRes_subTitle
-            // 
-            this.lbl_studentRes_subTitle.AutoSize = true;
-            this.lbl_studentRes_subTitle.Location = new System.Drawing.Point(404, 69);
-            this.lbl_studentRes_subTitle.Name = "lbl_studentRes_subTitle";
-            this.lbl_studentRes_subTitle.Size = new System.Drawing.Size(67, 22);
-            this.lbl_studentRes_subTitle.TabIndex = 1;
-            this.lbl_studentRes_subTitle.Text = "subtitle";
-            // 
-            // btn_studyAbroad
-            // 
-            this.btn_studyAbroad.Location = new System.Drawing.Point(101, 123);
-            this.btn_studyAbroad.Name = "btn_studyAbroad";
-            this.btn_studyAbroad.Size = new System.Drawing.Size(291, 177);
-            this.btn_studyAbroad.TabIndex = 2;
-            this.btn_studyAbroad.Text = "Study Abroad";
-            this.btn_studyAbroad.UseVisualStyleBackColor = true;
-            this.btn_studyAbroad.Click += new System.EventHandler(this.btn_studyAbroad_Click);
-            // 
-            // btn_facultyAdvisors
-            // 
-            this.btn_facultyAdvisors.Location = new System.Drawing.Point(483, 123);
-            this.btn_facultyAdvisors.Name = "btn_facultyAdvisors";
-            this.btn_facultyAdvisors.Size = new System.Drawing.Size(291, 177);
-            this.btn_facultyAdvisors.TabIndex = 3;
-            this.btn_facultyAdvisors.Text = "Faculty Advisors";
-            this.btn_facultyAdvisors.UseVisualStyleBackColor = true;
-            // 
-            // btn_istMinorAdvising
-            // 
-            this.btn_istMinorAdvising.Location = new System.Drawing.Point(876, 123);
-            this.btn_istMinorAdvising.Name = "btn_istMinorAdvising";
-            this.btn_istMinorAdvising.Size = new System.Drawing.Size(291, 177);
-            this.btn_istMinorAdvising.TabIndex = 4;
-            this.btn_istMinorAdvising.Text = "IstMinorAdvising";
-            this.btn_istMinorAdvising.UseVisualStyleBackColor = true;
-            // 
-            // btn_tutorsAndLabInformation
-            // 
-            this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(101, 397);
-            this.btn_tutorsAndLabInformation.Name = "btn_tutorsAndLabInformation";
-            this.btn_tutorsAndLabInformation.Size = new System.Drawing.Size(291, 177);
-            this.btn_tutorsAndLabInformation.TabIndex = 5;
-            this.btn_tutorsAndLabInformation.Text = "Tutors / Lab Information";
-            this.btn_tutorsAndLabInformation.UseVisualStyleBackColor = true;
-            // 
-            // btn_studentAmbassadors
-            // 
-            this.btn_studentAmbassadors.Location = new System.Drawing.Point(483, 397);
-            this.btn_studentAmbassadors.Name = "btn_studentAmbassadors";
-            this.btn_studentAmbassadors.Size = new System.Drawing.Size(291, 177);
-            this.btn_studentAmbassadors.TabIndex = 6;
-            this.btn_studentAmbassadors.Text = "Student Ambassadors";
-            this.btn_studentAmbassadors.UseVisualStyleBackColor = true;
-            // 
-            // btn_forms
-            // 
-            this.btn_forms.Location = new System.Drawing.Point(876, 397);
-            this.btn_forms.Name = "btn_forms";
-            this.btn_forms.Size = new System.Drawing.Size(291, 177);
-            this.btn_forms.TabIndex = 7;
-            this.btn_forms.Text = "Forms";
-            this.btn_forms.UseVisualStyleBackColor = true;
-            // 
             // NewsPage
             // 
             this.NewsPage.Location = new System.Drawing.Point(4, 31);
@@ -1074,6 +1064,16 @@
             this.NewsPage.TabIndex = 8;
             this.NewsPage.Text = "News";
             this.NewsPage.UseVisualStyleBackColor = true;
+            // 
+            // FooterPage
+            // 
+            this.FooterPage.Location = new System.Drawing.Point(4, 31);
+            this.FooterPage.Name = "FooterPage";
+            this.FooterPage.Padding = new System.Windows.Forms.Padding(3);
+            this.FooterPage.Size = new System.Drawing.Size(1265, 753);
+            this.FooterPage.TabIndex = 7;
+            this.FooterPage.Text = "Footer";
+            this.FooterPage.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

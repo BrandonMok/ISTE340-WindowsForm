@@ -592,6 +592,14 @@ namespace MokP3
             // Set the subtitle
             lbl_studentRes_subTitle.Text = resources.subTitle;
         }
+
+        // STUDY ABROAD
+        private void btn_studyAbroad_Click(object sender, EventArgs e)
+        {
+            // Get the studyAbroad and pass obj to another form
+            StudyAbroadForm sa = new StudyAbroadForm(resources.studyAbroad);
+            sa.ShowDialog();
+        }
         #endregion
 
 
@@ -661,10 +669,5 @@ namespace MokP3
 
         #endregion
 
-        private void btn_studyAbroad_Click(object sender, EventArgs e)
-        {
-            StudyAbroad sa = resources.studyAbroad; // get the studyAbroad
-    
-        }
     }
 }

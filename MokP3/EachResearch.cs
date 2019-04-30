@@ -93,7 +93,7 @@ namespace MokP3
             materialListView1.GridLines = true;
             materialListView1.FullRowSelect = true;
             materialListView1.Width = 800;
-            materialListView1.Columns.Add("Research", 750);
+            materialListView1.Columns.Add("Research", 790);
         }
     }
 }

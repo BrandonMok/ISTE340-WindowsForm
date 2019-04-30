@@ -33,3 +33,4 @@ C:\Users\brand\Desktop\MokP3\MokP3\bin\Debug\MaterialSkin.dll
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.MoreInfo.resources
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.FacStaff.resources
 C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.EachResearch.resources
+C:\Users\brand\Desktop\MokP3\MokP3\obj\Debug\MokP3.StudyAbroadForm.resources
