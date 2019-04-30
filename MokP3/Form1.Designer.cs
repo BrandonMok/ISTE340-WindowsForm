@@ -1022,6 +1022,7 @@
             this.btn_facultyAdvisors.TabIndex = 3;
             this.btn_facultyAdvisors.Text = "Faculty Advisors";
             this.btn_facultyAdvisors.UseVisualStyleBackColor = true;
+            this.btn_facultyAdvisors.Click += new System.EventHandler(this.btn_facultyAdvisors_Click);
             // 
             // btn_studyAbroad
             // 
@@ -1029,7 +1030,7 @@
             this.btn_studyAbroad.Name = "btn_studyAbroad";
             this.btn_studyAbroad.Size = new System.Drawing.Size(291, 177);
             this.btn_studyAbroad.TabIndex = 2;
-            this.btn_studyAbroad.Text = "StudyAbroad";
+            this.btn_studyAbroad.Text = "Study Abroad";
             this.btn_studyAbroad.UseVisualStyleBackColor = true;
             this.btn_studyAbroad.Click += new System.EventHandler(this.btn_studyAbroad_Click);
             // 

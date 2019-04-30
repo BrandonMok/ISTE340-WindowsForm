@@ -600,6 +600,13 @@ namespace MokP3
             StudyAbroadForm sa = new StudyAbroadForm(resources.studyAbroad);
             sa.ShowDialog();
         }
+
+        // FACULTY ADVISORS
+        private void btn_facultyAdvisors_Click(object sender, EventArgs e)
+        {
+            StudentServicesForm ss = new StudentServicesForm(resources.studentServices);
+            ss.ShowDialog();
+        }
         #endregion
 
 
@@ -668,6 +675,5 @@ namespace MokP3
 
 
         #endregion
-
     }
 }
