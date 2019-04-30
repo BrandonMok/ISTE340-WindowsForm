@@ -105,6 +105,7 @@
             this.mb_facultyAdvisors.TabIndex = 5;
             this.mb_facultyAdvisors.Text = "Faculty Advisors";
             this.mb_facultyAdvisors.UseVisualStyleBackColor = true;
+            this.mb_facultyAdvisors.Click += new System.EventHandler(this.mb_facultyAdvisors_Click);
             // 
             // mb_ISTMinorsAdvisors
             // 

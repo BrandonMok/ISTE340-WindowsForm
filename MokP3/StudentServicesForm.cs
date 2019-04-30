@@ -40,15 +40,17 @@ namespace MokP3
             // methods here, but don't show yet
             loadAcademicAdvisors();
             loadProfessionalAdvisors();
+            loadFacultyAdvisors();
 
 
             // Keep a list of all panels
             // Will use to show/hide based on clicked button
             panelList.Add(academicAdvisorPanel);
             panelList.Add(professonalAdvisorsPanel);
-            //panelList.Add(facultyAdvisorsPanel);
-            //panelList.Add(istMinorAdvisingPanel);
+            panelList.Add(facultyAdvisorsPanel);
+ //           panelList.Add(istMinorAdvisingPanel);
         }
+
 
 
         #region AcademicAdvisors
@@ -62,8 +64,8 @@ namespace MokP3
         private void loadAcademicAdvisors()
         {
             // First time! Only ran once
-            if (academicAdvisorPanel == null)
-            {
+            //if (academicAdvisorPanel == null)
+            //{
                 academicAdvisorPanel = new Panel();
                 academicAdvisorPanel.Dock = DockStyle.Fill;
 
@@ -94,7 +96,7 @@ namespace MokP3
 
                 panel_advisors_container.Controls.Add(academicAdvisorPanel);
                 academicAdvisorPanel.Visible = false; // HIDE IT initially
-            }
+           // }
         }
 
         private void faqLinkClick(object sender, LinkLabelLinkClickedEventArgs e)
@@ -103,10 +105,6 @@ namespace MokP3
             System.Diagnostics.Process.Start(ll.Text);
         }
         #endregion
-
-
-
-
 
         #region ProfessionalAdvisors
         private void mb_professionalAdvisors_Click(object sender, EventArgs e)
@@ -117,44 +115,100 @@ namespace MokP3
 
         private void loadProfessionalAdvisors()
         {
-            if (professonalAdvisorsPanel == null)
+            // Professional Advisors
+            professonalAdvisorsPanel = new Panel();
+            professonalAdvisorsPanel.Dock = DockStyle.Fill;
+
+            MaterialLabel mlTitle = new MaterialLabel();
+            mlTitle.Text = ss.professonalAdvisors.title;
+            mlTitle.AutoSize = true;
+            mlTitle.Location = new Point(340, 30);
+            professonalAdvisorsPanel.Controls.Add(mlTitle);
+
+
+            int xCoord = 100;
+
+            List<AdvisorInformation> advisorsList = ss.professonalAdvisors.advisorInformation;
+            for (int i = 0, len = advisorsList.Count; i < len; i++)
             {
-                professonalAdvisorsPanel = new Panel();
-                professonalAdvisorsPanel.Dock = DockStyle.Fill;
+                // Panel
+                Panel advisorPanel = new Panel();
+                advisorPanel.Size = new Size(200, 200);
+                advisorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-                MaterialLabel mlTitle = new MaterialLabel();
-                mlTitle.Text = ss.professonalAdvisors.title;
-                mlTitle.AutoSize = true;
-                mlTitle.Location = new Point(340, 30);
-                professonalAdvisorsPanel.Controls.Add(mlTitle);
+                // Advisor Name
+                MaterialLabel mlName = new MaterialLabel();
+                mlName.Text = advisorsList[i].name;
+                mlName.AutoSize = true;
+                mlName.Location = new Point(50, 60);
+                advisorPanel.Controls.Add(mlName); // add this label to this advisor's panel
 
+                // Department
+                Label lblDep = new Label();
+                lblDep.Text = advisorsList[i].department;
+                lblDep.AutoSize = true;
+                lblDep.Location = new Point(30, 80);
+                lblDep.MaximumSize = new Size(150, 0);
+                advisorPanel.Controls.Add(lblDep);
 
-                int xCoord = 100;
+                // Email
+                Label lblEmail = new Label();
+                lblEmail.Text = advisorsList[i].email;
+                lblEmail.AutoSize = true;
+                lblEmail.Location = new Point(50, 150);
+                advisorPanel.Controls.Add(lblEmail);
 
-                List<AdvisorInformation> advisorsList = ss.professonalAdvisors.advisorInformation;
-                for (int i = 0, len = advisorsList.Count; i < len; i++)
+                // Positioning
+                if (i != 0)
                 {
-                    Panel advisorPanel = new Panel();
-                    advisorPanel.Size = new Size(200, 200);
-                    advisorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
-
-                    // Positioning
-                    if (i != 0)
-                    {
-                        xCoord += 220;
-                    }
-
-                    advisorPanel.Location = new Point(xCoord, 60);
-                    professonalAdvisorsPanel.Controls.Add(advisorPanel);
+                    xCoord += 220;
                 }
 
-
-                panel_advisors_container.Controls.Add(professonalAdvisorsPanel);
-                professonalAdvisorsPanel.Visible = false;
+                advisorPanel.Location = new Point(xCoord, 60);
+                professonalAdvisorsPanel.Controls.Add(advisorPanel);
             }
+
+
+            panel_advisors_container.Controls.Add(professonalAdvisorsPanel);
+            professonalAdvisorsPanel.Visible = false;
         }
         #endregion
+
+
+        #region FacultyAdvisors
+        private void mb_facultyAdvisors_Click(object sender, EventArgs e)
+        {
+            hideShowPanels(facultyAdvisorsPanel);
+            facultyAdvisorsPanel.Visible = !facultyAdvisorsPanel.Visible;
+        }
+
+        private void loadFacultyAdvisors()
+        {
+            facultyAdvisorsPanel = new Panel();
+            facultyAdvisorsPanel.Dock = DockStyle.Fill;
+
+            // Title
+            MaterialLabel ml_FacAdvTitle = new MaterialLabel();
+            ml_FacAdvTitle.Text = ss.facultyAdvisors.title;
+            ml_FacAdvTitle.Location = new Point(340, 30);
+            facultyAdvisorsPanel.Controls.Add(ml_FacAdvTitle);
+
+            // Description
+            Label lbl_facAdv = new Label();
+            lbl_facAdv.Text = ss.facultyAdvisors.description;
+            lbl_facAdv.AutoSize = true;
+            lbl_facAdv.Location = new Point(200, 50);
+            lbl_facAdv.MaximumSize = new Size(500, 0);
+            facultyAdvisorsPanel.Controls.Add(lbl_facAdv);
+
+            facultyAdvisorsPanel.Visible = false;
+
+            panel_advisors_container.Controls.Add(facultyAdvisorsPanel); // add this panel to main
+        }
+        #endregion
+
+
+
 
 
 
@@ -173,7 +227,6 @@ namespace MokP3
                 }
             }
         }
-
 
 
         // Set Form Styling
