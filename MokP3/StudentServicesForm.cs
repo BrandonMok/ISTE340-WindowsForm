@@ -41,6 +41,7 @@ namespace MokP3
             loadAcademicAdvisors();
             loadProfessionalAdvisors();
             loadFacultyAdvisors();
+            loadISTMinorsAdvisors();
 
 
             // Keep a list of all panels
@@ -48,7 +49,7 @@ namespace MokP3
             panelList.Add(academicAdvisorPanel);
             panelList.Add(professonalAdvisorsPanel);
             panelList.Add(facultyAdvisorsPanel);
- //           panelList.Add(istMinorAdvisingPanel);
+            panelList.Add(istMinorAdvisingPanel);
         }
 
 
@@ -208,6 +209,90 @@ namespace MokP3
         #endregion
 
 
+        #region ISTMinorsAdvisors
+        private void mb_ISTMinorsAdvisors_Click(object sender, EventArgs e)
+        {
+            hideShowPanels(istMinorAdvisingPanel);
+            istMinorAdvisingPanel.Visible = !istMinorAdvisingPanel.Visible;
+        }
+
+        private void loadISTMinorsAdvisors()
+        {
+            istMinorAdvisingPanel = new Panel();
+            istMinorAdvisingPanel.Dock = DockStyle.Fill;
+
+            // Title
+            MaterialLabel ml_ISTMinorTitle = new MaterialLabel();
+            ml_ISTMinorTitle.Text = ss.istMinorAdvising.title;
+            ml_ISTMinorTitle.Location = new Point(370, 20);
+            istMinorAdvisingPanel.Controls.Add(ml_ISTMinorTitle);
+
+
+
+            // List of minor adivor information
+            List<MinorAdvisorInformation> istMinorAdvisingList = ss.istMinorAdvising.minorAdvisorInformation;
+            int istMinorAdvisingLength = istMinorAdvisingList.Count;
+
+            // Initial - preset values
+            int xCoordinate = 20; 
+            int yCoordinate = 60;  
+
+            // Loop through the list
+            for (int i = 0; i < istMinorAdvisingLength; i++)
+            {
+                // Each minor advisor panel
+                Panel minorAdvisorPanel = new Panel();
+                minorAdvisorPanel.Size = new Size(180, 120);
+                minorAdvisorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
+                // Title
+                MaterialLabel ml_minorAdvTitle = new MaterialLabel();
+                ml_minorAdvTitle.Text = istMinorAdvisingList[i].title;
+                ml_minorAdvTitle.AutoSize = true;
+                ml_minorAdvTitle.Location = new Point(10, 10);
+                ml_minorAdvTitle.MaximumSize = new Size(180, 0);
+                minorAdvisorPanel.Controls.Add(ml_minorAdvTitle);
+
+                // name
+                Label lbl_minorAdvName = new Label();
+                lbl_minorAdvName.AutoSize = true;
+                lbl_minorAdvName.Text = istMinorAdvisingList[i].advisor;
+                lbl_minorAdvName.Location = new Point(10, 80);
+                minorAdvisorPanel.Controls.Add(lbl_minorAdvName);
+
+                // email
+                Label lbl_minorAdvEmail = new Label();
+                lbl_minorAdvEmail.Text = istMinorAdvisingList[i].email;
+                lbl_minorAdvEmail.AutoSize = true;
+                lbl_minorAdvEmail.Location = new Point(10, 100);
+                minorAdvisorPanel.Controls.Add(lbl_minorAdvEmail);
+
+                // If not the first box. First box use the preset coordinates before for loop
+                // All others need to move over 200px
+                // Increment and move each time, but check for limit to then slide rest below
+                if (i != 0)
+                {
+                    xCoordinate += 200;
+
+                    if (xCoordinate >= 700)
+                    {
+                        xCoordinate = 20;
+                        yCoordinate += 140;
+                    }
+                }
+                minorAdvisorPanel.Location = new Point(xCoordinate, yCoordinate);
+
+                istMinorAdvisingPanel.Controls.Add(minorAdvisorPanel);
+            }
+
+
+
+
+            istMinorAdvisingPanel.Visible = false;
+
+            panel_advisors_container.Controls.Add(istMinorAdvisingPanel);
+        }
+        #endregion
 
 
 
@@ -233,6 +318,7 @@ namespace MokP3
         private void setFormStyle()
         {
             this.Text = "Advisors";
+            this.Size = new Size(900, 600);
 
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);

@@ -122,6 +122,7 @@
             this.mb_ISTMinorsAdvisors.TabIndex = 6;
             this.mb_ISTMinorsAdvisors.Text = "IST Minor Advising";
             this.mb_ISTMinorsAdvisors.UseVisualStyleBackColor = true;
+            this.mb_ISTMinorsAdvisors.Click += new System.EventHandler(this.mb_ISTMinorsAdvisors_Click);
             // 
             // StudentServicesForm
             // 
