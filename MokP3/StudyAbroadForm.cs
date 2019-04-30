@@ -25,6 +25,15 @@ namespace MokP3
             lbl_studyAbroad_desc.MaximumSize = new Size(450, 0);
             lbl_studyAbroad_desc.Font = new Font("Arial", 9);
 
+            // Place 1
+            ml_place1_name.Text = sa.places[0].nameOfPlace;
+            lbl_place1_desc.Text = sa.places[0].description;
+            lbl_place1_desc.MaximumSize = new Size(250, 0);
+
+            // Place 2
+            ml_place2_name.Text = sa.places[1].nameOfPlace;
+            lbl_place2_desc.Text = sa.places[1].description;
+            lbl_place2_desc.MaximumSize = new Size(250, 0);
         }
 
         private void setFormStyle()
