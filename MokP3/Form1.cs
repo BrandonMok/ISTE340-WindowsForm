@@ -31,7 +31,7 @@ namespace MokP3
         People people;
         Research research;
         Resources resources;
-        //News news;
+        News news;
         //Footer footer;
 
 
@@ -635,9 +635,9 @@ namespace MokP3
         }
         #endregion
 
+        #region NewsPage
 
-
-
+        #endregion
 
 
 
@@ -701,5 +701,38 @@ namespace MokP3
 
 
         #endregion
+
+        private void newsPage_Enter(object sender, EventArgs e)
+        {
+            if (news == null)
+            {
+                string jsonNews = rj.getRESTDataJSON("/news/");
+                news = JToken.Parse(jsonNews).ToObject<News>();
+            }
+
+            lv_news.View = View.Details;
+            lv_news.GridLines = true;
+            lv_news.FullRowSelect = true;
+            lv_news.Width = 800;
+
+            lv_news.Columns.Add("Date", 100);
+            lv_news.Columns.Add("Title", 100);
+            lv_news.Columns.Add("Description", 600);
+
+            ListViewItem lvItem;
+            int newsLength = news.older.Count;
+            for (int i = 0; i < newsLength; i++)
+            {
+                lvItem = new ListViewItem(new string[]
+                {
+                    news.older[i].date,
+                    news.older[i].title,
+                    news.older[i].description
+                });
+                
+                lv_news.Items.Add(lvItem);
+            }
+
+        }
     }
 }

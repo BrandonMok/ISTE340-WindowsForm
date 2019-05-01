@@ -119,6 +119,8 @@
             this.NewsPage = new System.Windows.Forms.TabPage();
             this.FooterPage = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ml_news_title = new MaterialSkin.Controls.MaterialLabel();
+            this.lv_news = new System.Windows.Forms.ListView();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -146,6 +148,7 @@
             this.StaffPage.SuspendLayout();
             this.ResearchPage.SuspendLayout();
             this.ResourcesPage.SuspendLayout();
+            this.NewsPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_quote
@@ -1062,6 +1065,8 @@
             // 
             // NewsPage
             // 
+            this.NewsPage.Controls.Add(this.lv_news);
+            this.NewsPage.Controls.Add(this.ml_news_title);
             this.NewsPage.Location = new System.Drawing.Point(4, 31);
             this.NewsPage.Name = "NewsPage";
             this.NewsPage.Padding = new System.Windows.Forms.Padding(3);
@@ -1069,6 +1074,7 @@
             this.NewsPage.TabIndex = 8;
             this.NewsPage.Text = "News";
             this.NewsPage.UseVisualStyleBackColor = true;
+            this.NewsPage.Enter += new System.EventHandler(this.newsPage_Enter);
             // 
             // FooterPage
             // 
@@ -1079,6 +1085,27 @@
             this.FooterPage.TabIndex = 7;
             this.FooterPage.Text = "Footer";
             this.FooterPage.UseVisualStyleBackColor = true;
+            // 
+            // ml_news_title
+            // 
+            this.ml_news_title.AutoSize = true;
+            this.ml_news_title.Depth = 0;
+            this.ml_news_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_news_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_news_title.Location = new System.Drawing.Point(562, 33);
+            this.ml_news_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_news_title.Name = "ml_news_title";
+            this.ml_news_title.Size = new System.Drawing.Size(68, 27);
+            this.ml_news_title.TabIndex = 1;
+            this.ml_news_title.Text = "News";
+            // 
+            // lv_news
+            // 
+            this.lv_news.Location = new System.Drawing.Point(26, 89);
+            this.lv_news.Name = "lv_news";
+            this.lv_news.Size = new System.Drawing.Size(1231, 641);
+            this.lv_news.TabIndex = 2;
+            this.lv_news.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
@@ -1140,6 +1167,8 @@
             this.ResearchPage.PerformLayout();
             this.ResourcesPage.ResumeLayout(false);
             this.ResourcesPage.PerformLayout();
+            this.NewsPage.ResumeLayout(false);
+            this.NewsPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1236,6 +1265,8 @@
         private System.Windows.Forms.Button btn_coopEnrollment;
         private System.Windows.Forms.Button btn_facultyAdvisors;
         private System.Windows.Forms.TabPage NewsPage;
+        private MaterialSkin.Controls.MaterialLabel ml_news_title;
+        private System.Windows.Forms.ListView lv_news;
     }
 }
 
