@@ -53,28 +53,23 @@ namespace MokP3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // json2csharp.com
+            // Only load about content first!
+            // About acts as the homepage
 
             // ABOUT
             string jsonAbout = rj.getRESTDataJSON("/about/"); 
             about = JToken.Parse(jsonAbout).ToObject<About>(); // cast it to the About object
 
-            //textBox1.Text = about.description;
-            lbl_title.Text = about.title;
-            lbl_title.Font = new Font("Arial", 10);
+            ml_about_title.Text = about.title;
 
             lbl_description.Text = about.description;
             lbl_description.MaximumSize = new Size(500, 0);
-            lbl_description.Font = new Font("Arial", 9);
 
             lbl_quote.Text = about.quote;
             lbl_quote.MaximumSize = new Size(400, 0);
-            lbl_quote.Font = new Font("Arial", 9);
 
             lbl_quote_author.Text = "- " + about.quoteAuthor;
         }
-
-
 
 
 
@@ -253,111 +248,114 @@ namespace MokP3
         }
         #endregion
 
-
         #region PeoplePage
         private void peoplePage_Enter(object sender, EventArgs e)
         {
-            if(people == null)
+            // CHECK if people object hasn't be innitialized
+            // If note then load all dynamic people in ONCE
+            if (people == null)
             {
                 string jsonpeople = rj.getRESTDataJSON("/people/");
                 people = JToken.Parse(jsonpeople).ToObject<People>();
-            }
-
-            // Set the SubTitle
-            lbl_people_subtitle.Text = people.subTitle;
 
 
-            // Keep all the faculty & staff in a list
-            List<Faculty> facultyList = people.faculty;
-            List<Staff> staffList = people.staff;
+                // Set the SubTitle
+                lbl_people_subtitle.Text = people.subTitle;
 
-            // Need a check to reset content
-            int newPointX = 0;
-            int newPointY = 0;
 
-            for (int i = 0; i < facultyList.Count; i++) // 34 fac in total
-            {
-                // Panel that acts as a container for each person
-                Panel newPanel = new Panel();
-                newPanel.Size = new Size(90, 90);
-                newPanel.Name = "panel_" + facultyList[i].username; // make panel's name the same as the person
+                // Keep all the faculty & staff in a list
+                List<Faculty> facultyList = people.faculty;
+                List<Staff> staffList = people.staff;
 
-                newPanel.Cursor = Cursors.Hand;
+                // Need a check to reset content
+                int newPointX = 0;
+                int newPointY = 0;
 
-                // Each image of person
-                PictureBox pb = new PictureBox();
-                pb.Load(facultyList[i].imagePath);
-                pb.Dock = DockStyle.Fill;
-                pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                newPanel.Controls.Add(pb);
-
-                // set an onclick to pass in the username to find that data
-                pb.Click += new EventHandler(pictureBox_Click);
-
-             
-
-                // If not the first person box, then move the next one over
-                if (i != 0)
+                for (int i = 0; i < facultyList.Count; i++) // 34 fac in total
                 {
-                    newPointX += 100;
+                    // Panel that acts as a container for each person
+                    Panel newPanel = new Panel();
+                    newPanel.Size = new Size(90, 90);
+                    newPanel.Name = "panel_" + facultyList[i].username; // make panel's name the same as the person
+
+                    newPanel.Cursor = Cursors.Hand;
+
+                    // Each image of person
+                    PictureBox pb = new PictureBox();
+                    pb.Load(facultyList[i].imagePath);
+                    pb.Dock = DockStyle.Fill;
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    newPanel.Controls.Add(pb);
+
+                    // set an onclick to pass in the username to find that data
+                    pb.Click += new EventHandler(pictureBox_Click);
+
+
+
+                    // If not the first person box, then move the next one over
+                    if (i != 0)
+                    {
+                        newPointX += 100;
+                    }
+
+                    // if reaches a certain point, reset the x coordinate and change the y coordinate
+                    if (newPointX >= 800)
+                    {
+                        newPointX = 0;
+                        newPointY += 100;
+                    }
+
+                    newPanel.Location = new Point(newPointX, newPointY);
+
+                    // Finally add the new dynamic panel to the main panel
+                    panel_faculty_container.Controls.Add(newPanel);
                 }
 
-                // if reaches a certain point, reset the x coordinate and change the y coordinate
-                if (newPointX >= 800)
+
+
+                // STAFF
+                int newPointSX = 0;
+                int newPointSY = 0;
+
+                for (int i = 0; i < staffList.Count; i++) // 17 fac in total
                 {
-                    newPointX = 0;
-                    newPointY += 100;
-                }
-                
-                newPanel.Location = new Point(newPointX, newPointY);
+                    // Panel that acts as a container for each person
+                    Panel newStaffPanel = new Panel();
+                    newStaffPanel.Size = new Size(90, 90);
+                    newStaffPanel.Name = "panel_" + staffList[i].username; // make panel's name the same as the person
 
-                // Finally add the new dynamic panel to the main panel
-                panel_faculty_container.Controls.Add(newPanel);
-            }
+                    newStaffPanel.Cursor = Cursors.Hand;
 
+                    // Each image of person
+                    PictureBox pb2 = new PictureBox();
+                    pb2.Load(staffList[i].imagePath);
+                    pb2.Dock = DockStyle.Fill;
+                    pb2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    newStaffPanel.Controls.Add(pb2);
 
-
-            // STAFF
-            int newPointSX = 0;
-            int newPointSY = 0;
-
-            for (int i = 0; i < staffList.Count; i++) // 17 fac in total
-            {
-                // Panel that acts as a container for each person
-                Panel newStaffPanel = new Panel();
-                newStaffPanel.Size = new Size(90, 90);
-                newStaffPanel.Name = "panel_" + staffList[i].username; // make panel's name the same as the person
-
-                newStaffPanel.Cursor = Cursors.Hand;
-
-                // Each image of person
-                PictureBox pb2 = new PictureBox();
-                pb2.Load(staffList[i].imagePath);
-                pb2.Dock = DockStyle.Fill;
-                pb2.SizeMode = PictureBoxSizeMode.StretchImage;
-                newStaffPanel.Controls.Add(pb2);
-
-                // set an onclick to pass in the username to find that data
-                pb2.Click += new EventHandler(pictureBox_Click);
+                    // set an onclick to pass in the username to find that data
+                    pb2.Click += new EventHandler(pictureBox_Click);
 
 
-                // If not the first person box, then move the next one over
-                if (i != 0)
-                {
-                    newPointSX += 100;
-                }
+                    // If not the first person box, then move the next one over
+                    if (i != 0)
+                    {
+                        newPointSX += 100;
+                    }
 
-                // if reaches a certain point, reset the x coordinate and change the y coordinate
-                if (newPointSX >= 800)
-                {
-                    newPointSX = 0;
-                    newPointSY += 100;
+                    // if reaches a certain point, reset the x coordinate and change the y coordinate
+                    if (newPointSX >= 800)
+                    {
+                        newPointSX = 0;
+                        newPointSY += 100;
+                    }
+
+                    newStaffPanel.Location = new Point(newPointSX, newPointSY);
+
+                    // Finally add the new dynamic panel to the main panel
+                    panel_staff_container.Controls.Add(newStaffPanel);
                 }
 
-                newStaffPanel.Location = new Point(newPointSX, newPointSY);
-
-                // Finally add the new dynamic panel to the main panel
-                panel_staff_container.Controls.Add(newStaffPanel);
             }
         }
 
@@ -404,7 +402,6 @@ namespace MokP3
             }
         }
         #endregion
-
 
         #region ResearchPage
         private void researchPage_Enter(object sender, EventArgs e)
@@ -658,75 +655,10 @@ namespace MokP3
         }
         #endregion
 
-
-
-
-
-
-
-
-
-        #region peopleTestInclass
-        private void btn_people_click(object sender, EventArgs e)
-        {
-            // get the json for people
-            string jsonpeople = rj.getRESTDataJSON("/people/");
-            people = JToken.Parse(jsonpeople).ToObject<People>();
-
-            // play with data
-            foreach (Faculty thisfac in people.faculty)
-            {
-                Console.WriteLine(thisfac.name);
-                //pictureBox1.Load(thisfac.imagePath);
-            }
-
-            // issue is how to find data on ONE individual?
-            getSingleInstance("dsbics");
-        }
-
-
-
-        private void getSingleInstance(string id)
-        {
-            // Would send the data to another form!
-
-            Faculty result = people.faculty.Find(x => x.username == id);
-            //Console.WriteLine(result.office);
-
-
-            // useful
-            List<Faculty> res = people.faculty.FindAll(x => x.title == "Associate Professor");
-            //Console.WriteLine(res[3].name);
-        }
-        #endregion
-
-
-        #region LinkLabelToPDF
-        // Can be used multiple times
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // go and load the pdf!
-            // which url do I need? We can get it from sender
-
-            // LinkLabel me = (LinkLabel)sender; 
-            LinkLabel me = sender as LinkLabel;
-
-            // make me look like I was visited
-            me.LinkVisited = true;
-
-            System.Diagnostics.Process.Start(me.Text);
-        }
-
-
-
-
-
-
-        #endregion
-
+        #region FooterPage
         private void footerPage_Enter(object sender, EventArgs e)
         {
-            if(footer == null)
+            if (footer == null)
             {
                 string jsonFooter = rj.getRESTDataJSON("/footer/");
                 footer = JToken.Parse(jsonFooter).ToObject<Footer>();
@@ -749,13 +681,13 @@ namespace MokP3
 
             // COPYRIGHT
             ml_copyright_title.Text = footer.copyright.title;
-           // lbl_html.Text = footer.copyright.html;
-
             ll_copyright_news.Text = footer.news;
-
-            webBrowser1.DocumentText = footer.copyright.html;
+            wb_copyright.DocumentText = footer.copyright.html;
 
         }
+#endregion
+
+
 
         private void linkClicks(object sender, LinkLabelLinkClickedEventArgs e)
         {

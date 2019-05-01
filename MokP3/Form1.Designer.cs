@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lbl_quote = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lbl_description = new System.Windows.Forms.Label();
-            this.lbl_title = new System.Windows.Forms.Label();
             this.newsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byInterestAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +63,6 @@
             this.lbl_HCC_title = new System.Windows.Forms.Label();
             this.panel_uDegrees_WMC = new System.Windows.Forms.Panel();
             this.lbl_WMC_title = new System.Windows.Forms.Label();
-            this.lbl_degree_section_title = new System.Windows.Forms.Label();
             this.MinorsPage = new System.Windows.Forms.TabPage();
             this.panel_minors_WEBD = new System.Windows.Forms.Panel();
             this.lbl_minors_WEBD_title = new System.Windows.Forms.Label();
@@ -83,7 +80,6 @@
             this.lbl_minors_GIS_title = new System.Windows.Forms.Label();
             this.panel_minors_DBDDI = new System.Windows.Forms.Panel();
             this.lbl_minors_DBDDI_title = new System.Windows.Forms.Label();
-            this.lbl_minors_section_title = new System.Windows.Forms.Label();
             this.EmploymentPage = new System.Windows.Forms.TabPage();
             this.btn_moreInfo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_showTables = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -94,7 +90,6 @@
             this.lbl_employment_content = new System.Windows.Forms.Label();
             this.lbl_employment_title = new System.Windows.Forms.Label();
             this.lbl_employment_introTitle = new System.Windows.Forms.Label();
-            this.lbl_employment_sectionTitle = new System.Windows.Forms.Label();
             this.PeoplePage = new System.Windows.Forms.TabPage();
             this.tb_people = new System.Windows.Forms.TabControl();
             this.FacultyPage = new System.Windows.Forms.TabPage();
@@ -102,11 +97,9 @@
             this.StaffPage = new System.Windows.Forms.TabPage();
             this.panel_staff_container = new System.Windows.Forms.Panel();
             this.lbl_people_subtitle = new System.Windows.Forms.Label();
-            this.lbl_people_section_title = new System.Windows.Forms.Label();
             this.ResearchPage = new System.Windows.Forms.TabPage();
             this.cb_research = new System.Windows.Forms.ComboBox();
             this.panel_research_container = new System.Windows.Forms.Panel();
-            this.ml_research_sectionHeading = new MaterialSkin.Controls.MaterialLabel();
             this.ResourcesPage = new System.Windows.Forms.TabPage();
             this.btn_forms = new System.Windows.Forms.Button();
             this.btn_studentAmbassadors = new System.Windows.Forms.Button();
@@ -120,22 +113,32 @@
             this.lv_news = new System.Windows.Forms.ListView();
             this.ml_news_title = new MaterialSkin.Controls.MaterialLabel();
             this.FooterPage = new System.Windows.Forms.TabPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_social_tweet = new System.Windows.Forms.Label();
-            this.ll_twitter = new System.Windows.Forms.LinkLabel();
-            this.ll_facebook = new System.Windows.Forms.LinkLabel();
-            this.ml_link_title1 = new MaterialSkin.Controls.MaterialLabel();
-            this.ml_link_title2 = new MaterialSkin.Controls.MaterialLabel();
-            this.ml_link_title3 = new MaterialSkin.Controls.MaterialLabel();
-            this.ml_link_title4 = new MaterialSkin.Controls.MaterialLabel();
-            this.ll_otherLink1 = new System.Windows.Forms.LinkLabel();
-            this.ll_otherLink2 = new System.Windows.Forms.LinkLabel();
-            this.ll_otherLink3 = new System.Windows.Forms.LinkLabel();
-            this.ll_otherLink4 = new System.Windows.Forms.LinkLabel();
-            this.ml_copyright_title = new MaterialSkin.Controls.MaterialLabel();
+            this.wb_copyright = new System.Windows.Forms.WebBrowser();
             this.ll_copyright_news = new System.Windows.Forms.LinkLabel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.ml_copyright_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ll_otherLink4 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink3 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink2 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink1 = new System.Windows.Forms.LinkLabel();
+            this.ml_link_title4 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title3 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title2 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title1 = new MaterialSkin.Controls.MaterialLabel();
+            this.ll_facebook = new System.Windows.Forms.LinkLabel();
+            this.ll_twitter = new System.Windows.Forms.LinkLabel();
+            this.lbl_social_tweet = new System.Windows.Forms.Label();
+            this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel_link4 = new System.Windows.Forms.Panel();
+            this.panel_link3 = new System.Windows.Forms.Panel();
+            this.panel_link1 = new System.Windows.Forms.Panel();
+            this.panel_link2 = new System.Windows.Forms.Panel();
+            this.ml_about_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_degrees_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_minors_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_employment_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_people_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_research_title = new MaterialSkin.Controls.MaterialLabel();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -165,6 +168,10 @@
             this.ResourcesPage.SuspendLayout();
             this.NewsPage.SuspendLayout();
             this.FooterPage.SuspendLayout();
+            this.panel_link4.SuspendLayout();
+            this.panel_link3.SuspendLayout();
+            this.panel_link1.SuspendLayout();
+            this.panel_link2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_quote
@@ -176,17 +183,6 @@
             this.lbl_quote.TabIndex = 0;
             this.lbl_quote.Text = "Quote";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(159, 620);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(91, 22);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // lbl_description
             // 
             this.lbl_description.AutoSize = true;
@@ -195,15 +191,6 @@
             this.lbl_description.Size = new System.Drawing.Size(100, 22);
             this.lbl_description.TabIndex = 3;
             this.lbl_description.Text = "Description";
-            // 
-            // lbl_title
-            // 
-            this.lbl_title.AutoSize = true;
-            this.lbl_title.Location = new System.Drawing.Point(447, 33);
-            this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(45, 22);
-            this.lbl_title.TabIndex = 4;
-            this.lbl_title.Text = "Title";
             // 
             // newsToolStripMenuItem
             // 
@@ -329,11 +316,10 @@
             // AboutPage
             // 
             this.AboutPage.BackColor = System.Drawing.Color.White;
+            this.AboutPage.Controls.Add(this.ml_about_title);
             this.AboutPage.Controls.Add(this.lbl_quote_author);
             this.AboutPage.Controls.Add(this.lbl_quote);
             this.AboutPage.Controls.Add(this.lbl_description);
-            this.AboutPage.Controls.Add(this.lbl_title);
-            this.AboutPage.Controls.Add(this.linkLabel1);
             this.AboutPage.Location = new System.Drawing.Point(4, 31);
             this.AboutPage.Name = "AboutPage";
             this.AboutPage.Padding = new System.Windows.Forms.Padding(3);
@@ -343,6 +329,7 @@
             // 
             // DegreesPage
             // 
+            this.DegreesPage.Controls.Add(this.ml_degrees_title);
             this.DegreesPage.Controls.Add(this.panel_gDegrees_NSA);
             this.DegreesPage.Controls.Add(this.panel_gDegrees_HCI);
             this.DegreesPage.Controls.Add(this.panel_gDegrees_IST);
@@ -351,7 +338,6 @@
             this.DegreesPage.Controls.Add(this.panel_uDegrees_CIT);
             this.DegreesPage.Controls.Add(this.panel_uDegrees_HCC);
             this.DegreesPage.Controls.Add(this.panel_uDegrees_WMC);
-            this.DegreesPage.Controls.Add(this.lbl_degree_section_title);
             this.DegreesPage.Location = new System.Drawing.Point(4, 31);
             this.DegreesPage.Name = "DegreesPage";
             this.DegreesPage.Padding = new System.Windows.Forms.Padding(3);
@@ -367,7 +353,7 @@
             this.panel_gDegrees_NSA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_gDegrees_NSA.Controls.Add(this.lbl_NSA_title);
             this.panel_gDegrees_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_NSA.Location = new System.Drawing.Point(830, 383);
+            this.panel_gDegrees_NSA.Location = new System.Drawing.Point(844, 384);
             this.panel_gDegrees_NSA.Name = "panel_gDegrees_NSA";
             this.panel_gDegrees_NSA.Size = new System.Drawing.Size(200, 100);
             this.panel_gDegrees_NSA.TabIndex = 8;
@@ -389,7 +375,7 @@
             this.panel_gDegrees_HCI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_gDegrees_HCI.Controls.Add(this.lbl_HCI_title);
             this.panel_gDegrees_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_HCI.Location = new System.Drawing.Point(439, 383);
+            this.panel_gDegrees_HCI.Location = new System.Drawing.Point(453, 384);
             this.panel_gDegrees_HCI.Name = "panel_gDegrees_HCI";
             this.panel_gDegrees_HCI.Size = new System.Drawing.Size(200, 100);
             this.panel_gDegrees_HCI.TabIndex = 7;
@@ -411,7 +397,7 @@
             this.panel_gDegrees_IST.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_gDegrees_IST.Controls.Add(this.lbl_IST_title);
             this.panel_gDegrees_IST.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_IST.Location = new System.Drawing.Point(65, 383);
+            this.panel_gDegrees_IST.Location = new System.Drawing.Point(79, 384);
             this.panel_gDegrees_IST.Name = "panel_gDegrees_IST";
             this.panel_gDegrees_IST.Size = new System.Drawing.Size(200, 100);
             this.panel_gDegrees_IST.TabIndex = 6;
@@ -430,7 +416,7 @@
             // lbl_degrees_graduate_Title
             // 
             this.lbl_degrees_graduate_Title.AutoSize = true;
-            this.lbl_degrees_graduate_Title.Location = new System.Drawing.Point(488, 340);
+            this.lbl_degrees_graduate_Title.Location = new System.Drawing.Point(502, 341);
             this.lbl_degrees_graduate_Title.Name = "lbl_degrees_graduate_Title";
             this.lbl_degrees_graduate_Title.Size = new System.Drawing.Size(85, 22);
             this.lbl_degrees_graduate_Title.TabIndex = 5;
@@ -439,7 +425,7 @@
             // lbl_degrees_undergrad_title
             // 
             this.lbl_degrees_undergrad_title.AutoSize = true;
-            this.lbl_degrees_undergrad_title.Location = new System.Drawing.Point(467, 74);
+            this.lbl_degrees_undergrad_title.Location = new System.Drawing.Point(481, 78);
             this.lbl_degrees_undergrad_title.Name = "lbl_degrees_undergrad_title";
             this.lbl_degrees_undergrad_title.Size = new System.Drawing.Size(130, 22);
             this.lbl_degrees_undergrad_title.TabIndex = 4;
@@ -451,7 +437,7 @@
             this.panel_uDegrees_CIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_uDegrees_CIT.Controls.Add(this.lbl_CIT_title);
             this.panel_uDegrees_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_CIT.Location = new System.Drawing.Point(812, 118);
+            this.panel_uDegrees_CIT.Location = new System.Drawing.Point(826, 122);
             this.panel_uDegrees_CIT.Name = "panel_uDegrees_CIT";
             this.panel_uDegrees_CIT.Size = new System.Drawing.Size(200, 100);
             this.panel_uDegrees_CIT.TabIndex = 3;
@@ -473,7 +459,7 @@
             this.panel_uDegrees_HCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_uDegrees_HCC.Controls.Add(this.lbl_HCC_title);
             this.panel_uDegrees_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_HCC.Location = new System.Drawing.Point(439, 118);
+            this.panel_uDegrees_HCC.Location = new System.Drawing.Point(453, 122);
             this.panel_uDegrees_HCC.Name = "panel_uDegrees_HCC";
             this.panel_uDegrees_HCC.Size = new System.Drawing.Size(200, 100);
             this.panel_uDegrees_HCC.TabIndex = 2;
@@ -495,7 +481,7 @@
             this.panel_uDegrees_WMC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_uDegrees_WMC.Controls.Add(this.lbl_WMC_title);
             this.panel_uDegrees_WMC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_WMC.Location = new System.Drawing.Point(65, 118);
+            this.panel_uDegrees_WMC.Location = new System.Drawing.Point(79, 122);
             this.panel_uDegrees_WMC.Name = "panel_uDegrees_WMC";
             this.panel_uDegrees_WMC.Size = new System.Drawing.Size(200, 100);
             this.panel_uDegrees_WMC.TabIndex = 1;
@@ -511,18 +497,10 @@
             this.lbl_WMC_title.TabIndex = 0;
             this.lbl_WMC_title.Text = "WMC";
             // 
-            // lbl_degree_section_title
-            // 
-            this.lbl_degree_section_title.AutoSize = true;
-            this.lbl_degree_section_title.Location = new System.Drawing.Point(488, 31);
-            this.lbl_degree_section_title.Name = "lbl_degree_section_title";
-            this.lbl_degree_section_title.Size = new System.Drawing.Size(78, 22);
-            this.lbl_degree_section_title.TabIndex = 0;
-            this.lbl_degree_section_title.Text = "Degrees";
-            // 
             // MinorsPage
             // 
             this.MinorsPage.BackColor = System.Drawing.Color.White;
+            this.MinorsPage.Controls.Add(this.ml_minors_title);
             this.MinorsPage.Controls.Add(this.panel_minors_WEBD);
             this.MinorsPage.Controls.Add(this.panel_minors_WEBDD);
             this.MinorsPage.Controls.Add(this.panel_minors_NETSYS);
@@ -531,7 +509,6 @@
             this.MinorsPage.Controls.Add(this.panel_minors_MEDINFO);
             this.MinorsPage.Controls.Add(this.panel_minors_GIS);
             this.MinorsPage.Controls.Add(this.panel_minors_DBDDI);
-            this.MinorsPage.Controls.Add(this.lbl_minors_section_title);
             this.MinorsPage.Location = new System.Drawing.Point(4, 31);
             this.MinorsPage.Name = "MinorsPage";
             this.MinorsPage.Padding = new System.Windows.Forms.Padding(3);
@@ -716,23 +693,14 @@
             this.lbl_minors_DBDDI_title.TabIndex = 0;
             this.lbl_minors_DBDDI_title.Text = "DBDDI";
             // 
-            // lbl_minors_section_title
-            // 
-            this.lbl_minors_section_title.AutoSize = true;
-            this.lbl_minors_section_title.Location = new System.Drawing.Point(546, 47);
-            this.lbl_minors_section_title.Name = "lbl_minors_section_title";
-            this.lbl_minors_section_title.Size = new System.Drawing.Size(63, 22);
-            this.lbl_minors_section_title.TabIndex = 0;
-            this.lbl_minors_section_title.Text = "Minors";
-            // 
             // EmploymentPage
             // 
+            this.EmploymentPage.Controls.Add(this.ml_employment_title);
             this.EmploymentPage.Controls.Add(this.btn_moreInfo);
             this.EmploymentPage.Controls.Add(this.btn_showTables);
             this.EmploymentPage.Controls.Add(this.panel_coop);
             this.EmploymentPage.Controls.Add(this.panel_employment);
             this.EmploymentPage.Controls.Add(this.lbl_employment_introTitle);
-            this.EmploymentPage.Controls.Add(this.lbl_employment_sectionTitle);
             this.EmploymentPage.Location = new System.Drawing.Point(4, 31);
             this.EmploymentPage.Name = "EmploymentPage";
             this.EmploymentPage.Padding = new System.Windows.Forms.Padding(3);
@@ -843,20 +811,11 @@
             this.lbl_employment_introTitle.TabIndex = 1;
             this.lbl_employment_introTitle.Text = "Title";
             // 
-            // lbl_employment_sectionTitle
-            // 
-            this.lbl_employment_sectionTitle.AutoSize = true;
-            this.lbl_employment_sectionTitle.Location = new System.Drawing.Point(547, 21);
-            this.lbl_employment_sectionTitle.Name = "lbl_employment_sectionTitle";
-            this.lbl_employment_sectionTitle.Size = new System.Drawing.Size(108, 22);
-            this.lbl_employment_sectionTitle.TabIndex = 0;
-            this.lbl_employment_sectionTitle.Text = "Employment";
-            // 
             // PeoplePage
             // 
+            this.PeoplePage.Controls.Add(this.ml_people_title);
             this.PeoplePage.Controls.Add(this.tb_people);
             this.PeoplePage.Controls.Add(this.lbl_people_subtitle);
-            this.PeoplePage.Controls.Add(this.lbl_people_section_title);
             this.PeoplePage.Location = new System.Drawing.Point(4, 31);
             this.PeoplePage.Name = "PeoplePage";
             this.PeoplePage.Padding = new System.Windows.Forms.Padding(3);
@@ -923,20 +882,11 @@
             this.lbl_people_subtitle.TabIndex = 1;
             this.lbl_people_subtitle.Text = "Sub Title";
             // 
-            // lbl_people_section_title
-            // 
-            this.lbl_people_section_title.AutoSize = true;
-            this.lbl_people_section_title.Location = new System.Drawing.Point(536, 17);
-            this.lbl_people_section_title.Name = "lbl_people_section_title";
-            this.lbl_people_section_title.Size = new System.Drawing.Size(66, 22);
-            this.lbl_people_section_title.TabIndex = 0;
-            this.lbl_people_section_title.Text = "People";
-            // 
             // ResearchPage
             // 
+            this.ResearchPage.Controls.Add(this.ml_research_title);
             this.ResearchPage.Controls.Add(this.cb_research);
             this.ResearchPage.Controls.Add(this.panel_research_container);
-            this.ResearchPage.Controls.Add(this.ml_research_sectionHeading);
             this.ResearchPage.Location = new System.Drawing.Point(4, 31);
             this.ResearchPage.Name = "ResearchPage";
             this.ResearchPage.Padding = new System.Windows.Forms.Padding(3);
@@ -964,19 +914,6 @@
             this.panel_research_container.Name = "panel_research_container";
             this.panel_research_container.Size = new System.Drawing.Size(1213, 564);
             this.panel_research_container.TabIndex = 1;
-            // 
-            // ml_research_sectionHeading
-            // 
-            this.ml_research_sectionHeading.AutoSize = true;
-            this.ml_research_sectionHeading.Depth = 0;
-            this.ml_research_sectionHeading.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_research_sectionHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_research_sectionHeading.Location = new System.Drawing.Point(501, 27);
-            this.ml_research_sectionHeading.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_research_sectionHeading.Name = "ml_research_sectionHeading";
-            this.ml_research_sectionHeading.Size = new System.Drawing.Size(104, 27);
-            this.ml_research_sectionHeading.TabIndex = 0;
-            this.ml_research_sectionHeading.Text = "Research";
             // 
             // ResourcesPage
             // 
@@ -1115,17 +1052,13 @@
             // 
             // FooterPage
             // 
-            this.FooterPage.Controls.Add(this.webBrowser1);
+            this.FooterPage.Controls.Add(this.panel_link2);
+            this.FooterPage.Controls.Add(this.panel_link1);
+            this.FooterPage.Controls.Add(this.panel_link3);
+            this.FooterPage.Controls.Add(this.panel_link4);
+            this.FooterPage.Controls.Add(this.wb_copyright);
             this.FooterPage.Controls.Add(this.ll_copyright_news);
             this.FooterPage.Controls.Add(this.ml_copyright_title);
-            this.FooterPage.Controls.Add(this.ll_otherLink4);
-            this.FooterPage.Controls.Add(this.ll_otherLink3);
-            this.FooterPage.Controls.Add(this.ll_otherLink2);
-            this.FooterPage.Controls.Add(this.ll_otherLink1);
-            this.FooterPage.Controls.Add(this.ml_link_title4);
-            this.FooterPage.Controls.Add(this.ml_link_title3);
-            this.FooterPage.Controls.Add(this.ml_link_title2);
-            this.FooterPage.Controls.Add(this.ml_link_title1);
             this.FooterPage.Controls.Add(this.ll_facebook);
             this.FooterPage.Controls.Add(this.ll_twitter);
             this.FooterPage.Controls.Add(this.lbl_social_tweet);
@@ -1138,6 +1071,165 @@
             this.FooterPage.Text = "Other";
             this.FooterPage.UseVisualStyleBackColor = true;
             this.FooterPage.Enter += new System.EventHandler(this.footerPage_Enter);
+            // 
+            // wb_copyright
+            // 
+            this.wb_copyright.Location = new System.Drawing.Point(322, 542);
+            this.wb_copyright.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wb_copyright.Name = "wb_copyright";
+            this.wb_copyright.Size = new System.Drawing.Size(545, 112);
+            this.wb_copyright.TabIndex = 15;
+            // 
+            // ll_copyright_news
+            // 
+            this.ll_copyright_news.AutoSize = true;
+            this.ll_copyright_news.Location = new System.Drawing.Point(540, 685);
+            this.ll_copyright_news.Name = "ll_copyright_news";
+            this.ll_copyright_news.Size = new System.Drawing.Size(55, 22);
+            this.ll_copyright_news.TabIndex = 14;
+            this.ll_copyright_news.TabStop = true;
+            this.ll_copyright_news.Text = "News";
+            this.ll_copyright_news.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ml_copyright_title
+            // 
+            this.ml_copyright_title.AutoSize = true;
+            this.ml_copyright_title.Depth = 0;
+            this.ml_copyright_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_copyright_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_copyright_title.Location = new System.Drawing.Point(572, 512);
+            this.ml_copyright_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_copyright_title.Name = "ml_copyright_title";
+            this.ml_copyright_title.Size = new System.Drawing.Size(104, 27);
+            this.ml_copyright_title.TabIndex = 12;
+            this.ml_copyright_title.Text = "Copyright";
+            // 
+            // ll_otherLink4
+            // 
+            this.ll_otherLink4.AutoSize = true;
+            this.ll_otherLink4.Location = new System.Drawing.Point(8, 72);
+            this.ll_otherLink4.Name = "ll_otherLink4";
+            this.ll_otherLink4.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink4.TabIndex = 11;
+            this.ll_otherLink4.TabStop = true;
+            this.ll_otherLink4.Text = "linkLabel5";
+            this.ll_otherLink4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink3
+            // 
+            this.ll_otherLink3.AutoSize = true;
+            this.ll_otherLink3.Location = new System.Drawing.Point(8, 79);
+            this.ll_otherLink3.Name = "ll_otherLink3";
+            this.ll_otherLink3.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink3.TabIndex = 10;
+            this.ll_otherLink3.TabStop = true;
+            this.ll_otherLink3.Text = "linkLabel4";
+            this.ll_otherLink3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink2
+            // 
+            this.ll_otherLink2.AutoSize = true;
+            this.ll_otherLink2.Location = new System.Drawing.Point(4, 79);
+            this.ll_otherLink2.Name = "ll_otherLink2";
+            this.ll_otherLink2.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink2.TabIndex = 9;
+            this.ll_otherLink2.TabStop = true;
+            this.ll_otherLink2.Text = "linkLabel3";
+            this.ll_otherLink2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink1
+            // 
+            this.ll_otherLink1.AutoSize = true;
+            this.ll_otherLink1.Location = new System.Drawing.Point(4, 66);
+            this.ll_otherLink1.Name = "ll_otherLink1";
+            this.ll_otherLink1.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink1.TabIndex = 8;
+            this.ll_otherLink1.TabStop = true;
+            this.ll_otherLink1.Text = "linkLabel2";
+            this.ll_otherLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ml_link_title4
+            // 
+            this.ml_link_title4.AutoSize = true;
+            this.ml_link_title4.Depth = 0;
+            this.ml_link_title4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title4.Location = new System.Drawing.Point(3, 12);
+            this.ml_link_title4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title4.Name = "ml_link_title4";
+            this.ml_link_title4.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title4.TabIndex = 7;
+            this.ml_link_title4.Text = "Title Link4";
+            // 
+            // ml_link_title3
+            // 
+            this.ml_link_title3.AutoSize = true;
+            this.ml_link_title3.Depth = 0;
+            this.ml_link_title3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title3.Location = new System.Drawing.Point(3, 19);
+            this.ml_link_title3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title3.Name = "ml_link_title3";
+            this.ml_link_title3.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title3.TabIndex = 6;
+            this.ml_link_title3.Text = "Title Link3";
+            // 
+            // ml_link_title2
+            // 
+            this.ml_link_title2.AutoSize = true;
+            this.ml_link_title2.Depth = 0;
+            this.ml_link_title2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title2.Location = new System.Drawing.Point(3, 19);
+            this.ml_link_title2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title2.Name = "ml_link_title2";
+            this.ml_link_title2.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title2.TabIndex = 5;
+            this.ml_link_title2.Text = "Title Link2";
+            // 
+            // ml_link_title1
+            // 
+            this.ml_link_title1.AutoSize = true;
+            this.ml_link_title1.Depth = 0;
+            this.ml_link_title1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title1.Location = new System.Drawing.Point(3, 19);
+            this.ml_link_title1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title1.Name = "ml_link_title1";
+            this.ml_link_title1.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title1.TabIndex = 4;
+            this.ml_link_title1.Text = "Title Link1";
+            // 
+            // ll_facebook
+            // 
+            this.ll_facebook.AutoSize = true;
+            this.ll_facebook.Location = new System.Drawing.Point(422, 180);
+            this.ll_facebook.Name = "ll_facebook";
+            this.ll_facebook.Size = new System.Drawing.Size(296, 22);
+            this.ll_facebook.TabIndex = 3;
+            this.ll_facebook.TabStop = true;
+            this.ll_facebook.Text = "https://www.facebook.com/ISTatRIT";
+            this.ll_facebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_twitter
+            // 
+            this.ll_twitter.AutoSize = true;
+            this.ll_twitter.Location = new System.Drawing.Point(422, 137);
+            this.ll_twitter.Name = "ll_twitter";
+            this.ll_twitter.Size = new System.Drawing.Size(203, 22);
+            this.ll_twitter.TabIndex = 2;
+            this.ll_twitter.TabStop = true;
+            this.ll_twitter.Text = "https://twitter.com/istatrit";
+            this.ll_twitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // lbl_social_tweet
+            // 
+            this.lbl_social_tweet.AutoSize = true;
+            this.lbl_social_tweet.Location = new System.Drawing.Point(340, 68);
+            this.lbl_social_tweet.Name = "lbl_social_tweet";
+            this.lbl_social_tweet.Size = new System.Drawing.Size(60, 22);
+            this.lbl_social_tweet.TabIndex = 1;
+            this.lbl_social_tweet.Text = "Tweet";
             // 
             // ml_other_title
             // 
@@ -1152,164 +1244,123 @@
             this.ml_other_title.TabIndex = 0;
             this.ml_other_title.Text = "Title";
             // 
-            // lbl_social_tweet
+            // panel_link4
             // 
-            this.lbl_social_tweet.AutoSize = true;
-            this.lbl_social_tweet.Location = new System.Drawing.Point(340, 68);
-            this.lbl_social_tweet.Name = "lbl_social_tweet";
-            this.lbl_social_tweet.Size = new System.Drawing.Size(60, 22);
-            this.lbl_social_tweet.TabIndex = 1;
-            this.lbl_social_tweet.Text = "Tweet";
+            this.panel_link4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_link4.Controls.Add(this.ml_link_title4);
+            this.panel_link4.Controls.Add(this.ll_otherLink4);
+            this.panel_link4.Location = new System.Drawing.Point(703, 365);
+            this.panel_link4.Name = "panel_link4";
+            this.panel_link4.Size = new System.Drawing.Size(542, 122);
+            this.panel_link4.TabIndex = 17;
             // 
-            // ll_twitter
+            // panel_link3
             // 
-            this.ll_twitter.AutoSize = true;
-            this.ll_twitter.Location = new System.Drawing.Point(422, 137);
-            this.ll_twitter.Name = "ll_twitter";
-            this.ll_twitter.Size = new System.Drawing.Size(203, 22);
-            this.ll_twitter.TabIndex = 2;
-            this.ll_twitter.TabStop = true;
-            this.ll_twitter.Text = "https://twitter.com/istatrit";
-            this.ll_twitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            this.panel_link3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_link3.Controls.Add(this.ml_link_title3);
+            this.panel_link3.Controls.Add(this.ll_otherLink3);
+            this.panel_link3.Location = new System.Drawing.Point(703, 226);
+            this.panel_link3.Name = "panel_link3";
+            this.panel_link3.Size = new System.Drawing.Size(542, 122);
+            this.panel_link3.TabIndex = 18;
             // 
-            // ll_facebook
+            // panel_link1
             // 
-            this.ll_facebook.AutoSize = true;
-            this.ll_facebook.Location = new System.Drawing.Point(422, 180);
-            this.ll_facebook.Name = "ll_facebook";
-            this.ll_facebook.Size = new System.Drawing.Size(296, 22);
-            this.ll_facebook.TabIndex = 3;
-            this.ll_facebook.TabStop = true;
-            this.ll_facebook.Text = "https://www.facebook.com/ISTatRIT";
-            this.ll_facebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            this.panel_link1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_link1.Controls.Add(this.ml_link_title1);
+            this.panel_link1.Controls.Add(this.ll_otherLink1);
+            this.panel_link1.Location = new System.Drawing.Point(29, 226);
+            this.panel_link1.Name = "panel_link1";
+            this.panel_link1.Size = new System.Drawing.Size(542, 122);
+            this.panel_link1.TabIndex = 19;
             // 
-            // ml_link_title1
+            // panel_link2
             // 
-            this.ml_link_title1.AutoSize = true;
-            this.ml_link_title1.Depth = 0;
-            this.ml_link_title1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_link_title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_link_title1.Location = new System.Drawing.Point(126, 272);
-            this.ml_link_title1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_link_title1.Name = "ml_link_title1";
-            this.ml_link_title1.Size = new System.Drawing.Size(111, 27);
-            this.ml_link_title1.TabIndex = 4;
-            this.ml_link_title1.Text = "Title Link1";
+            this.panel_link2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_link2.Controls.Add(this.ml_link_title2);
+            this.panel_link2.Controls.Add(this.ll_otherLink2);
+            this.panel_link2.Location = new System.Drawing.Point(29, 365);
+            this.panel_link2.Name = "panel_link2";
+            this.panel_link2.Size = new System.Drawing.Size(542, 122);
+            this.panel_link2.TabIndex = 20;
             // 
-            // ml_link_title2
+            // ml_about_title
             // 
-            this.ml_link_title2.AutoSize = true;
-            this.ml_link_title2.Depth = 0;
-            this.ml_link_title2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_link_title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_link_title2.Location = new System.Drawing.Point(126, 394);
-            this.ml_link_title2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_link_title2.Name = "ml_link_title2";
-            this.ml_link_title2.Size = new System.Drawing.Size(111, 27);
-            this.ml_link_title2.TabIndex = 5;
-            this.ml_link_title2.Text = "Title Link2";
+            this.ml_about_title.AutoSize = true;
+            this.ml_about_title.Depth = 0;
+            this.ml_about_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_about_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_about_title.Location = new System.Drawing.Point(441, 36);
+            this.ml_about_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_about_title.Name = "ml_about_title";
+            this.ml_about_title.Size = new System.Drawing.Size(54, 27);
+            this.ml_about_title.TabIndex = 6;
+            this.ml_about_title.Text = "Title";
             // 
-            // ml_link_title3
+            // ml_degrees_title
             // 
-            this.ml_link_title3.AutoSize = true;
-            this.ml_link_title3.Depth = 0;
-            this.ml_link_title3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_link_title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_link_title3.Location = new System.Drawing.Point(710, 272);
-            this.ml_link_title3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_link_title3.Name = "ml_link_title3";
-            this.ml_link_title3.Size = new System.Drawing.Size(111, 27);
-            this.ml_link_title3.TabIndex = 6;
-            this.ml_link_title3.Text = "Title Link3";
+            this.ml_degrees_title.AutoSize = true;
+            this.ml_degrees_title.Depth = 0;
+            this.ml_degrees_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_degrees_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_degrees_title.Location = new System.Drawing.Point(487, 32);
+            this.ml_degrees_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_degrees_title.Name = "ml_degrees_title";
+            this.ml_degrees_title.Size = new System.Drawing.Size(92, 27);
+            this.ml_degrees_title.TabIndex = 9;
+            this.ml_degrees_title.Text = "Degrees";
             // 
-            // ml_link_title4
+            // ml_minors_title
             // 
-            this.ml_link_title4.AutoSize = true;
-            this.ml_link_title4.Depth = 0;
-            this.ml_link_title4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_link_title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_link_title4.Location = new System.Drawing.Point(710, 394);
-            this.ml_link_title4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_link_title4.Name = "ml_link_title4";
-            this.ml_link_title4.Size = new System.Drawing.Size(111, 27);
-            this.ml_link_title4.TabIndex = 7;
-            this.ml_link_title4.Text = "Title Link4";
+            this.ml_minors_title.AutoSize = true;
+            this.ml_minors_title.Depth = 0;
+            this.ml_minors_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_minors_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_minors_title.Location = new System.Drawing.Point(539, 49);
+            this.ml_minors_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_minors_title.Name = "ml_minors_title";
+            this.ml_minors_title.Size = new System.Drawing.Size(79, 27);
+            this.ml_minors_title.TabIndex = 9;
+            this.ml_minors_title.Text = "Minors";
             // 
-            // ll_otherLink1
+            // ml_employment_title
             // 
-            this.ll_otherLink1.AutoSize = true;
-            this.ll_otherLink1.Location = new System.Drawing.Point(127, 319);
-            this.ll_otherLink1.Name = "ll_otherLink1";
-            this.ll_otherLink1.Size = new System.Drawing.Size(91, 22);
-            this.ll_otherLink1.TabIndex = 8;
-            this.ll_otherLink1.TabStop = true;
-            this.ll_otherLink1.Text = "linkLabel2";
-            this.ll_otherLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            this.ml_employment_title.AutoSize = true;
+            this.ml_employment_title.Depth = 0;
+            this.ml_employment_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_employment_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_employment_title.Location = new System.Drawing.Point(544, 17);
+            this.ml_employment_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_employment_title.Name = "ml_employment_title";
+            this.ml_employment_title.Size = new System.Drawing.Size(134, 27);
+            this.ml_employment_title.TabIndex = 22;
+            this.ml_employment_title.Text = "Employment";
             // 
-            // ll_otherLink2
+            // ml_people_title
             // 
-            this.ll_otherLink2.AutoSize = true;
-            this.ll_otherLink2.Location = new System.Drawing.Point(127, 454);
-            this.ll_otherLink2.Name = "ll_otherLink2";
-            this.ll_otherLink2.Size = new System.Drawing.Size(91, 22);
-            this.ll_otherLink2.TabIndex = 9;
-            this.ll_otherLink2.TabStop = true;
-            this.ll_otherLink2.Text = "linkLabel3";
-            this.ll_otherLink2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            this.ml_people_title.AutoSize = true;
+            this.ml_people_title.Depth = 0;
+            this.ml_people_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_people_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_people_title.Location = new System.Drawing.Point(538, 20);
+            this.ml_people_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_people_title.Name = "ml_people_title";
+            this.ml_people_title.Size = new System.Drawing.Size(80, 27);
+            this.ml_people_title.TabIndex = 2;
+            this.ml_people_title.Text = "People";
             // 
-            // ll_otherLink3
+            // ml_research_title
             // 
-            this.ll_otherLink3.AutoSize = true;
-            this.ll_otherLink3.Location = new System.Drawing.Point(715, 332);
-            this.ll_otherLink3.Name = "ll_otherLink3";
-            this.ll_otherLink3.Size = new System.Drawing.Size(91, 22);
-            this.ll_otherLink3.TabIndex = 10;
-            this.ll_otherLink3.TabStop = true;
-            this.ll_otherLink3.Text = "linkLabel4";
-            this.ll_otherLink3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
-            // 
-            // ll_otherLink4
-            // 
-            this.ll_otherLink4.AutoSize = true;
-            this.ll_otherLink4.Location = new System.Drawing.Point(715, 454);
-            this.ll_otherLink4.Name = "ll_otherLink4";
-            this.ll_otherLink4.Size = new System.Drawing.Size(91, 22);
-            this.ll_otherLink4.TabIndex = 11;
-            this.ll_otherLink4.TabStop = true;
-            this.ll_otherLink4.Text = "linkLabel5";
-            this.ll_otherLink4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
-            // 
-            // ml_copyright_title
-            // 
-            this.ml_copyright_title.AutoSize = true;
-            this.ml_copyright_title.Depth = 0;
-            this.ml_copyright_title.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_copyright_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_copyright_title.Location = new System.Drawing.Point(467, 531);
-            this.ml_copyright_title.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_copyright_title.Name = "ml_copyright_title";
-            this.ml_copyright_title.Size = new System.Drawing.Size(104, 27);
-            this.ml_copyright_title.TabIndex = 12;
-            this.ml_copyright_title.Text = "Copyright";
-            // 
-            // ll_copyright_news
-            // 
-            this.ll_copyright_news.AutoSize = true;
-            this.ll_copyright_news.Location = new System.Drawing.Point(377, 702);
-            this.ll_copyright_news.Name = "ll_copyright_news";
-            this.ll_copyright_news.Size = new System.Drawing.Size(55, 22);
-            this.ll_copyright_news.TabIndex = 14;
-            this.ll_copyright_news.TabStop = true;
-            this.ll_copyright_news.Text = "News";
-            this.ll_copyright_news.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(322, 561);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(545, 112);
-            this.webBrowser1.TabIndex = 15;
+            this.ml_research_title.AutoSize = true;
+            this.ml_research_title.Depth = 0;
+            this.ml_research_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_research_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_research_title.Location = new System.Drawing.Point(508, 27);
+            this.ml_research_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_research_title.Name = "ml_research_title";
+            this.ml_research_title.Size = new System.Drawing.Size(104, 27);
+            this.ml_research_title.TabIndex = 3;
+            this.ml_research_title.Text = "Research";
             // 
             // Form1
             // 
@@ -1375,6 +1426,14 @@
             this.NewsPage.PerformLayout();
             this.FooterPage.ResumeLayout(false);
             this.FooterPage.PerformLayout();
+            this.panel_link4.ResumeLayout(false);
+            this.panel_link4.PerformLayout();
+            this.panel_link3.ResumeLayout(false);
+            this.panel_link3.PerformLayout();
+            this.panel_link1.ResumeLayout(false);
+            this.panel_link1.PerformLayout();
+            this.panel_link2.ResumeLayout(false);
+            this.panel_link2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1382,7 +1441,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_quote;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.ToolStripMenuItem newsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resourcesToolStripMenuItem;
@@ -1398,12 +1456,10 @@
         private System.Windows.Forms.ToolStripMenuItem graduateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem degreesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem1;
-        private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Label lbl_quote_author;
         private System.Windows.Forms.TabControl tabController_MAIN;
         private System.Windows.Forms.TabPage AboutPage;
         private System.Windows.Forms.TabPage DegreesPage;
-        private System.Windows.Forms.Label lbl_degree_section_title;
         private System.Windows.Forms.Label lbl_degrees_undergrad_title;
         private System.Windows.Forms.Panel panel_uDegrees_CIT;
         private System.Windows.Forms.Panel panel_uDegrees_HCC;
@@ -1419,7 +1475,6 @@
         private System.Windows.Forms.Label lbl_IST_title;
         private System.Windows.Forms.Label lbl_degrees_graduate_Title;
         private System.Windows.Forms.TabPage MinorsPage;
-        private System.Windows.Forms.Label lbl_minors_section_title;
         private System.Windows.Forms.Panel panel_minors_WEBD;
         private System.Windows.Forms.Panel panel_minors_WEBDD;
         private System.Windows.Forms.Panel panel_minors_NETSYS;
@@ -1437,7 +1492,6 @@
         private System.Windows.Forms.Label lbl_minors_WEBD_title;
         private System.Windows.Forms.Label lbl_minors_WEBDD_title;
         private System.Windows.Forms.TabPage EmploymentPage;
-        private System.Windows.Forms.Label lbl_employment_sectionTitle;
         private System.Windows.Forms.Label lbl_employment_introTitle;
         private System.Windows.Forms.TabPage PeoplePage;
         private System.Windows.Forms.TabPage ResearchPage;
@@ -1452,7 +1506,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private MaterialSkin.Controls.MaterialRaisedButton btn_showTables;
         private MaterialSkin.Controls.MaterialRaisedButton btn_moreInfo;
-        private System.Windows.Forms.Label lbl_people_section_title;
         private System.Windows.Forms.Label lbl_people_subtitle;
         private System.Windows.Forms.Panel panel_faculty_container;
         private System.Windows.Forms.TabControl tb_people;
@@ -1460,7 +1513,6 @@
         private System.Windows.Forms.TabPage StaffPage;
         private System.Windows.Forms.Panel panel_staff_container;
         private System.Windows.Forms.Panel panel_research_container;
-        private MaterialSkin.Controls.MaterialLabel ml_research_sectionHeading;
         private System.Windows.Forms.ComboBox cb_research;
         private System.Windows.Forms.Label lbl_studentRes_subTitle;
         private MaterialSkin.Controls.MaterialLabel ml_studentRes_Title;
@@ -1487,7 +1539,17 @@
         private MaterialSkin.Controls.MaterialLabel ml_link_title1;
         private MaterialSkin.Controls.MaterialLabel ml_copyright_title;
         private System.Windows.Forms.LinkLabel ll_copyright_news;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser wb_copyright;
+        private System.Windows.Forms.Panel panel_link4;
+        private System.Windows.Forms.Panel panel_link1;
+        private System.Windows.Forms.Panel panel_link3;
+        private System.Windows.Forms.Panel panel_link2;
+        private MaterialSkin.Controls.MaterialLabel ml_about_title;
+        private MaterialSkin.Controls.MaterialLabel ml_degrees_title;
+        private MaterialSkin.Controls.MaterialLabel ml_minors_title;
+        private MaterialSkin.Controls.MaterialLabel ml_employment_title;
+        private MaterialSkin.Controls.MaterialLabel ml_people_title;
+        private MaterialSkin.Controls.MaterialLabel ml_research_title;
     }
 }
 
