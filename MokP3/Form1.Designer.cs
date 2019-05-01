@@ -1016,6 +1016,7 @@
             this.btn_coopEnrollment.TabIndex = 4;
             this.btn_coopEnrollment.Text = "Co-op Enrollment";
             this.btn_coopEnrollment.UseVisualStyleBackColor = true;
+            this.btn_coopEnrollment.Click += new System.EventHandler(this.btn_coopEnrollment_Click);
             // 
             // btn_facultyAdvisors
             // 

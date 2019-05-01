@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="CoopEnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoopEnrollmentForm.Designer.cs">
+      <DependentUpon>CoopEnrollmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Degrees.cs" />
     <Compile Include="EachDegree.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,9 @@
     <Compile Include="Tables.Designer.cs">
       <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CoopEnrollmentForm.resx">
+      <DependentUpon>CoopEnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EachDegree.resx">
       <DependentUpon>EachDegree.cs</DependentUpon>
     </EmbeddedResource>

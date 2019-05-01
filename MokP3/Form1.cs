@@ -626,6 +626,13 @@ namespace MokP3
             FormsForm ff = new FormsForm(resources.forms);
             ff.ShowDialog();
         }
+
+        // COOP ENROLLMENT
+        private void btn_coopEnrollment_Click(object sender, EventArgs e)
+        {
+            CoopEnrollmentForm cef = new CoopEnrollmentForm(resources.coopEnrollment);
+            cef.ShowDialog();
+        }
         #endregion
 
 
@@ -694,6 +701,5 @@ namespace MokP3
 
 
         #endregion
-
     }
 }
