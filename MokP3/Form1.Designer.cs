@@ -117,10 +117,25 @@
             this.lbl_studentRes_subTitle = new System.Windows.Forms.Label();
             this.ml_studentRes_Title = new MaterialSkin.Controls.MaterialLabel();
             this.NewsPage = new System.Windows.Forms.TabPage();
+            this.lv_news = new System.Windows.Forms.ListView();
+            this.ml_news_title = new MaterialSkin.Controls.MaterialLabel();
             this.FooterPage = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ml_news_title = new MaterialSkin.Controls.MaterialLabel();
-            this.lv_news = new System.Windows.Forms.ListView();
+            this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
+            this.lbl_social_tweet = new System.Windows.Forms.Label();
+            this.ll_twitter = new System.Windows.Forms.LinkLabel();
+            this.ll_facebook = new System.Windows.Forms.LinkLabel();
+            this.ml_link_title1 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title2 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title3 = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_link_title4 = new MaterialSkin.Controls.MaterialLabel();
+            this.ll_otherLink1 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink2 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink3 = new System.Windows.Forms.LinkLabel();
+            this.ll_otherLink4 = new System.Windows.Forms.LinkLabel();
+            this.ml_copyright_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ll_copyright_news = new System.Windows.Forms.LinkLabel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -149,6 +164,7 @@
             this.ResearchPage.SuspendLayout();
             this.ResourcesPage.SuspendLayout();
             this.NewsPage.SuspendLayout();
+            this.FooterPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_quote
@@ -1076,15 +1092,13 @@
             this.NewsPage.UseVisualStyleBackColor = true;
             this.NewsPage.Enter += new System.EventHandler(this.newsPage_Enter);
             // 
-            // FooterPage
+            // lv_news
             // 
-            this.FooterPage.Location = new System.Drawing.Point(4, 31);
-            this.FooterPage.Name = "FooterPage";
-            this.FooterPage.Padding = new System.Windows.Forms.Padding(3);
-            this.FooterPage.Size = new System.Drawing.Size(1265, 753);
-            this.FooterPage.TabIndex = 7;
-            this.FooterPage.Text = "Footer";
-            this.FooterPage.UseVisualStyleBackColor = true;
+            this.lv_news.Location = new System.Drawing.Point(26, 89);
+            this.lv_news.Name = "lv_news";
+            this.lv_news.Size = new System.Drawing.Size(1231, 641);
+            this.lv_news.TabIndex = 2;
+            this.lv_news.UseCompatibleStateImageBehavior = false;
             // 
             // ml_news_title
             // 
@@ -1099,13 +1113,203 @@
             this.ml_news_title.TabIndex = 1;
             this.ml_news_title.Text = "News";
             // 
-            // lv_news
+            // FooterPage
             // 
-            this.lv_news.Location = new System.Drawing.Point(26, 89);
-            this.lv_news.Name = "lv_news";
-            this.lv_news.Size = new System.Drawing.Size(1231, 641);
-            this.lv_news.TabIndex = 2;
-            this.lv_news.UseCompatibleStateImageBehavior = false;
+            this.FooterPage.Controls.Add(this.webBrowser1);
+            this.FooterPage.Controls.Add(this.ll_copyright_news);
+            this.FooterPage.Controls.Add(this.ml_copyright_title);
+            this.FooterPage.Controls.Add(this.ll_otherLink4);
+            this.FooterPage.Controls.Add(this.ll_otherLink3);
+            this.FooterPage.Controls.Add(this.ll_otherLink2);
+            this.FooterPage.Controls.Add(this.ll_otherLink1);
+            this.FooterPage.Controls.Add(this.ml_link_title4);
+            this.FooterPage.Controls.Add(this.ml_link_title3);
+            this.FooterPage.Controls.Add(this.ml_link_title2);
+            this.FooterPage.Controls.Add(this.ml_link_title1);
+            this.FooterPage.Controls.Add(this.ll_facebook);
+            this.FooterPage.Controls.Add(this.ll_twitter);
+            this.FooterPage.Controls.Add(this.lbl_social_tweet);
+            this.FooterPage.Controls.Add(this.ml_other_title);
+            this.FooterPage.Location = new System.Drawing.Point(4, 31);
+            this.FooterPage.Name = "FooterPage";
+            this.FooterPage.Padding = new System.Windows.Forms.Padding(3);
+            this.FooterPage.Size = new System.Drawing.Size(1265, 753);
+            this.FooterPage.TabIndex = 7;
+            this.FooterPage.Text = "Other";
+            this.FooterPage.UseVisualStyleBackColor = true;
+            this.FooterPage.Enter += new System.EventHandler(this.footerPage_Enter);
+            // 
+            // ml_other_title
+            // 
+            this.ml_other_title.AutoSize = true;
+            this.ml_other_title.Depth = 0;
+            this.ml_other_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_other_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_other_title.Location = new System.Drawing.Point(484, 35);
+            this.ml_other_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_other_title.Name = "ml_other_title";
+            this.ml_other_title.Size = new System.Drawing.Size(54, 27);
+            this.ml_other_title.TabIndex = 0;
+            this.ml_other_title.Text = "Title";
+            // 
+            // lbl_social_tweet
+            // 
+            this.lbl_social_tweet.AutoSize = true;
+            this.lbl_social_tweet.Location = new System.Drawing.Point(340, 68);
+            this.lbl_social_tweet.Name = "lbl_social_tweet";
+            this.lbl_social_tweet.Size = new System.Drawing.Size(60, 22);
+            this.lbl_social_tweet.TabIndex = 1;
+            this.lbl_social_tweet.Text = "Tweet";
+            // 
+            // ll_twitter
+            // 
+            this.ll_twitter.AutoSize = true;
+            this.ll_twitter.Location = new System.Drawing.Point(422, 137);
+            this.ll_twitter.Name = "ll_twitter";
+            this.ll_twitter.Size = new System.Drawing.Size(203, 22);
+            this.ll_twitter.TabIndex = 2;
+            this.ll_twitter.TabStop = true;
+            this.ll_twitter.Text = "https://twitter.com/istatrit";
+            this.ll_twitter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_facebook
+            // 
+            this.ll_facebook.AutoSize = true;
+            this.ll_facebook.Location = new System.Drawing.Point(422, 180);
+            this.ll_facebook.Name = "ll_facebook";
+            this.ll_facebook.Size = new System.Drawing.Size(296, 22);
+            this.ll_facebook.TabIndex = 3;
+            this.ll_facebook.TabStop = true;
+            this.ll_facebook.Text = "https://www.facebook.com/ISTatRIT";
+            this.ll_facebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ml_link_title1
+            // 
+            this.ml_link_title1.AutoSize = true;
+            this.ml_link_title1.Depth = 0;
+            this.ml_link_title1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title1.Location = new System.Drawing.Point(126, 272);
+            this.ml_link_title1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title1.Name = "ml_link_title1";
+            this.ml_link_title1.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title1.TabIndex = 4;
+            this.ml_link_title1.Text = "Title Link1";
+            // 
+            // ml_link_title2
+            // 
+            this.ml_link_title2.AutoSize = true;
+            this.ml_link_title2.Depth = 0;
+            this.ml_link_title2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title2.Location = new System.Drawing.Point(126, 394);
+            this.ml_link_title2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title2.Name = "ml_link_title2";
+            this.ml_link_title2.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title2.TabIndex = 5;
+            this.ml_link_title2.Text = "Title Link2";
+            // 
+            // ml_link_title3
+            // 
+            this.ml_link_title3.AutoSize = true;
+            this.ml_link_title3.Depth = 0;
+            this.ml_link_title3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title3.Location = new System.Drawing.Point(710, 272);
+            this.ml_link_title3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title3.Name = "ml_link_title3";
+            this.ml_link_title3.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title3.TabIndex = 6;
+            this.ml_link_title3.Text = "Title Link3";
+            // 
+            // ml_link_title4
+            // 
+            this.ml_link_title4.AutoSize = true;
+            this.ml_link_title4.Depth = 0;
+            this.ml_link_title4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_link_title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_link_title4.Location = new System.Drawing.Point(710, 394);
+            this.ml_link_title4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_link_title4.Name = "ml_link_title4";
+            this.ml_link_title4.Size = new System.Drawing.Size(111, 27);
+            this.ml_link_title4.TabIndex = 7;
+            this.ml_link_title4.Text = "Title Link4";
+            // 
+            // ll_otherLink1
+            // 
+            this.ll_otherLink1.AutoSize = true;
+            this.ll_otherLink1.Location = new System.Drawing.Point(127, 319);
+            this.ll_otherLink1.Name = "ll_otherLink1";
+            this.ll_otherLink1.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink1.TabIndex = 8;
+            this.ll_otherLink1.TabStop = true;
+            this.ll_otherLink1.Text = "linkLabel2";
+            this.ll_otherLink1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink2
+            // 
+            this.ll_otherLink2.AutoSize = true;
+            this.ll_otherLink2.Location = new System.Drawing.Point(127, 454);
+            this.ll_otherLink2.Name = "ll_otherLink2";
+            this.ll_otherLink2.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink2.TabIndex = 9;
+            this.ll_otherLink2.TabStop = true;
+            this.ll_otherLink2.Text = "linkLabel3";
+            this.ll_otherLink2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink3
+            // 
+            this.ll_otherLink3.AutoSize = true;
+            this.ll_otherLink3.Location = new System.Drawing.Point(715, 332);
+            this.ll_otherLink3.Name = "ll_otherLink3";
+            this.ll_otherLink3.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink3.TabIndex = 10;
+            this.ll_otherLink3.TabStop = true;
+            this.ll_otherLink3.Text = "linkLabel4";
+            this.ll_otherLink3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ll_otherLink4
+            // 
+            this.ll_otherLink4.AutoSize = true;
+            this.ll_otherLink4.Location = new System.Drawing.Point(715, 454);
+            this.ll_otherLink4.Name = "ll_otherLink4";
+            this.ll_otherLink4.Size = new System.Drawing.Size(91, 22);
+            this.ll_otherLink4.TabIndex = 11;
+            this.ll_otherLink4.TabStop = true;
+            this.ll_otherLink4.Text = "linkLabel5";
+            this.ll_otherLink4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // ml_copyright_title
+            // 
+            this.ml_copyright_title.AutoSize = true;
+            this.ml_copyright_title.Depth = 0;
+            this.ml_copyright_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_copyright_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_copyright_title.Location = new System.Drawing.Point(467, 531);
+            this.ml_copyright_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_copyright_title.Name = "ml_copyright_title";
+            this.ml_copyright_title.Size = new System.Drawing.Size(104, 27);
+            this.ml_copyright_title.TabIndex = 12;
+            this.ml_copyright_title.Text = "Copyright";
+            // 
+            // ll_copyright_news
+            // 
+            this.ll_copyright_news.AutoSize = true;
+            this.ll_copyright_news.Location = new System.Drawing.Point(377, 702);
+            this.ll_copyright_news.Name = "ll_copyright_news";
+            this.ll_copyright_news.Size = new System.Drawing.Size(55, 22);
+            this.ll_copyright_news.TabIndex = 14;
+            this.ll_copyright_news.TabStop = true;
+            this.ll_copyright_news.Text = "News";
+            this.ll_copyright_news.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicks);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(322, 561);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(545, 112);
+            this.webBrowser1.TabIndex = 15;
             // 
             // Form1
             // 
@@ -1169,6 +1373,8 @@
             this.ResourcesPage.PerformLayout();
             this.NewsPage.ResumeLayout(false);
             this.NewsPage.PerformLayout();
+            this.FooterPage.ResumeLayout(false);
+            this.FooterPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1267,6 +1473,21 @@
         private System.Windows.Forms.TabPage NewsPage;
         private MaterialSkin.Controls.MaterialLabel ml_news_title;
         private System.Windows.Forms.ListView lv_news;
+        private MaterialSkin.Controls.MaterialLabel ml_other_title;
+        private System.Windows.Forms.Label lbl_social_tweet;
+        private System.Windows.Forms.LinkLabel ll_facebook;
+        private System.Windows.Forms.LinkLabel ll_twitter;
+        private System.Windows.Forms.LinkLabel ll_otherLink4;
+        private System.Windows.Forms.LinkLabel ll_otherLink3;
+        private System.Windows.Forms.LinkLabel ll_otherLink2;
+        private System.Windows.Forms.LinkLabel ll_otherLink1;
+        private MaterialSkin.Controls.MaterialLabel ml_link_title4;
+        private MaterialSkin.Controls.MaterialLabel ml_link_title3;
+        private MaterialSkin.Controls.MaterialLabel ml_link_title2;
+        private MaterialSkin.Controls.MaterialLabel ml_link_title1;
+        private MaterialSkin.Controls.MaterialLabel ml_copyright_title;
+        private System.Windows.Forms.LinkLabel ll_copyright_news;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

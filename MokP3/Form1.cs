@@ -32,7 +32,7 @@ namespace MokP3
         Research research;
         Resources resources;
         News news;
-        //Footer footer;
+        Footer footer;
 
 
         public Form1()
@@ -72,14 +72,6 @@ namespace MokP3
             lbl_quote.Font = new Font("Arial", 9);
 
             lbl_quote_author.Text = "- " + about.quoteAuthor;
-
-            // NEWS
-            // string jsonNews = rj.getRESTDataJSON("/news/");
-            //News news = JToken.Parse(jsonNews).ToObject<News>();
-
-            // FOOTER
-            // string jsonFooter = rj.getRESTDataJSON("/footer/");
-            // footer = JToken.Parse(jsonFooter).ToObject<Footer>();
         }
 
 
@@ -243,7 +235,6 @@ namespace MokP3
             lbl_coop_content.MaximumSize = new Size(325, 400);
             lbl_coop_content.Font = new Font("Arial", 9);
         }
-
 
         // Show employment/coop tables!
         private void btn_showTables_Click(object sender, EventArgs e)
@@ -542,10 +533,9 @@ namespace MokP3
         private void getResearch(object sender, EventArgs e) 
         {
             Button clickedButton = sender as Button;
-            //Console.WriteLine(clickedButton.Name);
-
 
             // If wanted to make it reusable, if there are more areas added in future!
+            // Could've just named the btn without the "btn_" section though
             // get length of string
             // get last index of bit
             // length - index
@@ -555,7 +545,6 @@ namespace MokP3
             int nameLength = buttonName.Length;
             int name = nameLength - btnSection;
             string researchName = buttonName.Substring(btnSection, name);
-            Console.WriteLine(researchName);
 
             // Make objects to find. See which one is not null to send over
             ByInterestArea bia = research.byInterestArea.Find(x => x.areaName == researchName);
@@ -576,7 +565,6 @@ namespace MokP3
             er.ShowDialog();
         }
         #endregion
-
 
         #region ResourcesPage
         private void resourcesPage_Enter(object sender, EventArgs e)
@@ -636,8 +624,42 @@ namespace MokP3
         #endregion
 
         #region NewsPage
+        private void newsPage_Enter(object sender, EventArgs e)
+        {
+            if (news == null)
+            {
+                string jsonNews = rj.getRESTDataJSON("/news/");
+                news = JToken.Parse(jsonNews).ToObject<News>();
+            }
 
+            lv_news.View = View.Details;
+            lv_news.GridLines = true;
+            lv_news.FullRowSelect = true;
+            lv_news.Width = 800;
+
+            lv_news.Columns.Add("Date", 100);
+            lv_news.Columns.Add("Title", 100);
+            lv_news.Columns.Add("Description", 600);
+
+            ListViewItem lvItem;
+            int newsLength = news.older.Count;
+            for (int i = 0; i < newsLength; i++)
+            {
+                lvItem = new ListViewItem(new string[]
+                {
+                    news.older[i].date,
+                    news.older[i].title,
+                    news.older[i].description
+                });
+
+                lv_news.Items.Add(lvItem);
+            }
+
+        }
         #endregion
+
+
+
 
 
 
@@ -702,37 +724,43 @@ namespace MokP3
 
         #endregion
 
-        private void newsPage_Enter(object sender, EventArgs e)
+        private void footerPage_Enter(object sender, EventArgs e)
         {
-            if (news == null)
+            if(footer == null)
             {
-                string jsonNews = rj.getRESTDataJSON("/news/");
-                news = JToken.Parse(jsonNews).ToObject<News>();
+                string jsonFooter = rj.getRESTDataJSON("/footer/");
+                footer = JToken.Parse(jsonFooter).ToObject<Footer>();
             }
 
-            lv_news.View = View.Details;
-            lv_news.GridLines = true;
-            lv_news.FullRowSelect = true;
-            lv_news.Width = 800;
+            // SOCIAL   
+            ml_other_title.Text = footer.social.title;
+            lbl_social_tweet.Text = footer.social.tweet + "\n" + footer.social.by;
 
-            lv_news.Columns.Add("Date", 100);
-            lv_news.Columns.Add("Title", 100);
-            lv_news.Columns.Add("Description", 600);
+            // Links
+            ml_link_title1.Text = footer.quickLinks[0].title;
+            ml_link_title2.Text = footer.quickLinks[1].title;
+            ml_link_title3.Text = footer.quickLinks[2].title;
+            ml_link_title4.Text = footer.quickLinks[3].title;
 
-            ListViewItem lvItem;
-            int newsLength = news.older.Count;
-            for (int i = 0; i < newsLength; i++)
-            {
-                lvItem = new ListViewItem(new string[]
-                {
-                    news.older[i].date,
-                    news.older[i].title,
-                    news.older[i].description
-                });
-                
-                lv_news.Items.Add(lvItem);
-            }
+            ll_otherLink1.Text = footer.quickLinks[0].href;
+            ll_otherLink2.Text = footer.quickLinks[1].href;
+            ll_otherLink3.Text = footer.quickLinks[2].href;
+            ll_otherLink4.Text = footer.quickLinks[3].href;
 
+            // COPYRIGHT
+            ml_copyright_title.Text = footer.copyright.title;
+           // lbl_html.Text = footer.copyright.html;
+
+            ll_copyright_news.Text = footer.news;
+
+            webBrowser1.DocumentText = footer.copyright.html;
+
+        }
+
+        private void linkClicks(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LinkLabel ll = sender as LinkLabel;
+            System.Diagnostics.Process.Start(ll.Text);
         }
     }
 }
