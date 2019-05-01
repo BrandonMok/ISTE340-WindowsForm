@@ -585,8 +585,6 @@ namespace MokP3
             {
                 string jsonResources = rj.getRESTDataJSON("/resources/");
                 resources = JToken.Parse(jsonResources).ToObject<Resources>();
-                ////populate the link label with the RIT JobZoneLink!
-                //linkLabel1.Text = resources.coopEnrollment.RITJobZoneGuidelink;
             }
 
             // Set the subtitle

@@ -64,9 +64,6 @@ namespace MokP3
 
         private void loadAcademicAdvisors()
         {
-            // First time! Only ran once
-            //if (academicAdvisorPanel == null)
-            //{
                 academicAdvisorPanel = new Panel();
                 academicAdvisorPanel.Dock = DockStyle.Fill;
 
