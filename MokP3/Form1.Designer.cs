@@ -986,6 +986,7 @@
             this.btn_forms.TabIndex = 7;
             this.btn_forms.Text = "Forms";
             this.btn_forms.UseVisualStyleBackColor = true;
+            this.btn_forms.Click += new System.EventHandler(this.btn_forms_Click);
             // 
             // btn_studentAmbassadors
             // 

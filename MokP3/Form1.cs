@@ -621,6 +621,13 @@ namespace MokP3
             StudentAmbassadorsForm saf = new StudentAmbassadorsForm(resources.studentAmbassadors);
             saf.ShowDialog();
         }
+
+        // FORMS
+        private void btn_forms_Click(object sender, EventArgs e)
+        {
+            FormsForm ff = new FormsForm(resources.forms);
+            ff.ShowDialog();
+        }
         #endregion
 
 
@@ -689,5 +696,6 @@ namespace MokP3
 
 
         #endregion
+
     }
 }
