@@ -28,27 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_specific_minor_Name = new System.Windows.Forms.Label();
             this.lbl_specific_minor_Title = new System.Windows.Forms.Label();
             this.lbl_specific_minor_desc = new System.Windows.Forms.Label();
             this.lbl_specific_minor_concentrations = new System.Windows.Forms.Label();
             this.lbl_specific_minor_concentrationHeader = new System.Windows.Forms.Label();
             this.lbl_specific_minor_note = new System.Windows.Forms.Label();
+            this.panel_minor_desc = new System.Windows.Forms.Panel();
+            this.panel_minor_note = new System.Windows.Forms.Panel();
+            this.panel_concentrations = new System.Windows.Forms.Panel();
+            this.ml_minor_name = new MaterialSkin.Controls.MaterialLabel();
+            this.panel_minor_desc.SuspendLayout();
+            this.panel_minor_note.SuspendLayout();
+            this.panel_concentrations.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbl_specific_minor_Name
-            // 
-            this.lbl_specific_minor_Name.AutoSize = true;
-            this.lbl_specific_minor_Name.Location = new System.Drawing.Point(344, 112);
-            this.lbl_specific_minor_Name.Name = "lbl_specific_minor_Name";
-            this.lbl_specific_minor_Name.Size = new System.Drawing.Size(94, 20);
-            this.lbl_specific_minor_Name.TabIndex = 0;
-            this.lbl_specific_minor_Name.Text = "Minor Name";
             // 
             // lbl_specific_minor_Title
             // 
             this.lbl_specific_minor_Title.AutoSize = true;
-            this.lbl_specific_minor_Title.Location = new System.Drawing.Point(219, 140);
+            this.lbl_specific_minor_Title.Location = new System.Drawing.Point(241, 152);
             this.lbl_specific_minor_Title.Name = "lbl_specific_minor_Title";
             this.lbl_specific_minor_Title.Size = new System.Drawing.Size(81, 20);
             this.lbl_specific_minor_Title.TabIndex = 1;
@@ -57,7 +54,7 @@
             // lbl_specific_minor_desc
             // 
             this.lbl_specific_minor_desc.AutoSize = true;
-            this.lbl_specific_minor_desc.Location = new System.Drawing.Point(45, 195);
+            this.lbl_specific_minor_desc.Location = new System.Drawing.Point(-4, 0);
             this.lbl_specific_minor_desc.Name = "lbl_specific_minor_desc";
             this.lbl_specific_minor_desc.Size = new System.Drawing.Size(132, 20);
             this.lbl_specific_minor_desc.TabIndex = 2;
@@ -66,7 +63,7 @@
             // lbl_specific_minor_concentrations
             // 
             this.lbl_specific_minor_concentrations.AutoSize = true;
-            this.lbl_specific_minor_concentrations.Location = new System.Drawing.Point(344, 466);
+            this.lbl_specific_minor_concentrations.Location = new System.Drawing.Point(23, 44);
             this.lbl_specific_minor_concentrations.Name = "lbl_specific_minor_concentrations";
             this.lbl_specific_minor_concentrations.Size = new System.Drawing.Size(117, 20);
             this.lbl_specific_minor_concentrations.TabIndex = 3;
@@ -75,7 +72,7 @@
             // lbl_specific_minor_concentrationHeader
             // 
             this.lbl_specific_minor_concentrationHeader.AutoSize = true;
-            this.lbl_specific_minor_concentrationHeader.Location = new System.Drawing.Point(344, 435);
+            this.lbl_specific_minor_concentrationHeader.Location = new System.Drawing.Point(23, 13);
             this.lbl_specific_minor_concentrationHeader.Name = "lbl_specific_minor_concentrationHeader";
             this.lbl_specific_minor_concentrationHeader.Size = new System.Drawing.Size(117, 20);
             this.lbl_specific_minor_concentrationHeader.TabIndex = 4;
@@ -84,36 +81,81 @@
             // lbl_specific_minor_note
             // 
             this.lbl_specific_minor_note.AutoSize = true;
-            this.lbl_specific_minor_note.Location = new System.Drawing.Point(12, 553);
+            this.lbl_specific_minor_note.Location = new System.Drawing.Point(13, 18);
             this.lbl_specific_minor_note.Name = "lbl_specific_minor_note";
             this.lbl_specific_minor_note.Size = new System.Drawing.Size(0, 20);
             this.lbl_specific_minor_note.TabIndex = 5;
+            // 
+            // panel_minor_desc
+            // 
+            this.panel_minor_desc.Controls.Add(this.lbl_specific_minor_desc);
+            this.panel_minor_desc.Location = new System.Drawing.Point(47, 185);
+            this.panel_minor_desc.Name = "panel_minor_desc";
+            this.panel_minor_desc.Size = new System.Drawing.Size(869, 246);
+            this.panel_minor_desc.TabIndex = 6;
+            // 
+            // panel_minor_note
+            // 
+            this.panel_minor_note.Controls.Add(this.lbl_specific_minor_note);
+            this.panel_minor_note.Location = new System.Drawing.Point(47, 671);
+            this.panel_minor_note.Name = "panel_minor_note";
+            this.panel_minor_note.Size = new System.Drawing.Size(860, 83);
+            this.panel_minor_note.TabIndex = 7;
+            // 
+            // panel_concentrations
+            // 
+            this.panel_concentrations.Controls.Add(this.lbl_specific_minor_concentrationHeader);
+            this.panel_concentrations.Controls.Add(this.lbl_specific_minor_concentrations);
+            this.panel_concentrations.Location = new System.Drawing.Point(268, 451);
+            this.panel_concentrations.Name = "panel_concentrations";
+            this.panel_concentrations.Size = new System.Drawing.Size(326, 209);
+            this.panel_concentrations.TabIndex = 8;
+            // 
+            // ml_minor_name
+            // 
+            this.ml_minor_name.AutoSize = true;
+            this.ml_minor_name.Depth = 0;
+            this.ml_minor_name.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_minor_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_minor_name.Location = new System.Drawing.Point(332, 106);
+            this.ml_minor_name.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_minor_name.Name = "ml_minor_name";
+            this.ml_minor_name.Size = new System.Drawing.Size(132, 27);
+            this.ml_minor_name.TabIndex = 9;
+            this.ml_minor_name.Text = "Minor Name";
             // 
             // EachMinor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 606);
-            this.Controls.Add(this.lbl_specific_minor_note);
-            this.Controls.Add(this.lbl_specific_minor_concentrationHeader);
-            this.Controls.Add(this.lbl_specific_minor_concentrations);
-            this.Controls.Add(this.lbl_specific_minor_desc);
+            this.ClientSize = new System.Drawing.Size(954, 780);
+            this.Controls.Add(this.ml_minor_name);
+            this.Controls.Add(this.panel_concentrations);
+            this.Controls.Add(this.panel_minor_note);
+            this.Controls.Add(this.panel_minor_desc);
             this.Controls.Add(this.lbl_specific_minor_Title);
-            this.Controls.Add(this.lbl_specific_minor_Name);
             this.Name = "EachMinor";
             this.Text = "EachMinor";
+            this.panel_minor_desc.ResumeLayout(false);
+            this.panel_minor_desc.PerformLayout();
+            this.panel_minor_note.ResumeLayout(false);
+            this.panel_minor_note.PerformLayout();
+            this.panel_concentrations.ResumeLayout(false);
+            this.panel_concentrations.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_specific_minor_Name;
         private System.Windows.Forms.Label lbl_specific_minor_Title;
         private System.Windows.Forms.Label lbl_specific_minor_desc;
         private System.Windows.Forms.Label lbl_specific_minor_concentrations;
         private System.Windows.Forms.Label lbl_specific_minor_concentrationHeader;
         private System.Windows.Forms.Label lbl_specific_minor_note;
+        private System.Windows.Forms.Panel panel_minor_desc;
+        private System.Windows.Forms.Panel panel_minor_note;
+        private System.Windows.Forms.Panel panel_concentrations;
+        private MaterialSkin.Controls.MaterialLabel ml_minor_name;
     }
 }

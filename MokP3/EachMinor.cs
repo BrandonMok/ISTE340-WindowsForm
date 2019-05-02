@@ -17,25 +17,14 @@ namespace MokP3
         public EachMinor(UgMinor ugm)
         {
             InitializeComponent();
-            this.Size = new Size(600, 450); // Change size of the form
-            this.Text = "Minor";  // Change title of 
-
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
-            );
-
+            setFormStyle();
 
 
             // Setting all the information onto form
-            lbl_specific_minor_Name.Text = ugm.name;
+            ml_minor_name.Text = ugm.name;
             lbl_specific_minor_Title.Text = ugm.title;
             lbl_specific_minor_desc.Text = ugm.description;
-            lbl_specific_minor_desc.MaximumSize = new Size(500, 300);
+            lbl_specific_minor_desc.MaximumSize = new Size(550, 300);
 
 
             // courses section - is a list
@@ -56,8 +45,25 @@ namespace MokP3
             if (ugm.note != "")
             {
                 lbl_specific_minor_note.Text = "**" + ugm.note;
-                lbl_specific_minor_note.MaximumSize = new Size(500, 0);
+                lbl_specific_minor_note.MaximumSize = new Size(550, 0);
             }
+        }
+
+
+        // Form Styling setup
+        private void setFormStyle()
+        {
+            this.Size = new Size(600, 500); // Change size of the form
+            this.Text = "Minor";  // Change title of 
+
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
         }
     }
 }

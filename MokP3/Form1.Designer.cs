@@ -89,10 +89,8 @@
             this.btn_showTables = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel_coop = new System.Windows.Forms.Panel();
             this.lbl_coop_content = new System.Windows.Forms.Label();
-            this.lbl_coop_title = new System.Windows.Forms.Label();
             this.panel_employment = new System.Windows.Forms.Panel();
             this.lbl_employment_content = new System.Windows.Forms.Label();
-            this.lbl_employment_title = new System.Windows.Forms.Label();
             this.lbl_employment_introTitle = new System.Windows.Forms.Label();
             this.PeoplePage = new System.Windows.Forms.TabPage();
             this.ml_people_title = new MaterialSkin.Controls.MaterialLabel();
@@ -139,6 +137,8 @@
             this.lbl_social_tweet = new System.Windows.Forms.Label();
             this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ml_employmentSect_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_coopSection_title = new MaterialSkin.Controls.MaterialLabel();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -594,7 +594,7 @@
             // lbl_minors_WEBDD_title
             // 
             this.lbl_minors_WEBDD_title.AutoSize = true;
-            this.lbl_minors_WEBDD_title.Location = new System.Drawing.Point(59, 44);
+            this.lbl_minors_WEBDD_title.Location = new System.Drawing.Point(59, 43);
             this.lbl_minors_WEBDD_title.Name = "lbl_minors_WEBDD_title";
             this.lbl_minors_WEBDD_title.Size = new System.Drawing.Size(77, 22);
             this.lbl_minors_WEBDD_title.TabIndex = 0;
@@ -616,7 +616,7 @@
             // lbl_minors_NETSYS_title
             // 
             this.lbl_minors_NETSYS_title.AutoSize = true;
-            this.lbl_minors_NETSYS_title.Location = new System.Drawing.Point(59, 43);
+            this.lbl_minors_NETSYS_title.Location = new System.Drawing.Point(56, 43);
             this.lbl_minors_NETSYS_title.Name = "lbl_minors_NETSYS_title";
             this.lbl_minors_NETSYS_title.Size = new System.Drawing.Size(83, 22);
             this.lbl_minors_NETSYS_title.TabIndex = 0;
@@ -638,7 +638,7 @@
             // lbl_minors_MDEV_title
             // 
             this.lbl_minors_MDEV_title.AutoSize = true;
-            this.lbl_minors_MDEV_title.Location = new System.Drawing.Point(69, 43);
+            this.lbl_minors_MDEV_title.Location = new System.Drawing.Point(57, 43);
             this.lbl_minors_MDEV_title.Name = "lbl_minors_MDEV_title";
             this.lbl_minors_MDEV_title.Size = new System.Drawing.Size(61, 22);
             this.lbl_minors_MDEV_title.TabIndex = 0;
@@ -801,8 +801,8 @@
             // panel_coop
             // 
             this.panel_coop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_coop.Controls.Add(this.ml_coopSection_title);
             this.panel_coop.Controls.Add(this.lbl_coop_content);
-            this.panel_coop.Controls.Add(this.lbl_coop_title);
             this.panel_coop.Location = new System.Drawing.Point(660, 92);
             this.panel_coop.Name = "panel_coop";
             this.panel_coop.Size = new System.Drawing.Size(532, 414);
@@ -818,20 +818,11 @@
             this.lbl_coop_content.TabIndex = 2;
             this.lbl_coop_content.Text = "Content";
             // 
-            // lbl_coop_title
-            // 
-            this.lbl_coop_title.AutoSize = true;
-            this.lbl_coop_title.Location = new System.Drawing.Point(149, 19);
-            this.lbl_coop_title.Name = "lbl_coop_title";
-            this.lbl_coop_title.Size = new System.Drawing.Size(192, 22);
-            this.lbl_coop_title.TabIndex = 1;
-            this.lbl_coop_title.Text = "Cooperative Education";
-            // 
             // panel_employment
             // 
             this.panel_employment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_employment.Controls.Add(this.ml_employmentSect_title);
             this.panel_employment.Controls.Add(this.lbl_employment_content);
-            this.panel_employment.Controls.Add(this.lbl_employment_title);
             this.panel_employment.Location = new System.Drawing.Point(34, 92);
             this.panel_employment.Name = "panel_employment";
             this.panel_employment.Size = new System.Drawing.Size(531, 414);
@@ -846,15 +837,6 @@
             this.lbl_employment_content.Size = new System.Drawing.Size(73, 22);
             this.lbl_employment_content.TabIndex = 1;
             this.lbl_employment_content.Text = "Content";
-            // 
-            // lbl_employment_title
-            // 
-            this.lbl_employment_title.AutoSize = true;
-            this.lbl_employment_title.Location = new System.Drawing.Point(169, 19);
-            this.lbl_employment_title.Name = "lbl_employment_title";
-            this.lbl_employment_title.Size = new System.Drawing.Size(108, 22);
-            this.lbl_employment_title.TabIndex = 0;
-            this.lbl_employment_title.Text = "Employment";
             // 
             // lbl_employment_introTitle
             // 
@@ -1371,6 +1353,32 @@
             this.ml_other_title.TabIndex = 0;
             this.ml_other_title.Text = "Title";
             // 
+            // ml_employmentSect_title
+            // 
+            this.ml_employmentSect_title.AutoSize = true;
+            this.ml_employmentSect_title.Depth = 0;
+            this.ml_employmentSect_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_employmentSect_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_employmentSect_title.Location = new System.Drawing.Point(161, 19);
+            this.ml_employmentSect_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_employmentSect_title.Name = "ml_employmentSect_title";
+            this.ml_employmentSect_title.Size = new System.Drawing.Size(134, 27);
+            this.ml_employmentSect_title.TabIndex = 2;
+            this.ml_employmentSect_title.Text = "Employment";
+            // 
+            // ml_coopSection_title
+            // 
+            this.ml_coopSection_title.AutoSize = true;
+            this.ml_coopSection_title.Depth = 0;
+            this.ml_coopSection_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_coopSection_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_coopSection_title.Location = new System.Drawing.Point(145, 19);
+            this.ml_coopSection_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_coopSection_title.Name = "ml_coopSection_title";
+            this.ml_coopSection_title.Size = new System.Drawing.Size(233, 27);
+            this.ml_coopSection_title.TabIndex = 3;
+            this.ml_coopSection_title.Text = "Cooperative Education";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1508,10 +1516,8 @@
         private System.Windows.Forms.TabPage FooterPage;
         private System.Windows.Forms.Panel panel_coop;
         private System.Windows.Forms.Label lbl_coop_content;
-        private System.Windows.Forms.Label lbl_coop_title;
         private System.Windows.Forms.Panel panel_employment;
         private System.Windows.Forms.Label lbl_employment_content;
-        private System.Windows.Forms.Label lbl_employment_title;
         private System.Windows.Forms.ToolTip toolTip1;
         private MaterialSkin.Controls.MaterialRaisedButton btn_showTables;
         private MaterialSkin.Controls.MaterialRaisedButton btn_moreInfo;
@@ -1559,6 +1565,8 @@
         private MaterialSkin.Controls.MaterialLabel ml_employment_title;
         private MaterialSkin.Controls.MaterialLabel ml_people_title;
         private MaterialSkin.Controls.MaterialLabel ml_research_title;
+        private MaterialSkin.Controls.MaterialLabel ml_employmentSect_title;
+        private MaterialSkin.Controls.MaterialLabel ml_coopSection_title;
     }
 }
 
