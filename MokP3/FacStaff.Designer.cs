@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ml_people_username = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_people_name = new System.Windows.Forms.Label();
             this.pb_indv_personImage = new System.Windows.Forms.PictureBox();
             this.lbl_tagline = new System.Windows.Forms.Label();
             this.lbl_people_title = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.lbl_people_email = new System.Windows.Forms.Label();
             this.ll_website = new System.Windows.Forms.LinkLabel();
             this.panel_contactInfo = new System.Windows.Forms.Panel();
+            this.ml_people_name = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_indv_personImage)).BeginInit();
             this.panel_contactInfo.SuspendLayout();
             this.SuspendLayout();
@@ -55,15 +55,6 @@
             this.ml_people_username.Size = new System.Drawing.Size(115, 27);
             this.ml_people_username.TabIndex = 0;
             this.ml_people_username.Text = "UserName";
-            // 
-            // lbl_people_name
-            // 
-            this.lbl_people_name.AutoSize = true;
-            this.lbl_people_name.Location = new System.Drawing.Point(343, 197);
-            this.lbl_people_name.Name = "lbl_people_name";
-            this.lbl_people_name.Size = new System.Drawing.Size(51, 20);
-            this.lbl_people_name.TabIndex = 1;
-            this.lbl_people_name.Text = "Name";
             // 
             // pb_indv_personImage
             // 
@@ -150,17 +141,30 @@
             this.panel_contactInfo.Size = new System.Drawing.Size(268, 222);
             this.panel_contactInfo.TabIndex = 11;
             // 
+            // ml_people_name
+            // 
+            this.ml_people_name.AutoSize = true;
+            this.ml_people_name.Depth = 0;
+            this.ml_people_name.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_people_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_people_name.Location = new System.Drawing.Point(326, 193);
+            this.ml_people_name.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_people_name.Name = "ml_people_name";
+            this.ml_people_name.Size = new System.Drawing.Size(71, 27);
+            this.ml_people_name.TabIndex = 12;
+            this.ml_people_name.Text = "Name";
+            // 
             // FacStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 815);
+            this.Controls.Add(this.ml_people_name);
             this.Controls.Add(this.panel_contactInfo);
             this.Controls.Add(this.lbl_people_interestArea);
             this.Controls.Add(this.lbl_people_title);
             this.Controls.Add(this.lbl_tagline);
             this.Controls.Add(this.pb_indv_personImage);
-            this.Controls.Add(this.lbl_people_name);
             this.Controls.Add(this.ml_people_username);
             this.Name = "FacStaff";
             this.Text = "FacStaff";
@@ -175,7 +179,6 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel ml_people_username;
-        private System.Windows.Forms.Label lbl_people_name;
         private System.Windows.Forms.PictureBox pb_indv_personImage;
         private System.Windows.Forms.Label lbl_tagline;
         private System.Windows.Forms.Label lbl_people_title;
@@ -185,5 +188,6 @@
         private System.Windows.Forms.Label lbl_people_email;
         private System.Windows.Forms.LinkLabel ll_website;
         private System.Windows.Forms.Panel panel_contactInfo;
+        private MaterialSkin.Controls.MaterialLabel ml_people_name;
     }
 }

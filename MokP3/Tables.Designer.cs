@@ -30,8 +30,8 @@
         {
             this.listView_Employment = new System.Windows.Forms.ListView();
             this.listView_Coop = new System.Windows.Forms.ListView();
-            this.lbl_tables_employment = new System.Windows.Forms.Label();
-            this.lbl_tables_coop = new System.Windows.Forms.Label();
+            this.ml_employmentTable_title = new MaterialSkin.Controls.MaterialLabel();
+            this.ml_coopTable_title = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // listView_Employment
@@ -50,23 +50,31 @@
             this.listView_Coop.TabIndex = 13;
             this.listView_Coop.UseCompatibleStateImageBehavior = false;
             // 
-            // lbl_tables_employment
+            // ml_employmentTable_title
             // 
-            this.lbl_tables_employment.AutoSize = true;
-            this.lbl_tables_employment.Location = new System.Drawing.Point(520, 131);
-            this.lbl_tables_employment.Name = "lbl_tables_employment";
-            this.lbl_tables_employment.Size = new System.Drawing.Size(140, 20);
-            this.lbl_tables_employment.TabIndex = 14;
-            this.lbl_tables_employment.Text = "Employment Table";
+            this.ml_employmentTable_title.AutoSize = true;
+            this.ml_employmentTable_title.Depth = 0;
+            this.ml_employmentTable_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_employmentTable_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_employmentTable_title.Location = new System.Drawing.Point(498, 119);
+            this.ml_employmentTable_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_employmentTable_title.Name = "ml_employmentTable_title";
+            this.ml_employmentTable_title.Size = new System.Drawing.Size(193, 27);
+            this.ml_employmentTable_title.TabIndex = 16;
+            this.ml_employmentTable_title.Text = "Employment Table";
             // 
-            // lbl_tables_coop
+            // ml_coopTable_title
             // 
-            this.lbl_tables_coop.AutoSize = true;
-            this.lbl_tables_coop.Location = new System.Drawing.Point(529, 446);
-            this.lbl_tables_coop.Name = "lbl_tables_coop";
-            this.lbl_tables_coop.Size = new System.Drawing.Size(90, 20);
-            this.lbl_tables_coop.TabIndex = 15;
-            this.lbl_tables_coop.Text = "Coop Table";
+            this.ml_coopTable_title.AutoSize = true;
+            this.ml_coopTable_title.Depth = 0;
+            this.ml_coopTable_title.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_coopTable_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_coopTable_title.Location = new System.Drawing.Point(521, 444);
+            this.ml_coopTable_title.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_coopTable_title.Name = "ml_coopTable_title";
+            this.ml_coopTable_title.Size = new System.Drawing.Size(123, 27);
+            this.ml_coopTable_title.TabIndex = 17;
+            this.ml_coopTable_title.Text = "Coop Table";
             // 
             // Tables
             // 
@@ -74,8 +82,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1241, 782);
-            this.Controls.Add(this.lbl_tables_coop);
-            this.Controls.Add(this.lbl_tables_employment);
+            this.Controls.Add(this.ml_coopTable_title);
+            this.Controls.Add(this.ml_employmentTable_title);
             this.Controls.Add(this.listView_Coop);
             this.Controls.Add(this.listView_Employment);
             this.Name = "Tables";
@@ -89,7 +97,7 @@
 
         private System.Windows.Forms.ListView listView_Employment;
         private System.Windows.Forms.ListView listView_Coop;
-        private System.Windows.Forms.Label lbl_tables_employment;
-        private System.Windows.Forms.Label lbl_tables_coop;
+        private MaterialSkin.Controls.MaterialLabel ml_employmentTable_title;
+        private MaterialSkin.Controls.MaterialLabel ml_coopTable_title;
     }
 }

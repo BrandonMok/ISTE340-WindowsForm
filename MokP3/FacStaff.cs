@@ -31,7 +31,7 @@ namespace MokP3
             if(fac != null)
             {
                 ml_people_username.Text = fac.username;
-                lbl_people_name.Text = fac.name;
+                ml_people_name.Text = fac.name;
 
                 if(fac.tagline != null && fac.tagline != "")
                 {
@@ -85,7 +85,7 @@ namespace MokP3
             {
                 // STAFF OBJ
                 ml_people_username.Text = staff.username;
-                lbl_people_name.Text = staff.name;
+                ml_people_name.Text = staff.name;
 
                 if (staff.tagline != null && staff.tagline != "")
                 {

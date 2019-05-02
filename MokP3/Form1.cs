@@ -72,6 +72,10 @@ namespace MokP3
         }
 
 
+        // For each page, have an enter event
+        // on enter event check if object is intialized
+        // And on enter, load the object info and display all info
+        // All are contained in the if the object is null initially as to not have to remake everything on enter
 
         #region DegreesPageEnter
         private void DegreesPage_Enter(object sender, EventArgs e)
@@ -130,7 +134,6 @@ namespace MokP3
         #endregion
 
         #endregion
-
 
         #region MinorsPageEnter
         private void MinorsPage_Enter(object sender, EventArgs e)
@@ -203,32 +206,28 @@ namespace MokP3
         #endregion
         #endregion
 
-
         #region EmploymentPage
         // Employment Page Enter
         private void employmentPage_Enter(object sender, EventArgs e)
         {
-            // CHECK: if I have the data already
             if (employment == null)
             {
                 string jsonEmployment = rj.getRESTDataJSON("/employment/");
                 employment = JToken.Parse(jsonEmployment).ToObject<Employment>();
+
+                // Set the title
+                lbl_employment_introTitle.Text = employment.introduction.title;
+
+                // Descriptions
+                lbl_employment_content.Text = employment.introduction.content[0].description;
+                lbl_coop_content.Text = employment.introduction.content[1].description;
+
+                // Employment Content
+                lbl_employment_content.MaximumSize = new Size(325, 400);
+
+                // Coop Content
+                lbl_coop_content.MaximumSize = new Size(325, 400);
             }
-
-            // Set the title
-            lbl_employment_introTitle.Text = employment.introduction.title;
-
-            // Descriptions
-            lbl_employment_content.Text = employment.introduction.content[0].description;
-            lbl_coop_content.Text = employment.introduction.content[1].description;
-
-            // Employment Content
-            lbl_employment_content.MaximumSize = new Size(325, 400);
-            lbl_employment_content.Font = new Font("Arial", 9);
-
-            // Coop Content
-            lbl_coop_content.MaximumSize = new Size(325, 400);
-            lbl_coop_content.Font = new Font("Arial", 9);
         }
 
         // Show employment/coop tables!
@@ -271,7 +270,7 @@ namespace MokP3
                 int newPointX = 0;
                 int newPointY = 0;
 
-                for (int i = 0; i < facultyList.Count; i++) // 34 fac in total
+                for (int i = 0, len = facultyList.Count; i < len; i++) // 34 fac in total
                 {
                     // Panel that acts as a container for each person
                     Panel newPanel = new Panel();
@@ -317,7 +316,7 @@ namespace MokP3
                 int newPointSX = 0;
                 int newPointSY = 0;
 
-                for (int i = 0; i < staffList.Count; i++) // 17 fac in total
+                for (int i = 0, len = staffList.Count; i < len; i++) // 17 fac in total
                 {
                     // Panel that acts as a container for each person
                     Panel newStaffPanel = new Panel();
@@ -343,7 +342,6 @@ namespace MokP3
                         newPointSX += 100;
                     }
 
-                    // if reaches a certain point, reset the x coordinate and change the y coordinate
                     if (newPointSX >= 800)
                     {
                         newPointSX = 0;
@@ -406,11 +404,14 @@ namespace MokP3
         #region ResearchPage
         private void researchPage_Enter(object sender, EventArgs e)
         {
-            // RESEARCH
-            string jsonResearch = rj.getRESTDataJSON("/research/");
-            research = JToken.Parse(jsonResearch).ToObject<Research>();
+            if (research == null)
+            {
+                // RESEARCH
+                string jsonResearch = rj.getRESTDataJSON("/research/");
+                research = JToken.Parse(jsonResearch).ToObject<Research>();
 
-            cb_research.SelectedItem = "ByInterestArea"; // By Default show ByInterestArea
+                cb_research.SelectedItem = "ByInterestArea"; // By Default show ByInterestArea
+            }
         }
 
         // When change on combobox options
@@ -570,10 +571,10 @@ namespace MokP3
             {
                 string jsonResources = rj.getRESTDataJSON("/resources/");
                 resources = JToken.Parse(jsonResources).ToObject<Resources>();
-            }
 
-            // Set the subtitle
-            lbl_studentRes_subTitle.Text = resources.subTitle;
+                // Set the subtitle
+                lbl_studentRes_subTitle.Text = resources.subTitle;
+            }
         }
 
         // STUDY ABROAD
@@ -627,31 +628,32 @@ namespace MokP3
             {
                 string jsonNews = rj.getRESTDataJSON("/news/");
                 news = JToken.Parse(jsonNews).ToObject<News>();
-            }
 
-            lv_news.View = View.Details;
-            lv_news.GridLines = true;
-            lv_news.FullRowSelect = true;
-            lv_news.Width = 800;
 
-            lv_news.Columns.Add("Date", 100);
-            lv_news.Columns.Add("Title", 100);
-            lv_news.Columns.Add("Description", 600);
+                lv_news.View = View.Details;
+                lv_news.GridLines = true;
+                lv_news.FullRowSelect = true;
+                lv_news.Width = 800;
 
-            ListViewItem lvItem;
-            int newsLength = news.older.Count;
-            for (int i = 0; i < newsLength; i++)
-            {
-                lvItem = new ListViewItem(new string[]
+                lv_news.Columns.Add("Date", 100);
+                lv_news.Columns.Add("Title", 100);
+                lv_news.Columns.Add("Description", 600);
+
+                ListViewItem lvItem;
+                int newsLength = news.older.Count;
+                for (int i = 0; i < newsLength; i++)
                 {
+                    lvItem = new ListViewItem(new string[]
+                    {
                     news.older[i].date,
                     news.older[i].title,
                     news.older[i].description
-                });
+                    });
 
-                lv_news.Items.Add(lvItem);
+                    lv_news.Items.Add(lvItem);
+                }
+
             }
-
         }
         #endregion
 
@@ -662,28 +664,28 @@ namespace MokP3
             {
                 string jsonFooter = rj.getRESTDataJSON("/footer/");
                 footer = JToken.Parse(jsonFooter).ToObject<Footer>();
+
+
+                // SOCIAL   
+                ml_other_title.Text = footer.social.title;
+                lbl_social_tweet.Text = footer.social.tweet + "\n" + footer.social.by;
+
+                // Links
+                ml_link_title1.Text = footer.quickLinks[0].title;
+                ml_link_title2.Text = footer.quickLinks[1].title;
+                ml_link_title3.Text = footer.quickLinks[2].title;
+                ml_link_title4.Text = footer.quickLinks[3].title;
+
+                ll_otherLink1.Text = footer.quickLinks[0].href;
+                ll_otherLink2.Text = footer.quickLinks[1].href;
+                ll_otherLink3.Text = footer.quickLinks[2].href;
+                ll_otherLink4.Text = footer.quickLinks[3].href;
+
+                // COPYRIGHT
+                ml_copyright_title.Text = footer.copyright.title;
+                ll_copyright_news.Text = footer.news;
+                wb_copyright.DocumentText = footer.copyright.html;
             }
-
-            // SOCIAL   
-            ml_other_title.Text = footer.social.title;
-            lbl_social_tweet.Text = footer.social.tweet + "\n" + footer.social.by;
-
-            // Links
-            ml_link_title1.Text = footer.quickLinks[0].title;
-            ml_link_title2.Text = footer.quickLinks[1].title;
-            ml_link_title3.Text = footer.quickLinks[2].title;
-            ml_link_title4.Text = footer.quickLinks[3].title;
-
-            ll_otherLink1.Text = footer.quickLinks[0].href;
-            ll_otherLink2.Text = footer.quickLinks[1].href;
-            ll_otherLink3.Text = footer.quickLinks[2].href;
-            ll_otherLink4.Text = footer.quickLinks[3].href;
-
-            // COPYRIGHT
-            ml_copyright_title.Text = footer.copyright.title;
-            ll_copyright_news.Text = footer.news;
-            wb_copyright.DocumentText = footer.copyright.html;
-
         }
 #endregion
 

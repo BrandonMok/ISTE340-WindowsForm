@@ -45,8 +45,7 @@ namespace MokP3
             var sb = new StringBuilder(); // string builder so concentrations aren't stack on top
             foreach (string course in courses)
             {
-                sb.Append(course);
-                sb.AppendLine();
+                sb.Append(course + "\n");
             }
 
             // set Text

@@ -17,9 +17,8 @@ namespace MokP3
         public Tables(Employment employment)
         {
             InitializeComponent();
-            this.Text = "Employment Tables";
-            this.Size = new Size(900, 600);
-
+        
+            setFormStyle();
 
 
             // Prepare the listView for COOP
@@ -77,6 +76,24 @@ namespace MokP3
                 });
                 listView_Employment.Items.Add(employmentItem);
             }
+        }
+
+
+
+        private void setFormStyle()
+        {
+            this.Text = "Employment Tables";
+            this.Size = new Size(900, 600);
+
+
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
         }
     }
 }

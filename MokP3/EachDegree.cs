@@ -56,10 +56,8 @@ namespace MokP3
 
             // SAME for both objects - display information
             lbl_specific_degreeName.Text = degreeName;
-            lbl_specific_degreeName.Font = new Font("Arial", 11);
 
             lbl_specific_degreeTitle.Text = title;
-            lbl_specific_degreeTitle.Font = new Font("Arial", 9);
 
             lbl_specific_degreeDescription.Text = description;
             lbl_specific_degreeDescription.MaximumSize = new Size(400, 0);
@@ -71,8 +69,7 @@ namespace MokP3
             // loop through all concentrations
             foreach (string concen in concentrations)
             {
-                sb.Append(concen);
-                sb.AppendLine();
+                sb.Append(concen + "\n");
             }
 
             // set Text

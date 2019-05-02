@@ -18,11 +18,9 @@ namespace MokP3
         public EachResearch(ByInterestArea bia) 
         {
             InitializeComponent();
-
             setFormStyle(); // Set form style
 
-            // Set form name to THIS research
-            this.Text = bia.areaName;
+           
 
             // Set section title
             ml_eachResearch_sectionTitle.Text = bia.areaName;
@@ -74,6 +72,8 @@ namespace MokP3
         public void setFormStyle()
         {
             this.Size = new Size(900, 500);
+            // Set form name to THIS research
+            this.Text = "Tables";
 
             // Styling
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
