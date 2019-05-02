@@ -56,19 +56,7 @@ namespace MokP3
             // Only load about content first!
             // About acts as the homepage
 
-            // ABOUT
-            string jsonAbout = rj.getRESTDataJSON("/about/"); 
-            about = JToken.Parse(jsonAbout).ToObject<About>(); // cast it to the About object
-
-            ml_about_title.Text = about.title;
-
-            lbl_description.Text = about.description;
-            lbl_description.MaximumSize = new Size(500, 0);
-
-            lbl_quote.Text = about.quote;
-            lbl_quote.MaximumSize = new Size(400, 0);
-
-            lbl_quote_author.Text = "- " + about.quoteAuthor;
+           
         }
 
 
@@ -76,6 +64,28 @@ namespace MokP3
         // on enter event check if object is intialized
         // And on enter, load the object info and display all info
         // All are contained in the if the object is null initially as to not have to remake everything on enter
+
+
+
+        private void aboutPage_Enter(object sender, EventArgs e)
+        {
+            if(about == null)
+            {
+                // ABOUT
+                string jsonAbout = rj.getRESTDataJSON("/about/");
+                about = JToken.Parse(jsonAbout).ToObject<About>(); // cast it to the About object
+
+                ml_about_title.Text = about.title;
+
+                lbl_description.Text = about.description;
+                lbl_description.MaximumSize = new Size(500, 0);
+
+                lbl_quote.Text = "'" + about.quote + "'\n\n-" + about.quoteAuthor;
+                lbl_quote.MaximumSize = new Size(400, 0);
+            }
+        }
+
+
 
         #region DegreesPageEnter
         private void DegreesPage_Enter(object sender, EventArgs e)
@@ -699,5 +709,6 @@ namespace MokP3
             LinkLabel ll = sender as LinkLabel;
             System.Diagnostics.Process.Start(ll.Text);
         }
+
     }
 }

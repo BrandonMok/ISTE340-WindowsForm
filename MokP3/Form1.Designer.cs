@@ -45,7 +45,6 @@
             this.graduateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.degreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbl_quote_author = new System.Windows.Forms.Label();
             this.tabController_MAIN = new System.Windows.Forms.TabControl();
             this.AboutPage = new System.Windows.Forms.TabPage();
             this.ml_about_title = new MaterialSkin.Controls.MaterialLabel();
@@ -285,15 +284,6 @@
             this.homeToolStripMenuItem1.Size = new System.Drawing.Size(197, 30);
             this.homeToolStripMenuItem1.Text = "Home";
             // 
-            // lbl_quote_author
-            // 
-            this.lbl_quote_author.AutoSize = true;
-            this.lbl_quote_author.Location = new System.Drawing.Point(302, 454);
-            this.lbl_quote_author.Name = "lbl_quote_author";
-            this.lbl_quote_author.Size = new System.Drawing.Size(112, 22);
-            this.lbl_quote_author.TabIndex = 5;
-            this.lbl_quote_author.Text = "QuoteAuthor";
-            // 
             // tabController_MAIN
             // 
             this.tabController_MAIN.Controls.Add(this.AboutPage);
@@ -317,7 +307,6 @@
             // 
             this.AboutPage.BackColor = System.Drawing.Color.White;
             this.AboutPage.Controls.Add(this.ml_about_title);
-            this.AboutPage.Controls.Add(this.lbl_quote_author);
             this.AboutPage.Controls.Add(this.lbl_quote);
             this.AboutPage.Controls.Add(this.lbl_description);
             this.AboutPage.Location = new System.Drawing.Point(4, 31);
@@ -326,6 +315,7 @@
             this.AboutPage.Size = new System.Drawing.Size(1265, 753);
             this.AboutPage.TabIndex = 0;
             this.AboutPage.Text = "About";
+            this.AboutPage.Enter += new System.EventHandler(this.aboutPage_Enter);
             // 
             // ml_about_title
             // 
@@ -1388,7 +1378,6 @@
             this.Controls.Add(this.tabController_MAIN);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabController_MAIN.ResumeLayout(false);
             this.AboutPage.ResumeLayout(false);
             this.AboutPage.PerformLayout();
@@ -1473,7 +1462,6 @@
         private System.Windows.Forms.ToolStripMenuItem graduateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem degreesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem1;
-        private System.Windows.Forms.Label lbl_quote_author;
         private System.Windows.Forms.TabControl tabController_MAIN;
         private System.Windows.Forms.TabPage AboutPage;
         private System.Windows.Forms.TabPage DegreesPage;
