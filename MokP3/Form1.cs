@@ -51,41 +51,32 @@ namespace MokP3
             );
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Only load about content first!
-            // About acts as the homepage
-
-           
-        }
-
 
         // For each page, have an enter event
         // on enter event check if object is intialized
         // And on enter, load the object info and display all info
         // All are contained in the if the object is null initially as to not have to remake everything on enter
 
-
-
+        #region AboutPageEnter
         private void aboutPage_Enter(object sender, EventArgs e)
         {
-            if(about == null)
+            if (about == null)
             {
                 // ABOUT
                 string jsonAbout = rj.getRESTDataJSON("/about/");
                 about = JToken.Parse(jsonAbout).ToObject<About>(); // cast it to the About object
-
-                ml_about_title.Text = about.title;
-
-                lbl_description.Text = about.description;
-                lbl_description.MaximumSize = new Size(500, 0);
-
-                lbl_quote.Text = "'" + about.quote + "'\n\n-" + about.quoteAuthor;
-                lbl_quote.MaximumSize = new Size(400, 0);
             }
+
+            ml_about_title.Text = about.title;
+
+            lbl_description.Text = about.description;
+            lbl_description.MaximumSize = new Size(500, 0);
+
+            lbl_quote.Text = "'" + about.quote + "'\n\n-" + about.quoteAuthor;
+            lbl_quote.MaximumSize = new Size(400, 0);
+            
         }
-
-
+        #endregion
 
         #region DegreesPageEnter
         private void DegreesPage_Enter(object sender, EventArgs e)
@@ -710,5 +701,9 @@ namespace MokP3
             System.Diagnostics.Process.Start(ll.Text);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

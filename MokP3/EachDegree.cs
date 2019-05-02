@@ -18,18 +18,7 @@ namespace MokP3
         public EachDegree(Undergraduate undergrad, Graduate grad)
         {
             InitializeComponent();
-            this.Size = new Size(600, 400); // Change size of the form
-            this.Text = "Degrees";  // Change title of 
-
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
-            );
-
+            setFormStyle();
 
             string title = "";
             string degreeName = "";
@@ -55,9 +44,11 @@ namespace MokP3
 
 
             // SAME for both objects - display information
-            lbl_specific_degreeName.Text = degreeName;
+            // Form name
+            this.Text = degreeName;
 
-            lbl_specific_degreeTitle.Text = title;
+            // Title
+            ml_degree_title.Text = title;
 
             lbl_specific_degreeDescription.Text = description;
             lbl_specific_degreeDescription.MaximumSize = new Size(400, 0);
@@ -74,6 +65,24 @@ namespace MokP3
 
             // set Text
             lbl_specific_degreeConcentrations.Text = sb.ToString();
+        }
+
+
+
+        // Set form style
+        private void setFormStyle()
+        {
+            this.Size = new Size(600, 400); // Change size of the form
+            this.Text = "Degrees";  // Change title of 
+
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
         }
     }
 }
