@@ -18,19 +18,12 @@ namespace MokP3
         public FacStaff(Faculty fac, Staff staff)
         {
             InitializeComponent();
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
-            );
+            setFormStyle();
 
 
-            if(fac != null)
+            if (fac != null)
             {
-                ml_people_username.Text = fac.username;
+                this.Text = fac.username;
                 ml_people_name.Text = fac.name;
 
                 if(fac.tagline != null && fac.tagline != "")
@@ -44,7 +37,7 @@ namespace MokP3
 
                 // Picture Box
                 pb_indv_personImage.Load(fac.imagePath);
-                pb_indv_personImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb_indv_personImage.SizeMode = PictureBoxSizeMode.Zoom;
 
                 // Title
                 lbl_people_title.Text = fac.title;
@@ -84,7 +77,7 @@ namespace MokP3
             else
             {
                 // STAFF OBJ
-                ml_people_username.Text = staff.username;
+                this.Text = staff.username;
                 ml_people_name.Text = staff.name;
 
                 if (staff.tagline != null && staff.tagline != "")
@@ -138,6 +131,7 @@ namespace MokP3
 
         }
 
+        // LinkLabel clicks
         private void ll_website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LinkLabel personlbl = sender as LinkLabel;
@@ -145,20 +139,21 @@ namespace MokP3
 
             System.Diagnostics.Process.Start(personlbl.Text);
         }
-        //public FacStaff(Staff me)
-        //{
-        //    InitializeComponent();
-        //    MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-        //    materialSkinManager.AddFormToManage(this);
 
-        //    materialSkinManager.ColorScheme = new ColorScheme(
-        //        Primary.Blue400, Primary.Blue500,
-        //        Primary.Blue500, Accent.LightBlue200,
-        //        TextShade.WHITE
-        //    );
-        //}
+    
+        // Sets up this form's style
+        private void setFormStyle()
+        {
+            this.Size = new Size(450, 450);
 
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
 
-
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
+        }
     }
 }

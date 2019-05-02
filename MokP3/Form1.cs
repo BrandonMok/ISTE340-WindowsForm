@@ -294,15 +294,17 @@ namespace MokP3
                     // If not the first person box, then move the next one over
                     if (i != 0)
                     {
-                        newPointX += 100;
+                        newPointX += 100; // move next box over
+
+                        // CHECK if reached a certain width, then reset x, and move y down
+                        if (newPointX >= 800)
+                        {
+                            newPointX = 0;
+                            newPointY += 100;
+                        }
                     }
 
-                    // if reaches a certain point, reset the x coordinate and change the y coordinate
-                    if (newPointX >= 800)
-                    {
-                        newPointX = 0;
-                        newPointY += 100;
-                    }
+
 
                     newPanel.Location = new Point(newPointX, newPointY);
 
@@ -340,13 +342,14 @@ namespace MokP3
                     if (i != 0)
                     {
                         newPointSX += 100;
+                        if (newPointSX >= 800)
+                        {
+                            newPointSX = 0;
+                            newPointSY += 100;
+                        }
                     }
 
-                    if (newPointSX >= 800)
-                    {
-                        newPointSX = 0;
-                        newPointSY += 100;
-                    }
+                    
 
                     newStaffPanel.Location = new Point(newPointSX, newPointSY);
 
