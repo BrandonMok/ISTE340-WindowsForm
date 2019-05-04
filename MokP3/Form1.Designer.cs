@@ -49,6 +49,11 @@
             this.AboutPage = new System.Windows.Forms.TabPage();
             this.ml_about_title = new MaterialSkin.Controls.MaterialLabel();
             this.DegreesPage = new System.Windows.Forms.TabPage();
+            this.btn_NSA = new System.Windows.Forms.Button();
+            this.btn_HCI = new System.Windows.Forms.Button();
+            this.btn_IST = new System.Windows.Forms.Button();
+            this.btn_CIT = new System.Windows.Forms.Button();
+            this.btn_HCC = new System.Windows.Forms.Button();
             this.btn_WMC = new System.Windows.Forms.Button();
             this.ml_degrees_title = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_degrees_graduate_Title = new System.Windows.Forms.Label();
@@ -127,11 +132,14 @@
             this.lbl_social_tweet = new System.Windows.Forms.Label();
             this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_HCC = new System.Windows.Forms.Button();
-            this.btn_CIT = new System.Windows.Forms.Button();
-            this.btn_IST = new System.Windows.Forms.Button();
-            this.btn_HCI = new System.Windows.Forms.Button();
-            this.btn_NSA = new System.Windows.Forms.Button();
+            this.lbl_DBDDI_name = new System.Windows.Forms.Label();
+            this.lbl_GIS_name = new System.Windows.Forms.Label();
+            this.lbl_MEDINFO_name = new System.Windows.Forms.Label();
+            this.lbl_MEDDEV_name = new System.Windows.Forms.Label();
+            this.lbl_MDEV_name = new System.Windows.Forms.Label();
+            this.lbl_NETSYS_name = new System.Windows.Forms.Label();
+            this.lbl_WEBDD_name = new System.Windows.Forms.Label();
+            this.lbl_WEBD_name = new System.Windows.Forms.Label();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
@@ -338,6 +346,70 @@
             this.DegreesPage.UseVisualStyleBackColor = true;
             this.DegreesPage.Enter += new System.EventHandler(this.DegreesPage_Enter);
             // 
+            // btn_NSA
+            // 
+            this.btn_NSA.BackColor = System.Drawing.Color.Orange;
+            this.btn_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NSA.Location = new System.Drawing.Point(861, 416);
+            this.btn_NSA.Name = "btn_NSA";
+            this.btn_NSA.Size = new System.Drawing.Size(251, 146);
+            this.btn_NSA.TabIndex = 13;
+            this.btn_NSA.Text = "NSA";
+            this.toolTip1.SetToolTip(this.btn_NSA, "Networking and Systems Administration");
+            this.btn_NSA.UseVisualStyleBackColor = false;
+            this.btn_NSA.Click += new System.EventHandler(this.btn_NSA_Click);
+            // 
+            // btn_HCI
+            // 
+            this.btn_HCI.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HCI.Location = new System.Drawing.Point(488, 416);
+            this.btn_HCI.Name = "btn_HCI";
+            this.btn_HCI.Size = new System.Drawing.Size(251, 146);
+            this.btn_HCI.TabIndex = 12;
+            this.btn_HCI.Text = "HCI";
+            this.toolTip1.SetToolTip(this.btn_HCI, "Human Centered Computing");
+            this.btn_HCI.UseVisualStyleBackColor = false;
+            this.btn_HCI.Click += new System.EventHandler(this.btn_HCI_Click);
+            // 
+            // btn_IST
+            // 
+            this.btn_IST.BackColor = System.Drawing.Color.Orange;
+            this.btn_IST.Location = new System.Drawing.Point(140, 416);
+            this.btn_IST.Name = "btn_IST";
+            this.btn_IST.Size = new System.Drawing.Size(251, 146);
+            this.btn_IST.TabIndex = 11;
+            this.btn_IST.Text = "IST";
+            this.toolTip1.SetToolTip(this.btn_IST, "Information Sciences & Technologies");
+            this.btn_IST.UseVisualStyleBackColor = false;
+            this.btn_IST.Click += new System.EventHandler(this.btn_IST_Click);
+            // 
+            // btn_CIT
+            // 
+            this.btn_CIT.BackColor = System.Drawing.Color.Orange;
+            this.btn_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CIT.Location = new System.Drawing.Point(861, 154);
+            this.btn_CIT.Name = "btn_CIT";
+            this.btn_CIT.Size = new System.Drawing.Size(251, 146);
+            this.btn_CIT.TabIndex = 10;
+            this.btn_CIT.Text = "CIT";
+            this.toolTip1.SetToolTip(this.btn_CIT, "Computing & Information Technologies");
+            this.btn_CIT.UseVisualStyleBackColor = false;
+            this.btn_CIT.Click += new System.EventHandler(this.btn_CIT_Click);
+            // 
+            // btn_HCC
+            // 
+            this.btn_HCC.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HCC.Location = new System.Drawing.Point(488, 154);
+            this.btn_HCC.Name = "btn_HCC";
+            this.btn_HCC.Size = new System.Drawing.Size(251, 146);
+            this.btn_HCC.TabIndex = 1;
+            this.btn_HCC.Text = "HCC";
+            this.toolTip1.SetToolTip(this.btn_HCC, "Human Centered Computing");
+            this.btn_HCC.UseVisualStyleBackColor = false;
+            this.btn_HCC.Click += new System.EventHandler(this.btn_HCC_Click);
+            // 
             // btn_WMC
             // 
             this.btn_WMC.BackColor = System.Drawing.Color.Orange;
@@ -386,9 +458,9 @@
             // 
             this.MinorsPage.BackColor = System.Drawing.Color.White;
             this.MinorsPage.Controls.Add(this.ml_minors_title);
-            this.MinorsPage.Controls.Add(this.panel_minors_WEBD);
             this.MinorsPage.Controls.Add(this.panel_minors_WEBDD);
             this.MinorsPage.Controls.Add(this.panel_minors_NETSYS);
+            this.MinorsPage.Controls.Add(this.panel_minors_WEBD);
             this.MinorsPage.Controls.Add(this.panel_minors_MDEV);
             this.MinorsPage.Controls.Add(this.panel_minors_MDDEV);
             this.MinorsPage.Controls.Add(this.panel_minors_MEDINFO);
@@ -408,7 +480,7 @@
             this.ml_minors_title.Depth = 0;
             this.ml_minors_title.Font = new System.Drawing.Font("Roboto", 11F);
             this.ml_minors_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_minors_title.Location = new System.Drawing.Point(539, 49);
+            this.ml_minors_title.Location = new System.Drawing.Point(602, 35);
             this.ml_minors_title.MouseState = MaterialSkin.MouseState.HOVER;
             this.ml_minors_title.Name = "ml_minors_title";
             this.ml_minors_title.Size = new System.Drawing.Size(79, 27);
@@ -419,11 +491,12 @@
             // 
             this.panel_minors_WEBD.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_WEBD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_WEBD.Controls.Add(this.lbl_WEBD_name);
             this.panel_minors_WEBD.Controls.Add(this.lbl_minors_WEBD_title);
             this.panel_minors_WEBD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_WEBD.Location = new System.Drawing.Point(909, 326);
+            this.panel_minors_WEBD.Location = new System.Drawing.Point(995, 306);
             this.panel_minors_WEBD.Name = "panel_minors_WEBD";
-            this.panel_minors_WEBD.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_WEBD.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_WEBD.TabIndex = 8;
             this.toolTip1.SetToolTip(this.panel_minors_WEBD, "WEBD");
             this.panel_minors_WEBD.Click += new System.EventHandler(this.panel_minors_WEBD_Click);
@@ -431,7 +504,7 @@
             // lbl_minors_WEBD_title
             // 
             this.lbl_minors_WEBD_title.AutoSize = true;
-            this.lbl_minors_WEBD_title.Location = new System.Drawing.Point(67, 43);
+            this.lbl_minors_WEBD_title.Location = new System.Drawing.Point(77, 22);
             this.lbl_minors_WEBD_title.Name = "lbl_minors_WEBD_title";
             this.lbl_minors_WEBD_title.Size = new System.Drawing.Size(64, 22);
             this.lbl_minors_WEBD_title.TabIndex = 0;
@@ -441,11 +514,12 @@
             // 
             this.panel_minors_WEBDD.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_WEBDD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_WEBDD.Controls.Add(this.lbl_WEBDD_name);
             this.panel_minors_WEBDD.Controls.Add(this.lbl_minors_WEBDD_title);
             this.panel_minors_WEBDD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_WEBDD.Location = new System.Drawing.Point(621, 326);
+            this.panel_minors_WEBDD.Location = new System.Drawing.Point(680, 306);
             this.panel_minors_WEBDD.Name = "panel_minors_WEBDD";
-            this.panel_minors_WEBDD.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_WEBDD.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_WEBDD.TabIndex = 7;
             this.toolTip1.SetToolTip(this.panel_minors_WEBDD, "WEBDD");
             this.panel_minors_WEBDD.Click += new System.EventHandler(this.panel_minors_WEBDD_Click);
@@ -453,7 +527,7 @@
             // lbl_minors_WEBDD_title
             // 
             this.lbl_minors_WEBDD_title.AutoSize = true;
-            this.lbl_minors_WEBDD_title.Location = new System.Drawing.Point(59, 43);
+            this.lbl_minors_WEBDD_title.Location = new System.Drawing.Point(73, 22);
             this.lbl_minors_WEBDD_title.Name = "lbl_minors_WEBDD_title";
             this.lbl_minors_WEBDD_title.Size = new System.Drawing.Size(77, 22);
             this.lbl_minors_WEBDD_title.TabIndex = 0;
@@ -463,11 +537,12 @@
             // 
             this.panel_minors_NETSYS.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_NETSYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_NETSYS.Controls.Add(this.lbl_NETSYS_name);
             this.panel_minors_NETSYS.Controls.Add(this.lbl_minors_NETSYS_title);
             this.panel_minors_NETSYS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_NETSYS.Location = new System.Drawing.Point(335, 326);
+            this.panel_minors_NETSYS.Location = new System.Drawing.Point(367, 306);
             this.panel_minors_NETSYS.Name = "panel_minors_NETSYS";
-            this.panel_minors_NETSYS.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_NETSYS.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_NETSYS.TabIndex = 6;
             this.toolTip1.SetToolTip(this.panel_minors_NETSYS, "NETSYS");
             this.panel_minors_NETSYS.Click += new System.EventHandler(this.panel_minors_NETSYS_Click);
@@ -475,7 +550,7 @@
             // lbl_minors_NETSYS_title
             // 
             this.lbl_minors_NETSYS_title.AutoSize = true;
-            this.lbl_minors_NETSYS_title.Location = new System.Drawing.Point(56, 43);
+            this.lbl_minors_NETSYS_title.Location = new System.Drawing.Point(69, 22);
             this.lbl_minors_NETSYS_title.Name = "lbl_minors_NETSYS_title";
             this.lbl_minors_NETSYS_title.Size = new System.Drawing.Size(83, 22);
             this.lbl_minors_NETSYS_title.TabIndex = 0;
@@ -485,11 +560,12 @@
             // 
             this.panel_minors_MDEV.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_MDEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_MDEV.Controls.Add(this.lbl_MDEV_name);
             this.panel_minors_MDEV.Controls.Add(this.lbl_minors_MDEV_title);
             this.panel_minors_MDEV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_MDEV.Location = new System.Drawing.Point(49, 326);
+            this.panel_minors_MDEV.Location = new System.Drawing.Point(49, 306);
             this.panel_minors_MDEV.Name = "panel_minors_MDEV";
-            this.panel_minors_MDEV.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_MDEV.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_MDEV.TabIndex = 5;
             this.toolTip1.SetToolTip(this.panel_minors_MDEV, "MDEV");
             this.panel_minors_MDEV.Click += new System.EventHandler(this.panel_minors_MDEV_Click);
@@ -497,7 +573,7 @@
             // lbl_minors_MDEV_title
             // 
             this.lbl_minors_MDEV_title.AutoSize = true;
-            this.lbl_minors_MDEV_title.Location = new System.Drawing.Point(57, 43);
+            this.lbl_minors_MDEV_title.Location = new System.Drawing.Point(83, 22);
             this.lbl_minors_MDEV_title.Name = "lbl_minors_MDEV_title";
             this.lbl_minors_MDEV_title.Size = new System.Drawing.Size(61, 22);
             this.lbl_minors_MDEV_title.TabIndex = 0;
@@ -507,11 +583,12 @@
             // 
             this.panel_minors_MDDEV.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_MDDEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_MDDEV.Controls.Add(this.lbl_MEDDEV_name);
             this.panel_minors_MDDEV.Controls.Add(this.lbl_minors_MDDEV_title);
             this.panel_minors_MDDEV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_MDDEV.Location = new System.Drawing.Point(909, 121);
+            this.panel_minors_MDDEV.Location = new System.Drawing.Point(995, 121);
             this.panel_minors_MDDEV.Name = "panel_minors_MDDEV";
-            this.panel_minors_MDDEV.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_MDDEV.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_MDDEV.TabIndex = 4;
             this.toolTip1.SetToolTip(this.panel_minors_MDDEV, "MDDEV");
             this.panel_minors_MDDEV.Click += new System.EventHandler(this.panels_minors_MDDEV_Click);
@@ -519,7 +596,7 @@
             // lbl_minors_MDDEV_title
             // 
             this.lbl_minors_MDDEV_title.AutoSize = true;
-            this.lbl_minors_MDDEV_title.Location = new System.Drawing.Point(63, 38);
+            this.lbl_minors_MDDEV_title.Location = new System.Drawing.Point(67, 14);
             this.lbl_minors_MDDEV_title.Name = "lbl_minors_MDDEV_title";
             this.lbl_minors_MDDEV_title.Size = new System.Drawing.Size(74, 22);
             this.lbl_minors_MDDEV_title.TabIndex = 0;
@@ -529,11 +606,12 @@
             // 
             this.panel_minors_MEDINFO.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_MEDINFO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_MEDINFO.Controls.Add(this.lbl_MEDINFO_name);
             this.panel_minors_MEDINFO.Controls.Add(this.lbl_minors_MEDINFO_title);
             this.panel_minors_MEDINFO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_MEDINFO.Location = new System.Drawing.Point(621, 121);
+            this.panel_minors_MEDINFO.Location = new System.Drawing.Point(680, 121);
             this.panel_minors_MEDINFO.Name = "panel_minors_MEDINFO";
-            this.panel_minors_MEDINFO.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_MEDINFO.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_MEDINFO.TabIndex = 3;
             this.toolTip1.SetToolTip(this.panel_minors_MEDINFO, "MEDINFO");
             this.panel_minors_MEDINFO.Click += new System.EventHandler(this.panel_minors_MEDINFO_Click);
@@ -541,7 +619,7 @@
             // lbl_minors_MEDINFO_title
             // 
             this.lbl_minors_MEDINFO_title.AutoSize = true;
-            this.lbl_minors_MEDINFO_title.Location = new System.Drawing.Point(59, 38);
+            this.lbl_minors_MEDINFO_title.Location = new System.Drawing.Point(59, 14);
             this.lbl_minors_MEDINFO_title.Name = "lbl_minors_MEDINFO_title";
             this.lbl_minors_MEDINFO_title.Size = new System.Drawing.Size(91, 22);
             this.lbl_minors_MEDINFO_title.TabIndex = 0;
@@ -551,11 +629,12 @@
             // 
             this.panel_minors_GIS.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_GIS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_GIS.Controls.Add(this.lbl_GIS_name);
             this.panel_minors_GIS.Controls.Add(this.lbl_minors_GIS_title);
             this.panel_minors_GIS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_minors_GIS.Location = new System.Drawing.Point(335, 121);
+            this.panel_minors_GIS.Location = new System.Drawing.Point(367, 121);
             this.panel_minors_GIS.Name = "panel_minors_GIS";
-            this.panel_minors_GIS.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_GIS.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_GIS.TabIndex = 2;
             this.toolTip1.SetToolTip(this.panel_minors_GIS, "GIS");
             this.panel_minors_GIS.Click += new System.EventHandler(this.panel_minors_GIS_Click);
@@ -563,7 +642,7 @@
             // lbl_minors_GIS_title
             // 
             this.lbl_minors_GIS_title.AutoSize = true;
-            this.lbl_minors_GIS_title.Location = new System.Drawing.Point(78, 38);
+            this.lbl_minors_GIS_title.Location = new System.Drawing.Point(92, 14);
             this.lbl_minors_GIS_title.Name = "lbl_minors_GIS_title";
             this.lbl_minors_GIS_title.Size = new System.Drawing.Size(40, 22);
             this.lbl_minors_GIS_title.TabIndex = 0;
@@ -573,11 +652,12 @@
             // 
             this.panel_minors_DBDDI.BackColor = System.Drawing.Color.LightGray;
             this.panel_minors_DBDDI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_minors_DBDDI.Controls.Add(this.lbl_DBDDI_name);
             this.panel_minors_DBDDI.Controls.Add(this.lbl_minors_DBDDI_title);
             this.panel_minors_DBDDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel_minors_DBDDI.Location = new System.Drawing.Point(49, 121);
             this.panel_minors_DBDDI.Name = "panel_minors_DBDDI";
-            this.panel_minors_DBDDI.Size = new System.Drawing.Size(200, 100);
+            this.panel_minors_DBDDI.Size = new System.Drawing.Size(251, 154);
             this.panel_minors_DBDDI.TabIndex = 1;
             this.toolTip1.SetToolTip(this.panel_minors_DBDDI, "DBDDI");
             this.panel_minors_DBDDI.Click += new System.EventHandler(this.panel_minors_DBDDI_Click);
@@ -585,7 +665,7 @@
             // lbl_minors_DBDDI_title
             // 
             this.lbl_minors_DBDDI_title.AutoSize = true;
-            this.lbl_minors_DBDDI_title.Location = new System.Drawing.Point(69, 38);
+            this.lbl_minors_DBDDI_title.Location = new System.Drawing.Point(83, 14);
             this.lbl_minors_DBDDI_title.Name = "lbl_minors_DBDDI_title";
             this.lbl_minors_DBDDI_title.Size = new System.Drawing.Size(65, 22);
             this.lbl_minors_DBDDI_title.TabIndex = 0;
@@ -1251,69 +1331,85 @@
             this.ml_other_title.TabIndex = 0;
             this.ml_other_title.Text = "Title";
             // 
-            // btn_HCC
+            // lbl_DBDDI_name
             // 
-            this.btn_HCC.BackColor = System.Drawing.Color.Orange;
-            this.btn_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_HCC.Location = new System.Drawing.Point(488, 154);
-            this.btn_HCC.Name = "btn_HCC";
-            this.btn_HCC.Size = new System.Drawing.Size(251, 146);
-            this.btn_HCC.TabIndex = 1;
-            this.btn_HCC.Text = "HCC";
-            this.toolTip1.SetToolTip(this.btn_HCC, "Human Centered Computing");
-            this.btn_HCC.UseVisualStyleBackColor = false;
-            this.btn_HCC.Click += new System.EventHandler(this.btn_HCC_Click);
+            this.lbl_DBDDI_name.AutoSize = true;
+            this.lbl_DBDDI_name.Location = new System.Drawing.Point(33, 36);
+            this.lbl_DBDDI_name.Name = "lbl_DBDDI_name";
+            this.lbl_DBDDI_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_DBDDI_name.TabIndex = 10;
+            this.lbl_DBDDI_name.Text = "Name";
+            this.lbl_DBDDI_name.Click += new System.EventHandler(this.panel_minors_DBDDI_Click);
             // 
-            // btn_CIT
+            // lbl_GIS_name
             // 
-            this.btn_CIT.BackColor = System.Drawing.Color.Orange;
-            this.btn_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CIT.Location = new System.Drawing.Point(861, 154);
-            this.btn_CIT.Name = "btn_CIT";
-            this.btn_CIT.Size = new System.Drawing.Size(251, 146);
-            this.btn_CIT.TabIndex = 10;
-            this.btn_CIT.Text = "CIT";
-            this.toolTip1.SetToolTip(this.btn_CIT, "Computing & Information Technologies");
-            this.btn_CIT.UseVisualStyleBackColor = false;
-            this.btn_CIT.Click += new System.EventHandler(this.btn_CIT_Click);
+            this.lbl_GIS_name.AutoSize = true;
+            this.lbl_GIS_name.Location = new System.Drawing.Point(17, 36);
+            this.lbl_GIS_name.Name = "lbl_GIS_name";
+            this.lbl_GIS_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_GIS_name.TabIndex = 1;
+            this.lbl_GIS_name.Text = "Name";
+            this.lbl_GIS_name.Click += new System.EventHandler(this.panel_minors_GIS_Click);
             // 
-            // btn_IST
+            // lbl_MEDINFO_name
             // 
-            this.btn_IST.BackColor = System.Drawing.Color.Orange;
-            this.btn_IST.Location = new System.Drawing.Point(140, 416);
-            this.btn_IST.Name = "btn_IST";
-            this.btn_IST.Size = new System.Drawing.Size(251, 146);
-            this.btn_IST.TabIndex = 11;
-            this.btn_IST.Text = "IST";
-            this.toolTip1.SetToolTip(this.btn_IST, "Information Sciences & Technologies");
-            this.btn_IST.UseVisualStyleBackColor = false;
-            this.btn_IST.Click += new System.EventHandler(this.btn_IST_Click);
+            this.lbl_MEDINFO_name.AutoSize = true;
+            this.lbl_MEDINFO_name.Location = new System.Drawing.Point(24, 46);
+            this.lbl_MEDINFO_name.Name = "lbl_MEDINFO_name";
+            this.lbl_MEDINFO_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_MEDINFO_name.TabIndex = 1;
+            this.lbl_MEDINFO_name.Text = "Name";
+            this.lbl_MEDINFO_name.Click += new System.EventHandler(this.panel_minors_MEDINFO_Click);
             // 
-            // btn_HCI
+            // lbl_MEDDEV_name
             // 
-            this.btn_HCI.BackColor = System.Drawing.Color.Orange;
-            this.btn_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_HCI.Location = new System.Drawing.Point(488, 416);
-            this.btn_HCI.Name = "btn_HCI";
-            this.btn_HCI.Size = new System.Drawing.Size(251, 146);
-            this.btn_HCI.TabIndex = 12;
-            this.btn_HCI.Text = "HCI";
-            this.toolTip1.SetToolTip(this.btn_HCI, "Human Centered Computing");
-            this.btn_HCI.UseVisualStyleBackColor = false;
-            this.btn_HCI.Click += new System.EventHandler(this.btn_HCI_Click);
+            this.lbl_MEDDEV_name.AutoSize = true;
+            this.lbl_MEDDEV_name.Location = new System.Drawing.Point(55, 46);
+            this.lbl_MEDDEV_name.Name = "lbl_MEDDEV_name";
+            this.lbl_MEDDEV_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_MEDDEV_name.TabIndex = 1;
+            this.lbl_MEDDEV_name.Text = "Name";
+            this.lbl_MEDDEV_name.Click += new System.EventHandler(this.panels_minors_MDDEV_Click);
             // 
-            // btn_NSA
+            // lbl_MDEV_name
             // 
-            this.btn_NSA.BackColor = System.Drawing.Color.Orange;
-            this.btn_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_NSA.Location = new System.Drawing.Point(861, 416);
-            this.btn_NSA.Name = "btn_NSA";
-            this.btn_NSA.Size = new System.Drawing.Size(251, 146);
-            this.btn_NSA.TabIndex = 13;
-            this.btn_NSA.Text = "NSA";
-            this.toolTip1.SetToolTip(this.btn_NSA, "Networking and Systems Administration");
-            this.btn_NSA.UseVisualStyleBackColor = false;
-            this.btn_NSA.Click += new System.EventHandler(this.btn_NSA_Click);
+            this.lbl_MDEV_name.AutoSize = true;
+            this.lbl_MDEV_name.Location = new System.Drawing.Point(20, 49);
+            this.lbl_MDEV_name.Name = "lbl_MDEV_name";
+            this.lbl_MDEV_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_MDEV_name.TabIndex = 1;
+            this.lbl_MDEV_name.Text = "Name";
+            this.lbl_MDEV_name.Click += new System.EventHandler(this.panel_minors_MDEV_Click);
+            // 
+            // lbl_NETSYS_name
+            // 
+            this.lbl_NETSYS_name.AutoSize = true;
+            this.lbl_NETSYS_name.Location = new System.Drawing.Point(21, 49);
+            this.lbl_NETSYS_name.Name = "lbl_NETSYS_name";
+            this.lbl_NETSYS_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_NETSYS_name.TabIndex = 1;
+            this.lbl_NETSYS_name.Text = "Name";
+            this.lbl_NETSYS_name.Click += new System.EventHandler(this.panel_minors_NETSYS_Click);
+            // 
+            // lbl_WEBDD_name
+            // 
+            this.lbl_WEBDD_name.AutoSize = true;
+            this.lbl_WEBDD_name.Location = new System.Drawing.Point(28, 50);
+            this.lbl_WEBDD_name.Name = "lbl_WEBDD_name";
+            this.lbl_WEBDD_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_WEBDD_name.TabIndex = 1;
+            this.lbl_WEBDD_name.Text = "Name";
+            this.lbl_WEBDD_name.Click += new System.EventHandler(this.panel_minors_WEBDD_Click);
+            // 
+            // lbl_WEBD_name
+            // 
+            this.lbl_WEBD_name.AutoSize = true;
+            this.lbl_WEBD_name.Location = new System.Drawing.Point(21, 50);
+            this.lbl_WEBD_name.Name = "lbl_WEBD_name";
+            this.lbl_WEBD_name.Size = new System.Drawing.Size(57, 22);
+            this.lbl_WEBD_name.TabIndex = 1;
+            this.lbl_WEBD_name.Text = "Name";
+            this.lbl_WEBD_name.Click += new System.EventHandler(this.panel_minors_WEBD_Click);
             // 
             // Form1
             // 
@@ -1483,6 +1579,14 @@
         private System.Windows.Forms.Button btn_IST;
         private System.Windows.Forms.Button btn_HCI;
         private System.Windows.Forms.Button btn_NSA;
+        private System.Windows.Forms.Label lbl_DBDDI_name;
+        private System.Windows.Forms.Label lbl_GIS_name;
+        private System.Windows.Forms.Label lbl_MEDINFO_name;
+        private System.Windows.Forms.Label lbl_MEDDEV_name;
+        private System.Windows.Forms.Label lbl_MDEV_name;
+        private System.Windows.Forms.Label lbl_NETSYS_name;
+        private System.Windows.Forms.Label lbl_WEBDD_name;
+        private System.Windows.Forms.Label lbl_WEBD_name;
     }
 }
 

@@ -148,6 +148,30 @@ namespace MokP3
                 // Get Minors Data
                 string jsonMinors = rj.getRESTDataJSON("/minors/");
                 minors = JToken.Parse(jsonMinors).ToObject<Minors>();
+
+                lbl_DBDDI_name.Text = minors.UgMinors[0].title;
+                lbl_DBDDI_name.MaximumSize = new Size(150, 0);
+
+                lbl_GIS_name.Text = minors.UgMinors[1].title;
+                lbl_GIS_name.MaximumSize = new Size(150, 0);
+
+                lbl_MEDINFO_name.Text = minors.UgMinors[2].title;
+                lbl_MEDINFO_name.MaximumSize = new Size(150, 0);
+
+                lbl_MEDDEV_name.Text = minors.UgMinors[3].title;
+                lbl_MEDDEV_name.MaximumSize = new Size(150, 0);
+
+                lbl_MDEV_name.Text = minors.UgMinors[4].title;
+                lbl_MDEV_name.MaximumSize = new Size(150, 0);
+
+                lbl_NETSYS_name.Text = minors.UgMinors[5].title;
+                lbl_NETSYS_name.MaximumSize = new Size(150, 0);
+
+                lbl_WEBDD_name.Text = minors.UgMinors[6].title;
+                lbl_WEBDD_name.MaximumSize = new Size(150, 0);
+
+                lbl_WEBD_name.Text = minors.UgMinors[7].title;
+                lbl_WEBD_name.MaximumSize = new Size(150, 0);
             }
 
         }
@@ -660,6 +684,13 @@ namespace MokP3
 
                     lv_news.Items.Add(lvItem);
                 }
+
+                // NEW IDEA
+                // Make a new panel to hold information
+                // Add to listview
+                // .Items.Add();    
+
+
             }
         }
         #endregion
