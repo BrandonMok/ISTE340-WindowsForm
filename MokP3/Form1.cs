@@ -70,9 +70,11 @@ namespace MokP3
             ml_about_title.Text = about.title;
 
             lbl_description.Text = about.description;
+            lbl_description.Font = new Font("Arial", 9);
             lbl_description.MaximumSize = new Size(500, 0);
 
             lbl_quote.Text = "'" + about.quote + "'\n\n-" + about.quoteAuthor;
+            lbl_quote.Font = new Font("Arial", 9);
             lbl_quote.MaximumSize = new Size(400, 0);
             
         }
@@ -91,42 +93,44 @@ namespace MokP3
         }
 
         #region DegreesClicks
-        private void panel_uDegrees_WMC_Click(object sender, EventArgs e)
+        // new way
+        private void btn_WMC_Click(object sender, EventArgs e)
         {
             Undergraduate ug = degrees.undergraduate.Find(x => x.degreeName == "wmc");
             EachDegree ed = new EachDegree(ug, null);
             ed.ShowDialog();
         }
 
-        private void panel_uDegrees_HCC_Click(object sender, EventArgs e)
+        private void btn_HCC_Click(object sender, EventArgs e)
         {
             Undergraduate ug = degrees.undergraduate.Find(x => x.degreeName == "hcc");
             EachDegree ed = new EachDegree(ug, null);
             ed.ShowDialog();
         }
 
-        private void panel_uDegrees_CIT_Click(object sender, EventArgs e)
+        private void btn_CIT_Click(object sender, EventArgs e)
         {
             Undergraduate ug = degrees.undergraduate.Find(x => x.degreeName == "cit");
             EachDegree ed = new EachDegree(ug, null);
             ed.ShowDialog();
         }
 
-        private void panel_gDegrees_IST_Click(object sender, EventArgs e)
+        private void btn_IST_Click(object sender, EventArgs e)
         {
             Graduate grad = degrees.graduate.Find(x => x.degreeName == "ist");
             EachDegree ed = new EachDegree(null, grad);
             ed.ShowDialog();
         }
 
-        private void panel_gDegrees_HCI_Click(object sender, EventArgs e)
+        private void btn_HCI_Click(object sender, EventArgs e)
         {
             Graduate grad = degrees.graduate.Find(x => x.degreeName == "hci");
             EachDegree ed = new EachDegree(null, grad);
             ed.ShowDialog();
         }
 
-        private void panel_gDegrees_NSA_Click(object sender, EventArgs e)
+
+        private void btn_NSA_Click(object sender, EventArgs e)
         {
             Graduate grad = degrees.graduate.Find(x => x.degreeName == "nsa");
             EachDegree ed = new EachDegree(null, grad);
@@ -656,7 +660,6 @@ namespace MokP3
 
                     lv_news.Items.Add(lvItem);
                 }
-
             }
         }
         #endregion

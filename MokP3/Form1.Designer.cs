@@ -49,21 +49,10 @@
             this.AboutPage = new System.Windows.Forms.TabPage();
             this.ml_about_title = new MaterialSkin.Controls.MaterialLabel();
             this.DegreesPage = new System.Windows.Forms.TabPage();
+            this.btn_WMC = new System.Windows.Forms.Button();
             this.ml_degrees_title = new MaterialSkin.Controls.MaterialLabel();
-            this.panel_gDegrees_NSA = new System.Windows.Forms.Panel();
-            this.lbl_NSA_title = new System.Windows.Forms.Label();
-            this.panel_gDegrees_HCI = new System.Windows.Forms.Panel();
-            this.lbl_HCI_title = new System.Windows.Forms.Label();
-            this.panel_gDegrees_IST = new System.Windows.Forms.Panel();
-            this.lbl_IST_title = new System.Windows.Forms.Label();
             this.lbl_degrees_graduate_Title = new System.Windows.Forms.Label();
             this.lbl_degrees_undergrad_title = new System.Windows.Forms.Label();
-            this.panel_uDegrees_CIT = new System.Windows.Forms.Panel();
-            this.lbl_CIT_title = new System.Windows.Forms.Label();
-            this.panel_uDegrees_HCC = new System.Windows.Forms.Panel();
-            this.lbl_HCC_title = new System.Windows.Forms.Label();
-            this.panel_uDegrees_WMC = new System.Windows.Forms.Panel();
-            this.lbl_WMC_title = new System.Windows.Forms.Label();
             this.MinorsPage = new System.Windows.Forms.TabPage();
             this.ml_minors_title = new MaterialSkin.Controls.MaterialLabel();
             this.panel_minors_WEBD = new System.Windows.Forms.Panel();
@@ -138,15 +127,14 @@
             this.lbl_social_tweet = new System.Windows.Forms.Label();
             this.ml_other_title = new MaterialSkin.Controls.MaterialLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_HCC = new System.Windows.Forms.Button();
+            this.btn_CIT = new System.Windows.Forms.Button();
+            this.btn_IST = new System.Windows.Forms.Button();
+            this.btn_HCI = new System.Windows.Forms.Button();
+            this.btn_NSA = new System.Windows.Forms.Button();
             this.tabController_MAIN.SuspendLayout();
             this.AboutPage.SuspendLayout();
             this.DegreesPage.SuspendLayout();
-            this.panel_gDegrees_NSA.SuspendLayout();
-            this.panel_gDegrees_HCI.SuspendLayout();
-            this.panel_gDegrees_IST.SuspendLayout();
-            this.panel_uDegrees_CIT.SuspendLayout();
-            this.panel_uDegrees_HCC.SuspendLayout();
-            this.panel_uDegrees_WMC.SuspendLayout();
             this.MinorsPage.SuspendLayout();
             this.panel_minors_WEBD.SuspendLayout();
             this.panel_minors_WEBDD.SuspendLayout();
@@ -332,15 +320,15 @@
             // 
             // DegreesPage
             // 
+            this.DegreesPage.Controls.Add(this.btn_NSA);
+            this.DegreesPage.Controls.Add(this.btn_HCI);
+            this.DegreesPage.Controls.Add(this.btn_IST);
+            this.DegreesPage.Controls.Add(this.btn_CIT);
+            this.DegreesPage.Controls.Add(this.btn_HCC);
+            this.DegreesPage.Controls.Add(this.btn_WMC);
             this.DegreesPage.Controls.Add(this.ml_degrees_title);
-            this.DegreesPage.Controls.Add(this.panel_gDegrees_NSA);
-            this.DegreesPage.Controls.Add(this.panel_gDegrees_HCI);
-            this.DegreesPage.Controls.Add(this.panel_gDegrees_IST);
             this.DegreesPage.Controls.Add(this.lbl_degrees_graduate_Title);
             this.DegreesPage.Controls.Add(this.lbl_degrees_undergrad_title);
-            this.DegreesPage.Controls.Add(this.panel_uDegrees_CIT);
-            this.DegreesPage.Controls.Add(this.panel_uDegrees_HCC);
-            this.DegreesPage.Controls.Add(this.panel_uDegrees_WMC);
             this.DegreesPage.Location = new System.Drawing.Point(4, 31);
             this.DegreesPage.Name = "DegreesPage";
             this.DegreesPage.Padding = new System.Windows.Forms.Padding(3);
@@ -350,89 +338,36 @@
             this.DegreesPage.UseVisualStyleBackColor = true;
             this.DegreesPage.Enter += new System.EventHandler(this.DegreesPage_Enter);
             // 
+            // btn_WMC
+            // 
+            this.btn_WMC.BackColor = System.Drawing.Color.Orange;
+            this.btn_WMC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_WMC.Location = new System.Drawing.Point(140, 154);
+            this.btn_WMC.Name = "btn_WMC";
+            this.btn_WMC.Size = new System.Drawing.Size(251, 146);
+            this.btn_WMC.TabIndex = 1;
+            this.btn_WMC.Text = "WMC";
+            this.toolTip1.SetToolTip(this.btn_WMC, "Web & Mobile Computing");
+            this.btn_WMC.UseVisualStyleBackColor = false;
+            this.btn_WMC.Click += new System.EventHandler(this.btn_WMC_Click);
+            // 
             // ml_degrees_title
             // 
             this.ml_degrees_title.AutoSize = true;
             this.ml_degrees_title.Depth = 0;
             this.ml_degrees_title.Font = new System.Drawing.Font("Roboto", 11F);
             this.ml_degrees_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_degrees_title.Location = new System.Drawing.Point(513, 27);
+            this.ml_degrees_title.Location = new System.Drawing.Point(559, 34);
             this.ml_degrees_title.MouseState = MaterialSkin.MouseState.HOVER;
             this.ml_degrees_title.Name = "ml_degrees_title";
             this.ml_degrees_title.Size = new System.Drawing.Size(92, 27);
             this.ml_degrees_title.TabIndex = 9;
             this.ml_degrees_title.Text = "Degrees";
             // 
-            // panel_gDegrees_NSA
-            // 
-            this.panel_gDegrees_NSA.BackColor = System.Drawing.Color.LightGray;
-            this.panel_gDegrees_NSA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_gDegrees_NSA.Controls.Add(this.lbl_NSA_title);
-            this.panel_gDegrees_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_NSA.Location = new System.Drawing.Point(856, 383);
-            this.panel_gDegrees_NSA.Name = "panel_gDegrees_NSA";
-            this.panel_gDegrees_NSA.Size = new System.Drawing.Size(207, 122);
-            this.panel_gDegrees_NSA.TabIndex = 8;
-            this.panel_gDegrees_NSA.Click += new System.EventHandler(this.panel_gDegrees_NSA_Click);
-            // 
-            // lbl_NSA_title
-            // 
-            this.lbl_NSA_title.AutoSize = true;
-            this.lbl_NSA_title.Location = new System.Drawing.Point(78, 34);
-            this.lbl_NSA_title.Name = "lbl_NSA_title";
-            this.lbl_NSA_title.Size = new System.Drawing.Size(47, 22);
-            this.lbl_NSA_title.TabIndex = 0;
-            this.lbl_NSA_title.Text = "NSA";
-            this.toolTip1.SetToolTip(this.lbl_NSA_title, "NSA");
-            // 
-            // panel_gDegrees_HCI
-            // 
-            this.panel_gDegrees_HCI.BackColor = System.Drawing.Color.LightGray;
-            this.panel_gDegrees_HCI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_gDegrees_HCI.Controls.Add(this.lbl_HCI_title);
-            this.panel_gDegrees_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_HCI.Location = new System.Drawing.Point(465, 383);
-            this.panel_gDegrees_HCI.Name = "panel_gDegrees_HCI";
-            this.panel_gDegrees_HCI.Size = new System.Drawing.Size(200, 122);
-            this.panel_gDegrees_HCI.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.panel_gDegrees_HCI, "HCI");
-            this.panel_gDegrees_HCI.Click += new System.EventHandler(this.panel_gDegrees_HCI_Click);
-            // 
-            // lbl_HCI_title
-            // 
-            this.lbl_HCI_title.AutoSize = true;
-            this.lbl_HCI_title.Location = new System.Drawing.Point(75, 34);
-            this.lbl_HCI_title.Name = "lbl_HCI_title";
-            this.lbl_HCI_title.Size = new System.Drawing.Size(40, 22);
-            this.lbl_HCI_title.TabIndex = 0;
-            this.lbl_HCI_title.Text = "HCI";
-            // 
-            // panel_gDegrees_IST
-            // 
-            this.panel_gDegrees_IST.BackColor = System.Drawing.Color.LightGray;
-            this.panel_gDegrees_IST.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_gDegrees_IST.Controls.Add(this.lbl_IST_title);
-            this.panel_gDegrees_IST.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_gDegrees_IST.Location = new System.Drawing.Point(91, 383);
-            this.panel_gDegrees_IST.Name = "panel_gDegrees_IST";
-            this.panel_gDegrees_IST.Size = new System.Drawing.Size(213, 122);
-            this.panel_gDegrees_IST.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.panel_gDegrees_IST, "IST");
-            this.panel_gDegrees_IST.Click += new System.EventHandler(this.panel_gDegrees_IST_Click);
-            // 
-            // lbl_IST_title
-            // 
-            this.lbl_IST_title.AutoSize = true;
-            this.lbl_IST_title.Location = new System.Drawing.Point(78, 34);
-            this.lbl_IST_title.Name = "lbl_IST_title";
-            this.lbl_IST_title.Size = new System.Drawing.Size(38, 22);
-            this.lbl_IST_title.TabIndex = 0;
-            this.lbl_IST_title.Text = "IST";
-            // 
             // lbl_degrees_graduate_Title
             // 
             this.lbl_degrees_graduate_Title.AutoSize = true;
-            this.lbl_degrees_graduate_Title.Location = new System.Drawing.Point(514, 340);
+            this.lbl_degrees_graduate_Title.Location = new System.Drawing.Point(563, 373);
             this.lbl_degrees_graduate_Title.Name = "lbl_degrees_graduate_Title";
             this.lbl_degrees_graduate_Title.Size = new System.Drawing.Size(85, 22);
             this.lbl_degrees_graduate_Title.TabIndex = 5;
@@ -441,77 +376,11 @@
             // lbl_degrees_undergrad_title
             // 
             this.lbl_degrees_undergrad_title.AutoSize = true;
-            this.lbl_degrees_undergrad_title.Location = new System.Drawing.Point(493, 77);
+            this.lbl_degrees_undergrad_title.Location = new System.Drawing.Point(542, 110);
             this.lbl_degrees_undergrad_title.Name = "lbl_degrees_undergrad_title";
             this.lbl_degrees_undergrad_title.Size = new System.Drawing.Size(130, 22);
             this.lbl_degrees_undergrad_title.TabIndex = 4;
             this.lbl_degrees_undergrad_title.Text = "Undergraduate";
-            // 
-            // panel_uDegrees_CIT
-            // 
-            this.panel_uDegrees_CIT.BackColor = System.Drawing.Color.LightGray;
-            this.panel_uDegrees_CIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_uDegrees_CIT.Controls.Add(this.lbl_CIT_title);
-            this.panel_uDegrees_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_CIT.Location = new System.Drawing.Point(856, 121);
-            this.panel_uDegrees_CIT.Name = "panel_uDegrees_CIT";
-            this.panel_uDegrees_CIT.Size = new System.Drawing.Size(207, 121);
-            this.panel_uDegrees_CIT.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.panel_uDegrees_CIT, "CIT");
-            this.panel_uDegrees_CIT.Click += new System.EventHandler(this.panel_uDegrees_CIT_Click);
-            // 
-            // lbl_CIT_title
-            // 
-            this.lbl_CIT_title.AutoSize = true;
-            this.lbl_CIT_title.Location = new System.Drawing.Point(86, 36);
-            this.lbl_CIT_title.Name = "lbl_CIT_title";
-            this.lbl_CIT_title.Size = new System.Drawing.Size(39, 22);
-            this.lbl_CIT_title.TabIndex = 0;
-            this.lbl_CIT_title.Text = "CIT";
-            // 
-            // panel_uDegrees_HCC
-            // 
-            this.panel_uDegrees_HCC.BackColor = System.Drawing.Color.LightGray;
-            this.panel_uDegrees_HCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_uDegrees_HCC.Controls.Add(this.lbl_HCC_title);
-            this.panel_uDegrees_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_HCC.Location = new System.Drawing.Point(454, 121);
-            this.panel_uDegrees_HCC.Name = "panel_uDegrees_HCC";
-            this.panel_uDegrees_HCC.Size = new System.Drawing.Size(211, 121);
-            this.panel_uDegrees_HCC.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.panel_uDegrees_HCC, "HCC");
-            this.panel_uDegrees_HCC.Click += new System.EventHandler(this.panel_uDegrees_HCC_Click);
-            // 
-            // lbl_HCC_title
-            // 
-            this.lbl_HCC_title.AutoSize = true;
-            this.lbl_HCC_title.Location = new System.Drawing.Point(75, 36);
-            this.lbl_HCC_title.Name = "lbl_HCC_title";
-            this.lbl_HCC_title.Size = new System.Drawing.Size(49, 22);
-            this.lbl_HCC_title.TabIndex = 0;
-            this.lbl_HCC_title.Text = "HCC";
-            // 
-            // panel_uDegrees_WMC
-            // 
-            this.panel_uDegrees_WMC.BackColor = System.Drawing.Color.LightGray;
-            this.panel_uDegrees_WMC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_uDegrees_WMC.Controls.Add(this.lbl_WMC_title);
-            this.panel_uDegrees_WMC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_WMC.Location = new System.Drawing.Point(91, 121);
-            this.panel_uDegrees_WMC.Name = "panel_uDegrees_WMC";
-            this.panel_uDegrees_WMC.Size = new System.Drawing.Size(213, 121);
-            this.panel_uDegrees_WMC.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.panel_uDegrees_WMC, "WMC");
-            this.panel_uDegrees_WMC.Click += new System.EventHandler(this.panel_uDegrees_WMC_Click);
-            // 
-            // lbl_WMC_title
-            // 
-            this.lbl_WMC_title.AutoSize = true;
-            this.lbl_WMC_title.Location = new System.Drawing.Point(64, 36);
-            this.lbl_WMC_title.Name = "lbl_WMC_title";
-            this.lbl_WMC_title.Size = new System.Drawing.Size(54, 22);
-            this.lbl_WMC_title.TabIndex = 0;
-            this.lbl_WMC_title.Text = "WMC";
             // 
             // MinorsPage
             // 
@@ -1016,7 +885,7 @@
             // 
             // btn_forms
             // 
-            this.btn_forms.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_forms.BackColor = System.Drawing.Color.Orange;
             this.btn_forms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_forms.Location = new System.Drawing.Point(483, 397);
             this.btn_forms.Name = "btn_forms";
@@ -1029,7 +898,7 @@
             // 
             // btn_studentAmbassadors
             // 
-            this.btn_studentAmbassadors.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_studentAmbassadors.BackColor = System.Drawing.Color.Orange;
             this.btn_studentAmbassadors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_studentAmbassadors.Location = new System.Drawing.Point(101, 397);
             this.btn_studentAmbassadors.Name = "btn_studentAmbassadors";
@@ -1042,7 +911,7 @@
             // 
             // btn_tutorsAndLabInformation
             // 
-            this.btn_tutorsAndLabInformation.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_tutorsAndLabInformation.BackColor = System.Drawing.Color.Orange;
             this.btn_tutorsAndLabInformation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(876, 123);
             this.btn_tutorsAndLabInformation.Name = "btn_tutorsAndLabInformation";
@@ -1055,7 +924,7 @@
             // 
             // btn_coopEnrollment
             // 
-            this.btn_coopEnrollment.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_coopEnrollment.BackColor = System.Drawing.Color.Orange;
             this.btn_coopEnrollment.Location = new System.Drawing.Point(876, 397);
             this.btn_coopEnrollment.Name = "btn_coopEnrollment";
             this.btn_coopEnrollment.Size = new System.Drawing.Size(291, 177);
@@ -1067,7 +936,7 @@
             // 
             // btn_facultyAdvisors
             // 
-            this.btn_facultyAdvisors.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_facultyAdvisors.BackColor = System.Drawing.Color.Orange;
             this.btn_facultyAdvisors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_facultyAdvisors.Location = new System.Drawing.Point(483, 123);
             this.btn_facultyAdvisors.Name = "btn_facultyAdvisors";
@@ -1080,7 +949,7 @@
             // 
             // btn_studyAbroad
             // 
-            this.btn_studyAbroad.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_studyAbroad.BackColor = System.Drawing.Color.Orange;
             this.btn_studyAbroad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_studyAbroad.ForeColor = System.Drawing.Color.Black;
             this.btn_studyAbroad.Location = new System.Drawing.Point(101, 123);
@@ -1382,6 +1251,70 @@
             this.ml_other_title.TabIndex = 0;
             this.ml_other_title.Text = "Title";
             // 
+            // btn_HCC
+            // 
+            this.btn_HCC.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HCC.Location = new System.Drawing.Point(488, 154);
+            this.btn_HCC.Name = "btn_HCC";
+            this.btn_HCC.Size = new System.Drawing.Size(251, 146);
+            this.btn_HCC.TabIndex = 1;
+            this.btn_HCC.Text = "HCC";
+            this.toolTip1.SetToolTip(this.btn_HCC, "Human Centered Computing");
+            this.btn_HCC.UseVisualStyleBackColor = false;
+            this.btn_HCC.Click += new System.EventHandler(this.btn_HCC_Click);
+            // 
+            // btn_CIT
+            // 
+            this.btn_CIT.BackColor = System.Drawing.Color.Orange;
+            this.btn_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CIT.Location = new System.Drawing.Point(861, 154);
+            this.btn_CIT.Name = "btn_CIT";
+            this.btn_CIT.Size = new System.Drawing.Size(251, 146);
+            this.btn_CIT.TabIndex = 10;
+            this.btn_CIT.Text = "CIT";
+            this.toolTip1.SetToolTip(this.btn_CIT, "Computing & Information Technologies");
+            this.btn_CIT.UseVisualStyleBackColor = false;
+            this.btn_CIT.Click += new System.EventHandler(this.btn_CIT_Click);
+            // 
+            // btn_IST
+            // 
+            this.btn_IST.BackColor = System.Drawing.Color.Orange;
+            this.btn_IST.Location = new System.Drawing.Point(140, 416);
+            this.btn_IST.Name = "btn_IST";
+            this.btn_IST.Size = new System.Drawing.Size(251, 146);
+            this.btn_IST.TabIndex = 11;
+            this.btn_IST.Text = "IST";
+            this.toolTip1.SetToolTip(this.btn_IST, "Information Sciences & Technologies");
+            this.btn_IST.UseVisualStyleBackColor = false;
+            this.btn_IST.Click += new System.EventHandler(this.btn_IST_Click);
+            // 
+            // btn_HCI
+            // 
+            this.btn_HCI.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HCI.Location = new System.Drawing.Point(488, 416);
+            this.btn_HCI.Name = "btn_HCI";
+            this.btn_HCI.Size = new System.Drawing.Size(251, 146);
+            this.btn_HCI.TabIndex = 12;
+            this.btn_HCI.Text = "HCI";
+            this.toolTip1.SetToolTip(this.btn_HCI, "Human Centered Computing");
+            this.btn_HCI.UseVisualStyleBackColor = false;
+            this.btn_HCI.Click += new System.EventHandler(this.btn_HCI_Click);
+            // 
+            // btn_NSA
+            // 
+            this.btn_NSA.BackColor = System.Drawing.Color.Orange;
+            this.btn_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_NSA.Location = new System.Drawing.Point(861, 416);
+            this.btn_NSA.Name = "btn_NSA";
+            this.btn_NSA.Size = new System.Drawing.Size(251, 146);
+            this.btn_NSA.TabIndex = 13;
+            this.btn_NSA.Text = "NSA";
+            this.toolTip1.SetToolTip(this.btn_NSA, "Networking and Systems Administration");
+            this.btn_NSA.UseVisualStyleBackColor = false;
+            this.btn_NSA.Click += new System.EventHandler(this.btn_NSA_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1396,18 +1329,6 @@
             this.AboutPage.PerformLayout();
             this.DegreesPage.ResumeLayout(false);
             this.DegreesPage.PerformLayout();
-            this.panel_gDegrees_NSA.ResumeLayout(false);
-            this.panel_gDegrees_NSA.PerformLayout();
-            this.panel_gDegrees_HCI.ResumeLayout(false);
-            this.panel_gDegrees_HCI.PerformLayout();
-            this.panel_gDegrees_IST.ResumeLayout(false);
-            this.panel_gDegrees_IST.PerformLayout();
-            this.panel_uDegrees_CIT.ResumeLayout(false);
-            this.panel_uDegrees_CIT.PerformLayout();
-            this.panel_uDegrees_HCC.ResumeLayout(false);
-            this.panel_uDegrees_HCC.PerformLayout();
-            this.panel_uDegrees_WMC.ResumeLayout(false);
-            this.panel_uDegrees_WMC.PerformLayout();
             this.MinorsPage.ResumeLayout(false);
             this.MinorsPage.PerformLayout();
             this.panel_minors_WEBD.ResumeLayout(false);
@@ -1479,18 +1400,6 @@
         private System.Windows.Forms.TabPage AboutPage;
         private System.Windows.Forms.TabPage DegreesPage;
         private System.Windows.Forms.Label lbl_degrees_undergrad_title;
-        private System.Windows.Forms.Panel panel_uDegrees_CIT;
-        private System.Windows.Forms.Panel panel_uDegrees_HCC;
-        private System.Windows.Forms.Panel panel_uDegrees_WMC;
-        private System.Windows.Forms.Label lbl_CIT_title;
-        private System.Windows.Forms.Label lbl_HCC_title;
-        private System.Windows.Forms.Label lbl_WMC_title;
-        private System.Windows.Forms.Panel panel_gDegrees_NSA;
-        private System.Windows.Forms.Label lbl_NSA_title;
-        private System.Windows.Forms.Panel panel_gDegrees_HCI;
-        private System.Windows.Forms.Label lbl_HCI_title;
-        private System.Windows.Forms.Panel panel_gDegrees_IST;
-        private System.Windows.Forms.Label lbl_IST_title;
         private System.Windows.Forms.Label lbl_degrees_graduate_Title;
         private System.Windows.Forms.TabPage MinorsPage;
         private System.Windows.Forms.Panel panel_minors_WEBD;
@@ -1568,6 +1477,12 @@
         private MaterialSkin.Controls.MaterialLabel ml_research_title;
         private MaterialSkin.Controls.MaterialLabel ml_employmentSect_title;
         private MaterialSkin.Controls.MaterialLabel ml_coopSection_title;
+        private System.Windows.Forms.Button btn_WMC;
+        private System.Windows.Forms.Button btn_HCC;
+        private System.Windows.Forms.Button btn_CIT;
+        private System.Windows.Forms.Button btn_IST;
+        private System.Windows.Forms.Button btn_HCI;
+        private System.Windows.Forms.Button btn_NSA;
     }
 }
 
