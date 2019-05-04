@@ -64,37 +64,41 @@ namespace MokP3
 
         private void loadAcademicAdvisors()
         {
-                academicAdvisorPanel = new Panel();
-                academicAdvisorPanel.Dock = DockStyle.Fill;
+            academicAdvisorPanel = new Panel();
+            academicAdvisorPanel.Dock = DockStyle.Fill;
 
-                MaterialLabel mlTitle = new MaterialLabel();
-                mlTitle.Text = ss.academicAdvisors.title;
-                mlTitle.Location = new Point(380, 20);
-                academicAdvisorPanel.Controls.Add(mlTitle);
+            // Title
+            MaterialLabel mlTitle = new MaterialLabel();
+            mlTitle.Text = ss.academicAdvisors.title;
+            mlTitle.Location = new Point(380, 20);
+            academicAdvisorPanel.Controls.Add(mlTitle);
 
-                Label lblDesc = new Label();
-                lblDesc.Text = ss.academicAdvisors.description;
-                lblDesc.MaximumSize = new Size(500, 500);
-                lblDesc.AutoSize = true;
-                lblDesc.Location = new Point(180, 50);
-                academicAdvisorPanel.Controls.Add(lblDesc);
+            // Description
+            Label lblDesc = new Label();
+            lblDesc.Text = ss.academicAdvisors.description;
+            lblDesc.MaximumSize = new Size(500, 500);
+            lblDesc.AutoSize = true;
+            lblDesc.Location = new Point(180, 50);
+            lblDesc.Font = new Font("Arial", 9);
+            academicAdvisorPanel.Controls.Add(lblDesc);
 
-                Label lblFAQ = new Label();
-                lblFAQ.Text = ss.academicAdvisors.faq.title;
-                lblFAQ.AutoSize = true;
-                lblFAQ.Font = new Font("Arial", 10);
-                lblFAQ.Location = new Point(180, 220);
-                academicAdvisorPanel.Controls.Add(lblFAQ);
+            // FAQ 
+            Label lblFAQ = new Label();
+            lblFAQ.Text = ss.academicAdvisors.faq.title;
+            lblFAQ.AutoSize = true;
+            lblFAQ.Font = new Font("Arial", 10);
+            lblFAQ.Location = new Point(180, 260);
+            academicAdvisorPanel.Controls.Add(lblFAQ);
 
-                LinkLabel ll = new LinkLabel();
-                ll.Text = ss.academicAdvisors.faq.contentHref;
-                ll.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(faqLinkClick);
-                ll.Location = new Point(180, 250);
-                academicAdvisorPanel.Controls.Add(ll);
+            // LinkLabel for FAQ
+            LinkLabel linkLBL = new LinkLabel();
+            linkLBL.Text = ss.academicAdvisors.faq.contentHref;
+            linkLBL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(faqLinkClick);
+            linkLBL.Location = new Point(180, 280);
+            academicAdvisorPanel.Controls.Add(linkLBL);
 
-                panel_advisors_container.Controls.Add(academicAdvisorPanel);
-                academicAdvisorPanel.Visible = false; // HIDE IT initially
-           // }
+            panel_advisors_container.Controls.Add(academicAdvisorPanel);
+            academicAdvisorPanel.Visible = false; // HIDE IT initially
         }
 
         private void faqLinkClick(object sender, LinkLabelLinkClickedEventArgs e)
@@ -172,7 +176,6 @@ namespace MokP3
         }
         #endregion
 
-
         #region FacultyAdvisors
         private void mb_facultyAdvisors_Click(object sender, EventArgs e)
         {
@@ -195,12 +198,13 @@ namespace MokP3
             Label lbl_facAdv = new Label();
             lbl_facAdv.Text = ss.facultyAdvisors.description;
             lbl_facAdv.AutoSize = true;
-            lbl_facAdv.Location = new Point(200, 50);
-            lbl_facAdv.MaximumSize = new Size(500, 0);
+            lbl_facAdv.Font = new Font("Arial", 9);
+            lbl_facAdv.Location = new Point(100, 70);
+            lbl_facAdv.MaximumSize = new Size(600, 0);
             facultyAdvisorsPanel.Controls.Add(lbl_facAdv);
 
+            // Set visible to false initially
             facultyAdvisorsPanel.Visible = false;
-
             panel_advisors_container.Controls.Add(facultyAdvisorsPanel); // add this panel to main
         }
         #endregion

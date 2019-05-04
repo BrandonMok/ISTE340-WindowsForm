@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.panel_degreeStats = new System.Windows.Forms.Panel();
-            this.panel_stat1 = new System.Windows.Forms.Panel();
-            this.panel_stat2 = new System.Windows.Forms.Panel();
-            this.panel_stat3 = new System.Windows.Forms.Panel();
             this.panel_stat4 = new System.Windows.Forms.Panel();
+            this.lbl_stat4_desc = new System.Windows.Forms.Label();
+            this.ml_stat4_Value = new MaterialSkin.Controls.MaterialLabel();
+            this.panel_stat3 = new System.Windows.Forms.Panel();
+            this.lbl_stat3_desc = new System.Windows.Forms.Label();
+            this.ml_stat3_Value = new MaterialSkin.Controls.MaterialLabel();
+            this.panel_stat2 = new System.Windows.Forms.Panel();
+            this.lbl_stat2_desc = new System.Windows.Forms.Label();
+            this.ml_stat2_Value = new MaterialSkin.Controls.MaterialLabel();
+            this.panel_stat1 = new System.Windows.Forms.Panel();
+            this.lbl_stat1_desc = new System.Windows.Forms.Label();
             this.ml_stat1_Value = new MaterialSkin.Controls.MaterialLabel();
             this.ml_stats_title = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_stat1_desc = new System.Windows.Forms.Label();
-            this.ml_stat2_Value = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_stat2_desc = new System.Windows.Forms.Label();
-            this.ml_stat3_Value = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_stat3_desc = new System.Windows.Forms.Label();
-            this.ml_stat4_Value = new MaterialSkin.Controls.MaterialLabel();
-            this.lbl_stat4_desc = new System.Windows.Forms.Label();
             this.panel_careers_Content = new System.Windows.Forms.Panel();
-            this.panel_employers_Content = new System.Windows.Forms.Panel();
-            this.ml_careers_Title = new MaterialSkin.Controls.MaterialLabel();
-            this.ml_employers_Title = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_careers_list = new System.Windows.Forms.Label();
+            this.ml_careers_Title = new MaterialSkin.Controls.MaterialLabel();
+            this.panel_employers_Content = new System.Windows.Forms.Panel();
             this.lbl_employers_list = new System.Windows.Forms.Label();
+            this.ml_employers_Title = new MaterialSkin.Controls.MaterialLabel();
             this.panel_degreeStats.SuspendLayout();
-            this.panel_stat1.SuspendLayout();
-            this.panel_stat2.SuspendLayout();
-            this.panel_stat3.SuspendLayout();
             this.panel_stat4.SuspendLayout();
+            this.panel_stat3.SuspendLayout();
+            this.panel_stat2.SuspendLayout();
+            this.panel_stat1.SuspendLayout();
             this.panel_careers_Content.SuspendLayout();
             this.panel_employers_Content.SuspendLayout();
             this.SuspendLayout();
@@ -68,25 +68,37 @@
             this.panel_degreeStats.Size = new System.Drawing.Size(1127, 297);
             this.panel_degreeStats.TabIndex = 0;
             // 
-            // panel_stat1
+            // panel_stat4
             // 
-            this.panel_stat1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_stat1.Controls.Add(this.lbl_stat1_desc);
-            this.panel_stat1.Controls.Add(this.ml_stat1_Value);
-            this.panel_stat1.Location = new System.Drawing.Point(23, 19);
-            this.panel_stat1.Name = "panel_stat1";
-            this.panel_stat1.Size = new System.Drawing.Size(247, 248);
-            this.panel_stat1.TabIndex = 0;
+            this.panel_stat4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_stat4.Controls.Add(this.lbl_stat4_desc);
+            this.panel_stat4.Controls.Add(this.ml_stat4_Value);
+            this.panel_stat4.Location = new System.Drawing.Point(862, 19);
+            this.panel_stat4.Name = "panel_stat4";
+            this.panel_stat4.Size = new System.Drawing.Size(247, 248);
+            this.panel_stat4.TabIndex = 2;
             // 
-            // panel_stat2
+            // lbl_stat4_desc
             // 
-            this.panel_stat2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_stat2.Controls.Add(this.lbl_stat2_desc);
-            this.panel_stat2.Controls.Add(this.ml_stat2_Value);
-            this.panel_stat2.Location = new System.Drawing.Point(304, 19);
-            this.panel_stat2.Name = "panel_stat2";
-            this.panel_stat2.Size = new System.Drawing.Size(247, 248);
-            this.panel_stat2.TabIndex = 1;
+            this.lbl_stat4_desc.AutoSize = true;
+            this.lbl_stat4_desc.Location = new System.Drawing.Point(27, 82);
+            this.lbl_stat4_desc.Name = "lbl_stat4_desc";
+            this.lbl_stat4_desc.Size = new System.Drawing.Size(83, 20);
+            this.lbl_stat4_desc.TabIndex = 4;
+            this.lbl_stat4_desc.Text = "stat4 desc";
+            // 
+            // ml_stat4_Value
+            // 
+            this.ml_stat4_Value.AutoSize = true;
+            this.ml_stat4_Value.Depth = 0;
+            this.ml_stat4_Value.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_stat4_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_stat4_Value.Location = new System.Drawing.Point(26, 37);
+            this.ml_stat4_Value.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_stat4_Value.Name = "ml_stat4_Value";
+            this.ml_stat4_Value.Size = new System.Drawing.Size(67, 27);
+            this.ml_stat4_Value.TabIndex = 4;
+            this.ml_stat4_Value.Text = "Value";
             // 
             // panel_stat3
             // 
@@ -98,15 +110,78 @@
             this.panel_stat3.Size = new System.Drawing.Size(247, 248);
             this.panel_stat3.TabIndex = 1;
             // 
-            // panel_stat4
+            // lbl_stat3_desc
             // 
-            this.panel_stat4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_stat4.Controls.Add(this.lbl_stat4_desc);
-            this.panel_stat4.Controls.Add(this.ml_stat4_Value);
-            this.panel_stat4.Location = new System.Drawing.Point(862, 19);
-            this.panel_stat4.Name = "panel_stat4";
-            this.panel_stat4.Size = new System.Drawing.Size(247, 248);
-            this.panel_stat4.TabIndex = 2;
+            this.lbl_stat3_desc.AutoSize = true;
+            this.lbl_stat3_desc.Location = new System.Drawing.Point(25, 82);
+            this.lbl_stat3_desc.Name = "lbl_stat3_desc";
+            this.lbl_stat3_desc.Size = new System.Drawing.Size(83, 20);
+            this.lbl_stat3_desc.TabIndex = 3;
+            this.lbl_stat3_desc.Text = "stat3 desc";
+            // 
+            // ml_stat3_Value
+            // 
+            this.ml_stat3_Value.AutoSize = true;
+            this.ml_stat3_Value.Depth = 0;
+            this.ml_stat3_Value.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_stat3_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_stat3_Value.Location = new System.Drawing.Point(86, 37);
+            this.ml_stat3_Value.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_stat3_Value.Name = "ml_stat3_Value";
+            this.ml_stat3_Value.Size = new System.Drawing.Size(67, 27);
+            this.ml_stat3_Value.TabIndex = 3;
+            this.ml_stat3_Value.Text = "Value";
+            // 
+            // panel_stat2
+            // 
+            this.panel_stat2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_stat2.Controls.Add(this.lbl_stat2_desc);
+            this.panel_stat2.Controls.Add(this.ml_stat2_Value);
+            this.panel_stat2.Location = new System.Drawing.Point(304, 19);
+            this.panel_stat2.Name = "panel_stat2";
+            this.panel_stat2.Size = new System.Drawing.Size(247, 248);
+            this.panel_stat2.TabIndex = 1;
+            // 
+            // lbl_stat2_desc
+            // 
+            this.lbl_stat2_desc.AutoSize = true;
+            this.lbl_stat2_desc.Location = new System.Drawing.Point(23, 82);
+            this.lbl_stat2_desc.Name = "lbl_stat2_desc";
+            this.lbl_stat2_desc.Size = new System.Drawing.Size(83, 20);
+            this.lbl_stat2_desc.TabIndex = 2;
+            this.lbl_stat2_desc.Text = "stat2 desc";
+            // 
+            // ml_stat2_Value
+            // 
+            this.ml_stat2_Value.AutoSize = true;
+            this.ml_stat2_Value.Depth = 0;
+            this.ml_stat2_Value.Font = new System.Drawing.Font("Roboto", 11F);
+            this.ml_stat2_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ml_stat2_Value.Location = new System.Drawing.Point(92, 37);
+            this.ml_stat2_Value.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ml_stat2_Value.Name = "ml_stat2_Value";
+            this.ml_stat2_Value.Size = new System.Drawing.Size(67, 27);
+            this.ml_stat2_Value.TabIndex = 2;
+            this.ml_stat2_Value.Text = "Value";
+            // 
+            // panel_stat1
+            // 
+            this.panel_stat1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_stat1.Controls.Add(this.lbl_stat1_desc);
+            this.panel_stat1.Controls.Add(this.ml_stat1_Value);
+            this.panel_stat1.Location = new System.Drawing.Point(23, 19);
+            this.panel_stat1.Name = "panel_stat1";
+            this.panel_stat1.Size = new System.Drawing.Size(247, 248);
+            this.panel_stat1.TabIndex = 0;
+            // 
+            // lbl_stat1_desc
+            // 
+            this.lbl_stat1_desc.AutoSize = true;
+            this.lbl_stat1_desc.Location = new System.Drawing.Point(29, 82);
+            this.lbl_stat1_desc.Name = "lbl_stat1_desc";
+            this.lbl_stat1_desc.Size = new System.Drawing.Size(83, 20);
+            this.lbl_stat1_desc.TabIndex = 1;
+            this.lbl_stat1_desc.Text = "stat1 desc";
             // 
             // ml_stat1_Value
             // 
@@ -134,81 +209,6 @@
             this.ml_stats_title.TabIndex = 1;
             this.ml_stats_title.Text = "materialLabel1";
             // 
-            // lbl_stat1_desc
-            // 
-            this.lbl_stat1_desc.AutoSize = true;
-            this.lbl_stat1_desc.Location = new System.Drawing.Point(29, 82);
-            this.lbl_stat1_desc.Name = "lbl_stat1_desc";
-            this.lbl_stat1_desc.Size = new System.Drawing.Size(83, 20);
-            this.lbl_stat1_desc.TabIndex = 1;
-            this.lbl_stat1_desc.Text = "stat1 desc";
-            // 
-            // ml_stat2_Value
-            // 
-            this.ml_stat2_Value.AutoSize = true;
-            this.ml_stat2_Value.Depth = 0;
-            this.ml_stat2_Value.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_stat2_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_stat2_Value.Location = new System.Drawing.Point(92, 37);
-            this.ml_stat2_Value.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_stat2_Value.Name = "ml_stat2_Value";
-            this.ml_stat2_Value.Size = new System.Drawing.Size(67, 27);
-            this.ml_stat2_Value.TabIndex = 2;
-            this.ml_stat2_Value.Text = "Value";
-            // 
-            // lbl_stat2_desc
-            // 
-            this.lbl_stat2_desc.AutoSize = true;
-            this.lbl_stat2_desc.Location = new System.Drawing.Point(23, 82);
-            this.lbl_stat2_desc.Name = "lbl_stat2_desc";
-            this.lbl_stat2_desc.Size = new System.Drawing.Size(83, 20);
-            this.lbl_stat2_desc.TabIndex = 2;
-            this.lbl_stat2_desc.Text = "stat2 desc";
-            // 
-            // ml_stat3_Value
-            // 
-            this.ml_stat3_Value.AutoSize = true;
-            this.ml_stat3_Value.Depth = 0;
-            this.ml_stat3_Value.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_stat3_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_stat3_Value.Location = new System.Drawing.Point(86, 37);
-            this.ml_stat3_Value.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_stat3_Value.Name = "ml_stat3_Value";
-            this.ml_stat3_Value.Size = new System.Drawing.Size(67, 27);
-            this.ml_stat3_Value.TabIndex = 3;
-            this.ml_stat3_Value.Text = "Value";
-            // 
-            // lbl_stat3_desc
-            // 
-            this.lbl_stat3_desc.AutoSize = true;
-            this.lbl_stat3_desc.Location = new System.Drawing.Point(25, 82);
-            this.lbl_stat3_desc.Name = "lbl_stat3_desc";
-            this.lbl_stat3_desc.Size = new System.Drawing.Size(83, 20);
-            this.lbl_stat3_desc.TabIndex = 3;
-            this.lbl_stat3_desc.Text = "stat3 desc";
-            // 
-            // ml_stat4_Value
-            // 
-            this.ml_stat4_Value.AutoSize = true;
-            this.ml_stat4_Value.Depth = 0;
-            this.ml_stat4_Value.Font = new System.Drawing.Font("Roboto", 11F);
-            this.ml_stat4_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ml_stat4_Value.Location = new System.Drawing.Point(26, 37);
-            this.ml_stat4_Value.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ml_stat4_Value.Name = "ml_stat4_Value";
-            this.ml_stat4_Value.Size = new System.Drawing.Size(67, 27);
-            this.ml_stat4_Value.TabIndex = 4;
-            this.ml_stat4_Value.Text = "Value";
-            // 
-            // lbl_stat4_desc
-            // 
-            this.lbl_stat4_desc.AutoSize = true;
-            this.lbl_stat4_desc.Location = new System.Drawing.Point(27, 82);
-            this.lbl_stat4_desc.Name = "lbl_stat4_desc";
-            this.lbl_stat4_desc.Size = new System.Drawing.Size(83, 20);
-            this.lbl_stat4_desc.TabIndex = 4;
-            this.lbl_stat4_desc.Text = "stat4 desc";
-            // 
             // panel_careers_Content
             // 
             this.panel_careers_Content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -219,15 +219,14 @@
             this.panel_careers_Content.Size = new System.Drawing.Size(464, 322);
             this.panel_careers_Content.TabIndex = 2;
             // 
-            // panel_employers_Content
+            // lbl_careers_list
             // 
-            this.panel_employers_Content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_employers_Content.Controls.Add(this.lbl_employers_list);
-            this.panel_employers_Content.Controls.Add(this.ml_employers_Title);
-            this.panel_employers_Content.Location = new System.Drawing.Point(715, 495);
-            this.panel_employers_Content.Name = "panel_employers_Content";
-            this.panel_employers_Content.Size = new System.Drawing.Size(464, 322);
-            this.panel_employers_Content.TabIndex = 3;
+            this.lbl_careers_list.AutoSize = true;
+            this.lbl_careers_list.Location = new System.Drawing.Point(42, 97);
+            this.lbl_careers_list.Name = "lbl_careers_list";
+            this.lbl_careers_list.Size = new System.Drawing.Size(65, 20);
+            this.lbl_careers_list.TabIndex = 1;
+            this.lbl_careers_list.Text = "Careers";
             // 
             // ml_careers_Title
             // 
@@ -242,6 +241,25 @@
             this.ml_careers_Title.TabIndex = 0;
             this.ml_careers_Title.Text = "Careers";
             // 
+            // panel_employers_Content
+            // 
+            this.panel_employers_Content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_employers_Content.Controls.Add(this.lbl_employers_list);
+            this.panel_employers_Content.Controls.Add(this.ml_employers_Title);
+            this.panel_employers_Content.Location = new System.Drawing.Point(715, 495);
+            this.panel_employers_Content.Name = "panel_employers_Content";
+            this.panel_employers_Content.Size = new System.Drawing.Size(464, 322);
+            this.panel_employers_Content.TabIndex = 3;
+            // 
+            // lbl_employers_list
+            // 
+            this.lbl_employers_list.AutoSize = true;
+            this.lbl_employers_list.Location = new System.Drawing.Point(39, 97);
+            this.lbl_employers_list.Name = "lbl_employers_list";
+            this.lbl_employers_list.Size = new System.Drawing.Size(83, 20);
+            this.lbl_employers_list.TabIndex = 2;
+            this.lbl_employers_list.Text = "Employers";
+            // 
             // ml_employers_Title
             // 
             this.ml_employers_Title.AutoSize = true;
@@ -255,24 +273,6 @@
             this.ml_employers_Title.TabIndex = 1;
             this.ml_employers_Title.Text = "Employers";
             // 
-            // lbl_careers_list
-            // 
-            this.lbl_careers_list.AutoSize = true;
-            this.lbl_careers_list.Location = new System.Drawing.Point(42, 97);
-            this.lbl_careers_list.Name = "lbl_careers_list";
-            this.lbl_careers_list.Size = new System.Drawing.Size(65, 20);
-            this.lbl_careers_list.TabIndex = 1;
-            this.lbl_careers_list.Text = "Careers";
-            // 
-            // lbl_employers_list
-            // 
-            this.lbl_employers_list.AutoSize = true;
-            this.lbl_employers_list.Location = new System.Drawing.Point(39, 97);
-            this.lbl_employers_list.Name = "lbl_employers_list";
-            this.lbl_employers_list.Size = new System.Drawing.Size(83, 20);
-            this.lbl_employers_list.TabIndex = 2;
-            this.lbl_employers_list.Text = "Employers";
-            // 
             // MoreInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -285,14 +285,14 @@
             this.Name = "MoreInfo";
             this.Text = "MoreInfo";
             this.panel_degreeStats.ResumeLayout(false);
-            this.panel_stat1.ResumeLayout(false);
-            this.panel_stat1.PerformLayout();
-            this.panel_stat2.ResumeLayout(false);
-            this.panel_stat2.PerformLayout();
-            this.panel_stat3.ResumeLayout(false);
-            this.panel_stat3.PerformLayout();
             this.panel_stat4.ResumeLayout(false);
             this.panel_stat4.PerformLayout();
+            this.panel_stat3.ResumeLayout(false);
+            this.panel_stat3.PerformLayout();
+            this.panel_stat2.ResumeLayout(false);
+            this.panel_stat2.PerformLayout();
+            this.panel_stat1.ResumeLayout(false);
+            this.panel_stat1.PerformLayout();
             this.panel_careers_Content.ResumeLayout(false);
             this.panel_careers_Content.PerformLayout();
             this.panel_employers_Content.ResumeLayout(false);
