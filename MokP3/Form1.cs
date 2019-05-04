@@ -149,6 +149,7 @@ namespace MokP3
                 string jsonMinors = rj.getRESTDataJSON("/minors/");
                 minors = JToken.Parse(jsonMinors).ToObject<Minors>();
 
+                #region PreSetMinorNameLabels
                 lbl_DBDDI_name.Text = minors.UgMinors[0].title;
                 lbl_DBDDI_name.MaximumSize = new Size(150, 0);
 
@@ -172,6 +173,7 @@ namespace MokP3
 
                 lbl_WEBD_name.Text = minors.UgMinors[7].title;
                 lbl_WEBD_name.MaximumSize = new Size(150, 0);
+                #endregion
             }
 
         }
