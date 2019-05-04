@@ -117,7 +117,7 @@
             this.lbl_studentRes_subTitle = new System.Windows.Forms.Label();
             this.ml_studentRes_Title = new MaterialSkin.Controls.MaterialLabel();
             this.NewsPage = new System.Windows.Forms.TabPage();
-            this.lv_news = new System.Windows.Forms.ListView();
+            this.panel_news_container = new System.Windows.Forms.Panel();
             this.ml_news_title = new MaterialSkin.Controls.MaterialLabel();
             this.FooterPage = new System.Windows.Forms.TabPage();
             this.panel_link2 = new System.Windows.Forms.Panel();
@@ -1145,7 +1145,7 @@
             // 
             // NewsPage
             // 
-            this.NewsPage.Controls.Add(this.lv_news);
+            this.NewsPage.Controls.Add(this.panel_news_container);
             this.NewsPage.Controls.Add(this.ml_news_title);
             this.NewsPage.Location = new System.Drawing.Point(4, 31);
             this.NewsPage.Name = "NewsPage";
@@ -1156,13 +1156,13 @@
             this.NewsPage.UseVisualStyleBackColor = true;
             this.NewsPage.Enter += new System.EventHandler(this.newsPage_Enter);
             // 
-            // lv_news
+            // panel_news_container
             // 
-            this.lv_news.Location = new System.Drawing.Point(26, 89);
-            this.lv_news.Name = "lv_news";
-            this.lv_news.Size = new System.Drawing.Size(1231, 641);
-            this.lv_news.TabIndex = 2;
-            this.lv_news.UseCompatibleStateImageBehavior = false;
+            this.panel_news_container.AutoScroll = true;
+            this.panel_news_container.Location = new System.Drawing.Point(26, 89);
+            this.panel_news_container.Name = "panel_news_container";
+            this.panel_news_container.Size = new System.Drawing.Size(1286, 661);
+            this.panel_news_container.TabIndex = 3;
             // 
             // ml_news_title
             // 
@@ -1545,7 +1545,6 @@
         private System.Windows.Forms.Button btn_facultyAdvisors;
         private System.Windows.Forms.TabPage NewsPage;
         private MaterialSkin.Controls.MaterialLabel ml_news_title;
-        private System.Windows.Forms.ListView lv_news;
         private MaterialSkin.Controls.MaterialLabel ml_other_title;
         private System.Windows.Forms.Label lbl_social_tweet;
         private System.Windows.Forms.LinkLabel ll_facebook;
@@ -1587,6 +1586,7 @@
         private System.Windows.Forms.Label lbl_NETSYS_name;
         private System.Windows.Forms.Label lbl_WEBDD_name;
         private System.Windows.Forms.Label lbl_WEBD_name;
+        private System.Windows.Forms.Panel panel_news_container;
     }
 }
 

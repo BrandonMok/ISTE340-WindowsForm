@@ -664,35 +664,59 @@ namespace MokP3
                 news = JToken.Parse(jsonNews).ToObject<News>();
 
 
-                lv_news.View = View.Details;
-                lv_news.GridLines = true;
-                lv_news.FullRowSelect = true;
-                lv_news.Width = 800;
-
-                lv_news.Columns.Add("Date", 100);
-                lv_news.Columns.Add("Title", 100);
-                lv_news.Columns.Add("Description", 600);
-
-                ListViewItem lvItem;
                 int newsLength = news.older.Count;
+
+                int yCoord = 0;
                 for (int i = 0; i < newsLength; i++)
                 {
-                    lvItem = new ListViewItem(new string[]
+                    Panel newsPanel = new Panel();
+                    newsPanel.BorderStyle = BorderStyle.FixedSingle;
+
+                    Label lblDate = new Label();
+                    lblDate.Text = news.older[i].date;
+                    lblDate.AutoSize = true;
+                    lblDate.Location = new Point(0,0);
+
+                    Label lblTitle = new Label();
+                    lblTitle.Text = news.older[i].title;
+                    lblTitle.AutoSize = true;
+                    lblTitle.Location = new Point(0, 20);
+
+                    // Description
+                    Label lblDesc = new Label();
+                    lblDesc.Text = news.older[i].description;
+                    lblDesc.AutoSize = true;
+                    lblDesc.MaximumSize = new Size(750, 400);
+                    lblDesc.Location = new Point(0, 40);
+
+                    newsPanel.Controls.Add(lblDate);
+                    newsPanel.Controls.Add(lblTitle);
+                    newsPanel.Controls.Add(lblDesc);
+
+
+                    // Add heights of all content
+                    int calculatedHeight = lblDate.Height + lblTitle.Height + lblDesc.Height;
+
+
+                    if (i != 0)
                     {
-                    news.older[i].date,
-                    news.older[i].title,
-                    news.older[i].description
-                    });
+                        if(news.older[i].description == null)
+                        {
+                            yCoord += calculatedHeight;
+                        }
+                        else
+                        {
+                            yCoord += calculatedHeight + 200;
+                        }
+                    }
 
-                    lv_news.Items.Add(lvItem);
+
+                    newsPanel.Size = new Size(800, calculatedHeight + 100);
+                    newsPanel.MaximumSize = new Size(800, calculatedHeight + 100);
+
+                    newsPanel.Location = new Point(0, yCoord);
+                    panel_news_container.Controls.Add(newsPanel);
                 }
-
-                // NEW IDEA
-                // Make a new panel to hold information
-                // Add to listview
-                // .Items.Add();    
-
-
             }
         }
         #endregion
