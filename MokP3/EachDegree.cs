@@ -51,7 +51,12 @@ namespace MokP3
             ml_degree_title.Text = title;
 
             lbl_specific_degreeDescription.Text = description;
+            lbl_specific_degreeDescription.Font = new Font("Arial", 9);
             lbl_specific_degreeDescription.MaximumSize = new Size(400, 0);
+
+            // Concentrations literal label
+            lbl_Concentrations.Font = new Font("Arial", 10);
+
 
 
             // String to hold all concentrations
@@ -65,6 +70,7 @@ namespace MokP3
 
             // set Text
             lbl_specific_degreeConcentrations.Text = sb.ToString();
+            lbl_specific_degreeConcentrations.Font = new Font("Arial", 9);
         }
 
 

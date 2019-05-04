@@ -453,7 +453,7 @@
             this.panel_uDegrees_CIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_uDegrees_CIT.Controls.Add(this.lbl_CIT_title);
             this.panel_uDegrees_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel_uDegrees_CIT.Location = new System.Drawing.Point(831, 121);
+            this.panel_uDegrees_CIT.Location = new System.Drawing.Point(856, 121);
             this.panel_uDegrees_CIT.Name = "panel_uDegrees_CIT";
             this.panel_uDegrees_CIT.Size = new System.Drawing.Size(207, 121);
             this.panel_uDegrees_CIT.TabIndex = 3;
@@ -1391,7 +1391,6 @@
             this.Controls.Add(this.tabController_MAIN);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabController_MAIN.ResumeLayout(false);
             this.AboutPage.ResumeLayout(false);
             this.AboutPage.PerformLayout();

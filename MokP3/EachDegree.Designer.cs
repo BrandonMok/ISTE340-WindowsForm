@@ -46,7 +46,7 @@
             // lbl_specific_degreeConcentrations
             // 
             this.lbl_specific_degreeConcentrations.AutoSize = true;
-            this.lbl_specific_degreeConcentrations.Location = new System.Drawing.Point(260, 289);
+            this.lbl_specific_degreeConcentrations.Location = new System.Drawing.Point(258, 320);
             this.lbl_specific_degreeConcentrations.Name = "lbl_specific_degreeConcentrations";
             this.lbl_specific_degreeConcentrations.Size = new System.Drawing.Size(164, 20);
             this.lbl_specific_degreeConcentrations.TabIndex = 3;
@@ -55,7 +55,7 @@
             // lbl_Concentrations
             // 
             this.lbl_Concentrations.AutoSize = true;
-            this.lbl_Concentrations.Location = new System.Drawing.Point(260, 248);
+            this.lbl_Concentrations.Location = new System.Drawing.Point(258, 279);
             this.lbl_Concentrations.Name = "lbl_Concentrations";
             this.lbl_Concentrations.Size = new System.Drawing.Size(121, 20);
             this.lbl_Concentrations.TabIndex = 4;

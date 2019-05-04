@@ -695,15 +695,13 @@ namespace MokP3
 
 
 
+
+
+        // Label Link clicks
         private void linkClicks(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LinkLabel ll = sender as LinkLabel;
             System.Diagnostics.Process.Start(ll.Text);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
