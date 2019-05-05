@@ -23,32 +23,36 @@ namespace MokP3
             // Set section title
             ml_eachResearch_sectionTitle.Text = bia.areaName;
 
-            // Panel for each research
-            Panel resPanel = null;
-            resPanel = new Panel();
-            resPanel.BorderStyle = BorderStyle.FixedSingle;
-            resPanel.Dock = DockStyle.Fill;
 
-            StringBuilder sb = new StringBuilder();
+            // Y Coordinate to know where to place the next panel below
+            int yCoord = 0;
 
-            for (int i = 0, len = bia.citations.Count; i < len; i++)
+            // Went the route of making panels for each citation so that main container can scroll
+            for (int i = 0; i < bia.citations.Count; i++)
             {
-                sb.Append(bia.citations[i] + "\n\n");
+                Panel citationPanel = new Panel();
+                citationPanel.BorderStyle = BorderStyle.FixedSingle;
+                citationPanel.Size = new Size(800, 60);
+
+                Label lblNew = new Label();
+                lblNew.Text = bia.citations[i];
+                lblNew.AutoSize = true;
+                lblNew.Font = new Font("Arial", 8);
+                lblNew.MaximumSize = new Size(750, 0);
+                lblNew.Location = new Point(10, 0);
+
+                if(i != 0)
+                {
+                    yCoord += 80;
+                }
+
+                // This citation panel add the label
+                citationPanel.Controls.Add(lblNew);
+                citationPanel.Location = new Point(20, yCoord); // Set position 
+
+                // Add to main container
+                panel_research_container.Controls.Add(citationPanel);
             }
-
-
-            Label lblCitation = new Label();
-            lblCitation.Text = sb.ToString();
-            lblCitation.Location = new Point(0, 0);
-            lblCitation.AutoSize = true;
-            lblCitation.MaximumSize = new Size(700, 0);
-
-            resPanel.Controls.Add(lblCitation);
-            resPanel.Size = new Size(800, 500);
-
-            resPanel.Location = new Point(0, 0);
-
-            panel_research_container.Controls.Add(resPanel);
         }
 
 
@@ -67,32 +71,35 @@ namespace MokP3
             ml_eachResearch_sectionTitle.Text = bf.facultyName;
 
 
-            // Panel for each research
-            Panel resPanel = null;
-            resPanel = new Panel();
-            resPanel.BorderStyle = BorderStyle.FixedSingle;
-            resPanel.Dock = DockStyle.Fill;
+            // Y Coordinate to know where to place the next panel below
+            int yCoord = 0;
 
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0, len = bf.citations.Count; i < len; i++)
+            // Went the route of making panels for each citation so that main container can scroll
+            for (int i = 0; i < bf.citations.Count; i++)
             {
-                sb.Append(bf.citations[i] + "\n\n");
+                Panel citationPanel = new Panel();
+                citationPanel.BorderStyle = BorderStyle.FixedSingle;
+                citationPanel.Size = new Size(800, 60);
+
+                Label lblNew = new Label();
+                lblNew.Text = bf.citations[i];
+                lblNew.AutoSize = true;
+                lblNew.Font = new Font("Arial", 8);
+                lblNew.MaximumSize = new Size(750, 0);
+                lblNew.Location = new Point(10, 0);
+
+                if (i != 0)
+                {
+                    yCoord += 80;
+                }
+
+                // This citation panel add the label
+                citationPanel.Controls.Add(lblNew);
+                citationPanel.Location = new Point(20, yCoord); // Set position 
+
+                // Add to main container
+                panel_research_container.Controls.Add(citationPanel);
             }
-
-
-            Label lblCitation = new Label();
-            lblCitation.Text = sb.ToString();
-            lblCitation.Location = new Point(0, 0);
-            lblCitation.AutoSize = true;
-            lblCitation.MaximumSize = new Size(700, 0);
-
-            resPanel.Controls.Add(lblCitation);
-            resPanel.Size = new Size(800, 500);
-
-            resPanel.Location = new Point(0, 0);
-
-            panel_research_container.Controls.Add(resPanel);
         }
 
 

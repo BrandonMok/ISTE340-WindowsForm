@@ -50,14 +50,14 @@
             this.panel_research_container.AutoScroll = true;
             this.panel_research_container.Location = new System.Drawing.Point(12, 170);
             this.panel_research_container.Name = "panel_research_container";
-            this.panel_research_container.Size = new System.Drawing.Size(1304, 498);
+            this.panel_research_container.Size = new System.Drawing.Size(1304, 586);
             this.panel_research_container.TabIndex = 1;
             // 
             // EachResearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1355, 680);
+            this.ClientSize = new System.Drawing.Size(1355, 768);
             this.Controls.Add(this.panel_research_container);
             this.Controls.Add(this.ml_eachResearch_sectionTitle);
             this.Name = "EachResearch";
