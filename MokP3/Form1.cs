@@ -672,28 +672,28 @@ namespace MokP3
                     lblTitle.AutoSize = true;
                     lblTitle.Location = new Point(0, 20);
 
-                    //int descHeight = 0;
-                    //if (news.older[i].description != null && news.older[i].description != "")
-                    //{
+                    int descHeight = 0;
+                    if (news.older[i].description != null && news.older[i].description != "")
+                    {
                         // Description
                         Label lblDesc = new Label();
                         lblDesc.Text = news.older[i].description;
                         lblDesc.AutoSize = true;
                         lblDesc.MaximumSize = new Size(750, 400);
                         lblDesc.Location = new Point(0, 40);
-                        //descHeight = lblDesc.Height;
+                        descHeight = lblDesc.Height;
                         newsPanel.Controls.Add(lblDesc);
-                   // }
+                    }
 
                     newsPanel.Controls.Add(lblDate);
                     newsPanel.Controls.Add(lblTitle);
-                    newsPanel.Controls.Add(lblDesc);
+                   // newsPanel.Controls.Add(lblDesc);
 
 
 
                     // Add heights of all content
 
-                    int calculatedHeight = lblDate.Height + lblTitle.Height + lblDesc.Height;
+                    int calculatedHeight = lblDate.Height + lblTitle.Height + descHeight;
 
 
                     if (i != 0)
@@ -704,7 +704,7 @@ namespace MokP3
                         }
                         else
                         {
-                            yCoord += calculatedHeight + 200;
+                            yCoord += calculatedHeight + 125;
                         }
                     }
 
