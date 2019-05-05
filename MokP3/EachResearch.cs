@@ -20,23 +20,38 @@ namespace MokP3
             InitializeComponent();
             setFormStyle(); // Set form style
 
-           
-
             // Set section title
             ml_eachResearch_sectionTitle.Text = bia.areaName;
 
+            // Panel for each research
+            Panel resPanel = null;
+            resPanel = new Panel();
+            resPanel.BorderStyle = BorderStyle.FixedSingle;
+            resPanel.Dock = DockStyle.Fill;
 
-            setListViewProps();
+            StringBuilder sb = new StringBuilder();
 
-            ListViewItem lviResearch;
-            for(int i = 0; i < bia.citations.Count; i++)
+            for (int i = 0, len = bia.citations.Count; i < len; i++)
             {
-                lviResearch = new ListViewItem(new String[] {
-                    bia.citations[i]
-                });
-                materialListView1.Items.Add(lviResearch);
+                sb.Append(bia.citations[i] + "\n\n");
             }
+
+
+            Label lblCitation = new Label();
+            lblCitation.Text = sb.ToString();
+            lblCitation.Location = new Point(0, 0);
+            lblCitation.AutoSize = true;
+            lblCitation.MaximumSize = new Size(700, 0);
+
+            resPanel.Controls.Add(lblCitation);
+            resPanel.Size = new Size(800, 500);
+
+            resPanel.Location = new Point(0, 0);
+
+            panel_research_container.Controls.Add(resPanel);
         }
+
+
 
         // ByFaculty overloaded constructor
         public EachResearch(ByFaculty bf) 
@@ -51,17 +66,33 @@ namespace MokP3
             // Set the section heading to this faculty's name
             ml_eachResearch_sectionTitle.Text = bf.facultyName;
 
-            setListViewProps();
 
-            ListViewItem lviResearch;
-            for (int i = 0; i < bf.citations.Count; i++)
+            // Panel for each research
+            Panel resPanel = null;
+            resPanel = new Panel();
+            resPanel.BorderStyle = BorderStyle.FixedSingle;
+            resPanel.Dock = DockStyle.Fill;
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0, len = bf.citations.Count; i < len; i++)
             {
-                lviResearch = new ListViewItem(new String[] {
-                    bf.citations[i]
-                });
-                materialListView1.Items.Add(lviResearch);
+                sb.Append(bf.citations[i] + "\n\n");
             }
 
+
+            Label lblCitation = new Label();
+            lblCitation.Text = sb.ToString();
+            lblCitation.Location = new Point(0, 0);
+            lblCitation.AutoSize = true;
+            lblCitation.MaximumSize = new Size(700, 0);
+
+            resPanel.Controls.Add(lblCitation);
+            resPanel.Size = new Size(800, 500);
+
+            resPanel.Location = new Point(0, 0);
+
+            panel_research_container.Controls.Add(resPanel);
         }
 
 
@@ -84,16 +115,6 @@ namespace MokP3
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
-        }
-
-        // Sets the ListView properties
-        public void setListViewProps()
-        {
-            materialListView1.View = View.Details;
-            materialListView1.GridLines = true;
-            materialListView1.FullRowSelect = true;
-            materialListView1.Width = 800;
-            materialListView1.Columns.Add("Research", 790);
         }
     }
 }

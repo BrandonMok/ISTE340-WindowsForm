@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ml_eachResearch_sectionTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.panel_research_container = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // ml_eachResearch_sectionTitle
@@ -45,29 +45,20 @@
             this.ml_eachResearch_sectionTitle.TabIndex = 0;
             this.ml_eachResearch_sectionTitle.Text = "Research Name";
             // 
-            // materialListView1
+            // panel_research_container
             // 
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialListView1.Depth = 0;
-            this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.materialListView1.Location = new System.Drawing.Point(63, 163);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1072, 486);
-            this.materialListView1.TabIndex = 1;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.panel_research_container.AutoScroll = true;
+            this.panel_research_container.Location = new System.Drawing.Point(12, 170);
+            this.panel_research_container.Name = "panel_research_container";
+            this.panel_research_container.Size = new System.Drawing.Size(1304, 498);
+            this.panel_research_container.TabIndex = 1;
             // 
             // EachResearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 680);
-            this.Controls.Add(this.materialListView1);
+            this.ClientSize = new System.Drawing.Size(1355, 680);
+            this.Controls.Add(this.panel_research_container);
             this.Controls.Add(this.ml_eachResearch_sectionTitle);
             this.Name = "EachResearch";
             this.Text = "EachResearch";
@@ -79,6 +70,6 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel ml_eachResearch_sectionTitle;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private System.Windows.Forms.Panel panel_research_container;
     }
 }
