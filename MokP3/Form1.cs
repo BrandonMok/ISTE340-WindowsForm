@@ -397,41 +397,33 @@ namespace MokP3
             var pb = sender as PictureBox;
             string filepath = pb.ImageLocation;
 
-            int lastSlash = filepath.LastIndexOf("/") + 1;
+            // Substringing the imagepath
+            int lastSlash = filepath.LastIndexOf("/");
+            int dot = filepath.LastIndexOf(".");
+            int inBetween = dot - lastSlash;
+            string userName = filepath.Substring(lastSlash + 1, inBetween - 1);
 
-            string userName = filepath.Substring(lastSlash,6);
 
             // BOTH objects look for the username, will check which is null to know where it is
             Faculty fac = people.faculty.Find(x => x.username == userName);
             Staff staff = people.staff.Find(x => x.username == userName);
 
-            FacStaff fs; // facultyStaff separate form
+            // facultyStaff separate form - set null initially
+            FacStaff fs = null; 
            
 
+            // Find which grouping person is in
             if(staff != null)
             {
                 fs = new FacStaff(null, staff);
-                fs.ShowDialog();
             }
-            else
-            {
-                string usrName = filepath.Substring(lastSlash, 7);
-                Staff anotherStaff = people.staff.Find(x => x.username == usrName);
-
-                if (anotherStaff != null)
-                {
-                    fs = new FacStaff(null, anotherStaff);
-                    fs.ShowDialog();
-                }
-            }
-
       
-            
             if (fac != null)
             {
                 fs = new FacStaff(fac, null);
-                fs.ShowDialog();
             }
+
+            fs.ShowDialog(); // show form
         }
         #endregion
 
@@ -664,10 +656,8 @@ namespace MokP3
                 news = JToken.Parse(jsonNews).ToObject<News>();
 
 
-                int newsLength = news.older.Count;
-
                 int yCoord = 0;
-                for (int i = 0; i < newsLength; i++)
+                for (int i = 0, newsLength = news.older.Count; i < newsLength; i++)
                 {
                     Panel newsPanel = new Panel();
                     newsPanel.BorderStyle = BorderStyle.FixedSingle;
@@ -682,19 +672,27 @@ namespace MokP3
                     lblTitle.AutoSize = true;
                     lblTitle.Location = new Point(0, 20);
 
-                    // Description
-                    Label lblDesc = new Label();
-                    lblDesc.Text = news.older[i].description;
-                    lblDesc.AutoSize = true;
-                    lblDesc.MaximumSize = new Size(750, 400);
-                    lblDesc.Location = new Point(0, 40);
+                    //int descHeight = 0;
+                    //if (news.older[i].description != null && news.older[i].description != "")
+                    //{
+                        // Description
+                        Label lblDesc = new Label();
+                        lblDesc.Text = news.older[i].description;
+                        lblDesc.AutoSize = true;
+                        lblDesc.MaximumSize = new Size(750, 400);
+                        lblDesc.Location = new Point(0, 40);
+                        //descHeight = lblDesc.Height;
+                        newsPanel.Controls.Add(lblDesc);
+                   // }
 
                     newsPanel.Controls.Add(lblDate);
                     newsPanel.Controls.Add(lblTitle);
                     newsPanel.Controls.Add(lblDesc);
 
 
+
                     // Add heights of all content
+
                     int calculatedHeight = lblDate.Height + lblTitle.Height + lblDesc.Height;
 
 
@@ -702,7 +700,7 @@ namespace MokP3
                     {
                         if(news.older[i].description == null)
                         {
-                            yCoord += calculatedHeight;
+                            yCoord += calculatedHeight + 20;
                         }
                         else
                         {
