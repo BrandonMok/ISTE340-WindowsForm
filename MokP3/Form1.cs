@@ -726,28 +726,28 @@ namespace MokP3
             {
                 string jsonFooter = rj.getRESTDataJSON("/footer/");
                 footer = JToken.Parse(jsonFooter).ToObject<Footer>();
-
-
-                // SOCIAL   
-                ml_other_title.Text = footer.social.title;
-                lbl_social_tweet.Text = footer.social.tweet + "\n" + footer.social.by;
-
-                // Links
-                ml_link_title1.Text = footer.quickLinks[0].title;
-                ml_link_title2.Text = footer.quickLinks[1].title;
-                ml_link_title3.Text = footer.quickLinks[2].title;
-                ml_link_title4.Text = footer.quickLinks[3].title;
-
-                ll_otherLink1.Text = footer.quickLinks[0].href;
-                ll_otherLink2.Text = footer.quickLinks[1].href;
-                ll_otherLink3.Text = footer.quickLinks[2].href;
-                ll_otherLink4.Text = footer.quickLinks[3].href;
-
-                // COPYRIGHT
-                ml_copyright_title.Text = footer.copyright.title;
-                ll_copyright_news.Text = footer.news;
-                wb_copyright.DocumentText = footer.copyright.html;
             }
+
+            // SOCIAL   
+            ml_other_title.Text = footer.social.title;
+            lbl_social_tweet.Text = footer.social.tweet + "\n" + footer.social.by;
+
+            // Links
+            ml_link_title1.Text = footer.quickLinks[0].title;
+            ml_link_title2.Text = footer.quickLinks[1].title;
+            ml_link_title3.Text = footer.quickLinks[2].title;
+            ml_link_title4.Text = footer.quickLinks[3].title;
+
+            ll_otherLink1.Text = footer.quickLinks[0].href;
+            ll_otherLink2.Text = footer.quickLinks[1].href;
+            ll_otherLink3.Text = footer.quickLinks[2].href;
+            ll_otherLink4.Text = footer.quickLinks[3].href;
+
+            // COPYRIGHT
+            ml_copyright_title.Text = footer.copyright.title;
+            ll_copyright_news.Text = footer.news;
+            wb_copyright.DocumentText = footer.copyright.html;
+            
         }
 #endregion
 

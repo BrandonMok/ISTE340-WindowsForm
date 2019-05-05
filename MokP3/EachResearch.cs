@@ -14,6 +14,10 @@ namespace MokP3
 {
     public partial class EachResearch : MaterialForm
     {
+        // Did EachResearch differently
+        // Decided to try having a constructor that accepts one or the other
+
+
         // ByInterestArea - overloaded constructor
         public EachResearch(ByInterestArea bia) 
         {
