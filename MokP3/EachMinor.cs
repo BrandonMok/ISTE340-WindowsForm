@@ -17,13 +17,24 @@ namespace MokP3
     public partial class EachMinor : MaterialForm
     {
         REST rj = new REST("http://ist.rit.edu/api");
-        Course course = null;
+        List<Course> courseList = null;
 
 
         public EachMinor(UgMinor ugm)
         {
             InitializeComponent();
             setFormStyle();
+
+
+            if(courseList == null)
+            {
+                string path = "/course/";
+                string coursePath = rj.getRESTDataJSON(path);
+                courseList = JToken.Parse(coursePath).ToObject<List<Course>>();
+            }
+
+           
+
 
 
             // Setting all the information onto form
@@ -59,21 +70,16 @@ namespace MokP3
             }
         }
 
-
+        // Separate form to show specific course info
         private void findCourse(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LinkLabel linkLbl = sender as LinkLabel;
-            // linkLbl.Text
 
-            string path = "/course/courseID=" + linkLbl.Text + "/";
-            
+            // Get the clicked course
+            Course clickedCourse = courseList.Find(x => x.courseID == linkLbl.Text);
 
-            // Make another form
-            // ABOUT
-            string coursePath = rj.getRESTDataJSON(path);
-            course = JToken.Parse(coursePath).ToObject<Course>();
-
-            SelectedCourse sc = new SelectedCourse(course);
+            // Show form
+            SelectedCourse sc = new SelectedCourse(clickedCourse);
             sc.ShowDialog();
         }
 
