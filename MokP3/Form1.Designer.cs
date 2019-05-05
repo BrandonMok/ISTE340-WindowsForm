@@ -348,7 +348,7 @@
             // 
             // btn_NSA
             // 
-            this.btn_NSA.BackColor = System.Drawing.Color.Orange;
+            this.btn_NSA.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_NSA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_NSA.Location = new System.Drawing.Point(861, 416);
             this.btn_NSA.Name = "btn_NSA";
@@ -361,7 +361,7 @@
             // 
             // btn_HCI
             // 
-            this.btn_HCI.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCI.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_HCI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_HCI.Location = new System.Drawing.Point(488, 416);
             this.btn_HCI.Name = "btn_HCI";
@@ -374,7 +374,7 @@
             // 
             // btn_IST
             // 
-            this.btn_IST.BackColor = System.Drawing.Color.Orange;
+            this.btn_IST.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_IST.Location = new System.Drawing.Point(140, 416);
             this.btn_IST.Name = "btn_IST";
             this.btn_IST.Size = new System.Drawing.Size(251, 146);
@@ -386,7 +386,7 @@
             // 
             // btn_CIT
             // 
-            this.btn_CIT.BackColor = System.Drawing.Color.Orange;
+            this.btn_CIT.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_CIT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_CIT.Location = new System.Drawing.Point(861, 154);
             this.btn_CIT.Name = "btn_CIT";
@@ -399,7 +399,7 @@
             // 
             // btn_HCC
             // 
-            this.btn_HCC.BackColor = System.Drawing.Color.Orange;
+            this.btn_HCC.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_HCC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_HCC.Location = new System.Drawing.Point(488, 154);
             this.btn_HCC.Name = "btn_HCC";
@@ -412,7 +412,7 @@
             // 
             // btn_WMC
             // 
-            this.btn_WMC.BackColor = System.Drawing.Color.Orange;
+            this.btn_WMC.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_WMC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_WMC.Location = new System.Drawing.Point(140, 154);
             this.btn_WMC.Name = "btn_WMC";
@@ -489,7 +489,7 @@
             // 
             // panel_minors_WEBDD
             // 
-            this.panel_minors_WEBDD.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_WEBDD.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_WEBDD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_WEBDD.Controls.Add(this.lbl_WEBDD_name);
             this.panel_minors_WEBDD.Controls.Add(this.lbl_minors_WEBDD_title);
@@ -522,7 +522,7 @@
             // 
             // panel_minors_NETSYS
             // 
-            this.panel_minors_NETSYS.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_NETSYS.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_NETSYS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_NETSYS.Controls.Add(this.lbl_NETSYS_name);
             this.panel_minors_NETSYS.Controls.Add(this.lbl_minors_NETSYS_title);
@@ -555,7 +555,7 @@
             // 
             // panel_minors_WEBD
             // 
-            this.panel_minors_WEBD.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_WEBD.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_WEBD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_WEBD.Controls.Add(this.lbl_WEBD_name);
             this.panel_minors_WEBD.Controls.Add(this.lbl_minors_WEBD_title);
@@ -588,7 +588,7 @@
             // 
             // panel_minors_MDEV
             // 
-            this.panel_minors_MDEV.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_MDEV.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_MDEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_MDEV.Controls.Add(this.lbl_MDEV_name);
             this.panel_minors_MDEV.Controls.Add(this.lbl_minors_MDEV_title);
@@ -621,7 +621,7 @@
             // 
             // panel_minors_MDDEV
             // 
-            this.panel_minors_MDDEV.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_MDDEV.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_MDDEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_MDDEV.Controls.Add(this.lbl_MEDDEV_name);
             this.panel_minors_MDDEV.Controls.Add(this.lbl_minors_MDDEV_title);
@@ -654,7 +654,7 @@
             // 
             // panel_minors_MEDINFO
             // 
-            this.panel_minors_MEDINFO.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_MEDINFO.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_MEDINFO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_MEDINFO.Controls.Add(this.lbl_MEDINFO_name);
             this.panel_minors_MEDINFO.Controls.Add(this.lbl_minors_MEDINFO_title);
@@ -687,7 +687,7 @@
             // 
             // panel_minors_GIS
             // 
-            this.panel_minors_GIS.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_GIS.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_GIS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_GIS.Controls.Add(this.lbl_GIS_name);
             this.panel_minors_GIS.Controls.Add(this.lbl_minors_GIS_title);
@@ -720,7 +720,7 @@
             // 
             // panel_minors_DBDDI
             // 
-            this.panel_minors_DBDDI.BackColor = System.Drawing.Color.Orange;
+            this.panel_minors_DBDDI.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_minors_DBDDI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_minors_DBDDI.Controls.Add(this.lbl_DBDDI_name);
             this.panel_minors_DBDDI.Controls.Add(this.lbl_minors_DBDDI_title);
@@ -1045,7 +1045,7 @@
             // 
             // btn_forms
             // 
-            this.btn_forms.BackColor = System.Drawing.Color.Orange;
+            this.btn_forms.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_forms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_forms.Location = new System.Drawing.Point(483, 397);
             this.btn_forms.Name = "btn_forms";
@@ -1058,7 +1058,7 @@
             // 
             // btn_studentAmbassadors
             // 
-            this.btn_studentAmbassadors.BackColor = System.Drawing.Color.Orange;
+            this.btn_studentAmbassadors.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_studentAmbassadors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_studentAmbassadors.Location = new System.Drawing.Point(101, 397);
             this.btn_studentAmbassadors.Name = "btn_studentAmbassadors";
@@ -1071,7 +1071,7 @@
             // 
             // btn_tutorsAndLabInformation
             // 
-            this.btn_tutorsAndLabInformation.BackColor = System.Drawing.Color.Orange;
+            this.btn_tutorsAndLabInformation.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_tutorsAndLabInformation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_tutorsAndLabInformation.Location = new System.Drawing.Point(876, 123);
             this.btn_tutorsAndLabInformation.Name = "btn_tutorsAndLabInformation";
@@ -1084,7 +1084,7 @@
             // 
             // btn_coopEnrollment
             // 
-            this.btn_coopEnrollment.BackColor = System.Drawing.Color.Orange;
+            this.btn_coopEnrollment.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_coopEnrollment.Location = new System.Drawing.Point(876, 397);
             this.btn_coopEnrollment.Name = "btn_coopEnrollment";
             this.btn_coopEnrollment.Size = new System.Drawing.Size(291, 177);
@@ -1096,7 +1096,7 @@
             // 
             // btn_facultyAdvisors
             // 
-            this.btn_facultyAdvisors.BackColor = System.Drawing.Color.Orange;
+            this.btn_facultyAdvisors.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_facultyAdvisors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_facultyAdvisors.Location = new System.Drawing.Point(483, 123);
             this.btn_facultyAdvisors.Name = "btn_facultyAdvisors";
@@ -1109,7 +1109,7 @@
             // 
             // btn_studyAbroad
             // 
-            this.btn_studyAbroad.BackColor = System.Drawing.Color.Orange;
+            this.btn_studyAbroad.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_studyAbroad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_studyAbroad.ForeColor = System.Drawing.Color.Black;
             this.btn_studyAbroad.Location = new System.Drawing.Point(101, 123);
