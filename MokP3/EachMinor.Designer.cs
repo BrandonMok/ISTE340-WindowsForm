@@ -30,13 +30,13 @@
         {
             this.lbl_specific_minor_Title = new System.Windows.Forms.Label();
             this.lbl_specific_minor_desc = new System.Windows.Forms.Label();
-            this.lbl_specific_minor_concentrationHeader = new System.Windows.Forms.Label();
+            this.lbl_specific_minor_course = new System.Windows.Forms.Label();
             this.lbl_specific_minor_note = new System.Windows.Forms.Label();
             this.panel_minor_desc = new System.Windows.Forms.Panel();
             this.panel_minor_note = new System.Windows.Forms.Panel();
             this.panel_concentrations = new System.Windows.Forms.Panel();
-            this.ml_minor_name = new MaterialSkin.Controls.MaterialLabel();
             this.panel_concList = new System.Windows.Forms.Panel();
+            this.ml_minor_name = new MaterialSkin.Controls.MaterialLabel();
             this.panel_minor_desc.SuspendLayout();
             this.panel_minor_note.SuspendLayout();
             this.panel_concentrations.SuspendLayout();
@@ -60,14 +60,14 @@
             this.lbl_specific_minor_desc.TabIndex = 2;
             this.lbl_specific_minor_desc.Text = "Minor Description";
             // 
-            // lbl_specific_minor_concentrationHeader
+            // lbl_specific_minor_course
             // 
-            this.lbl_specific_minor_concentrationHeader.AutoSize = true;
-            this.lbl_specific_minor_concentrationHeader.Location = new System.Drawing.Point(23, 13);
-            this.lbl_specific_minor_concentrationHeader.Name = "lbl_specific_minor_concentrationHeader";
-            this.lbl_specific_minor_concentrationHeader.Size = new System.Drawing.Size(117, 20);
-            this.lbl_specific_minor_concentrationHeader.TabIndex = 4;
-            this.lbl_specific_minor_concentrationHeader.Text = "Concentrations";
+            this.lbl_specific_minor_course.AutoSize = true;
+            this.lbl_specific_minor_course.Location = new System.Drawing.Point(23, 13);
+            this.lbl_specific_minor_course.Name = "lbl_specific_minor_course";
+            this.lbl_specific_minor_course.Size = new System.Drawing.Size(68, 20);
+            this.lbl_specific_minor_course.TabIndex = 4;
+            this.lbl_specific_minor_course.Text = "Courses";
             // 
             // lbl_specific_minor_note
             // 
@@ -96,11 +96,18 @@
             // panel_concentrations
             // 
             this.panel_concentrations.Controls.Add(this.panel_concList);
-            this.panel_concentrations.Controls.Add(this.lbl_specific_minor_concentrationHeader);
+            this.panel_concentrations.Controls.Add(this.lbl_specific_minor_course);
             this.panel_concentrations.Location = new System.Drawing.Point(270, 437);
             this.panel_concentrations.Name = "panel_concentrations";
             this.panel_concentrations.Size = new System.Drawing.Size(326, 228);
             this.panel_concentrations.TabIndex = 8;
+            // 
+            // panel_concList
+            // 
+            this.panel_concList.Location = new System.Drawing.Point(0, 36);
+            this.panel_concList.Name = "panel_concList";
+            this.panel_concList.Size = new System.Drawing.Size(326, 178);
+            this.panel_concList.TabIndex = 10;
             // 
             // ml_minor_name
             // 
@@ -114,13 +121,6 @@
             this.ml_minor_name.Size = new System.Drawing.Size(132, 27);
             this.ml_minor_name.TabIndex = 9;
             this.ml_minor_name.Text = "Minor Name";
-            // 
-            // panel_concList
-            // 
-            this.panel_concList.Location = new System.Drawing.Point(0, 36);
-            this.panel_concList.Name = "panel_concList";
-            this.panel_concList.Size = new System.Drawing.Size(326, 178);
-            this.panel_concList.TabIndex = 10;
             // 
             // EachMinor
             // 
@@ -148,7 +148,7 @@
         #endregion
         private System.Windows.Forms.Label lbl_specific_minor_Title;
         private System.Windows.Forms.Label lbl_specific_minor_desc;
-        private System.Windows.Forms.Label lbl_specific_minor_concentrationHeader;
+        private System.Windows.Forms.Label lbl_specific_minor_course;
         private System.Windows.Forms.Label lbl_specific_minor_note;
         private System.Windows.Forms.Panel panel_minor_desc;
         private System.Windows.Forms.Panel panel_minor_note;

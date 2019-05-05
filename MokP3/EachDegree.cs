@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
+
 namespace MokP3
 {
     public partial class EachDegree : MaterialForm
     {
-
         public EachDegree(Undergraduate undergrad, Graduate grad)
         {
             InitializeComponent();
@@ -25,9 +25,9 @@ namespace MokP3
             string description = "";
             List<string> concentrations = null;
 
-      
+
             // CHECK: If undergrad or graduate object
-            if(undergrad != null)
+            if (undergrad != null)
             {
                 title = undergrad.title;
                 degreeName = undergrad.degreeName;
@@ -41,6 +41,8 @@ namespace MokP3
                 description = grad.description;
                 concentrations = grad.concentrations;
             }
+
+
 
 
             // SAME for both objects - display information
@@ -59,21 +61,15 @@ namespace MokP3
 
 
 
-            // String to hold all concentrations
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-            // loop through all concentrations
+            // loop through all concentrations for THIS degree
             foreach (string concen in concentrations)
             {
                 sb.Append(concen + "\n");
             }
-
-            // set Text
-            lbl_specific_degreeConcentrations.Text = sb.ToString();
-            lbl_specific_degreeConcentrations.Font = new Font("Arial", 9);
+            lbl_concentrationList.Text = sb.ToString();
         }
-
-
 
         // Set form style
         private void setFormStyle()

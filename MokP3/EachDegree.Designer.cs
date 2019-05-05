@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lbl_specific_degreeDescription = new System.Windows.Forms.Label();
-            this.lbl_specific_degreeConcentrations = new System.Windows.Forms.Label();
             this.lbl_Concentrations = new System.Windows.Forms.Label();
             this.ml_degree_title = new MaterialSkin.Controls.MaterialLabel();
+            this.lbl_concentrationList = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_specific_degreeDescription
@@ -43,19 +43,10 @@
             this.lbl_specific_degreeDescription.TabIndex = 2;
             this.lbl_specific_degreeDescription.Text = "Degree Description";
             // 
-            // lbl_specific_degreeConcentrations
-            // 
-            this.lbl_specific_degreeConcentrations.AutoSize = true;
-            this.lbl_specific_degreeConcentrations.Location = new System.Drawing.Point(258, 320);
-            this.lbl_specific_degreeConcentrations.Name = "lbl_specific_degreeConcentrations";
-            this.lbl_specific_degreeConcentrations.Size = new System.Drawing.Size(164, 20);
-            this.lbl_specific_degreeConcentrations.TabIndex = 3;
-            this.lbl_specific_degreeConcentrations.Text = "List of Concentrations";
-            // 
             // lbl_Concentrations
             // 
             this.lbl_Concentrations.AutoSize = true;
-            this.lbl_Concentrations.Location = new System.Drawing.Point(258, 279);
+            this.lbl_Concentrations.Location = new System.Drawing.Point(295, 274);
             this.lbl_Concentrations.Name = "lbl_Concentrations";
             this.lbl_Concentrations.Size = new System.Drawing.Size(121, 20);
             this.lbl_Concentrations.TabIndex = 4;
@@ -74,14 +65,23 @@
             this.ml_degree_title.TabIndex = 5;
             this.ml_degree_title.Text = "Degree Title";
             // 
+            // lbl_concentrationList
+            // 
+            this.lbl_concentrationList.AutoSize = true;
+            this.lbl_concentrationList.Location = new System.Drawing.Point(299, 316);
+            this.lbl_concentrationList.Name = "lbl_concentrationList";
+            this.lbl_concentrationList.Size = new System.Drawing.Size(117, 20);
+            this.lbl_concentrationList.TabIndex = 6;
+            this.lbl_concentrationList.Text = "Concentrations";
+            // 
             // EachDegree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 505);
+            this.Controls.Add(this.lbl_concentrationList);
             this.Controls.Add(this.ml_degree_title);
             this.Controls.Add(this.lbl_Concentrations);
-            this.Controls.Add(this.lbl_specific_degreeConcentrations);
             this.Controls.Add(this.lbl_specific_degreeDescription);
             this.Name = "EachDegree";
             this.Text = "EachDegree";
@@ -92,8 +92,8 @@
 
         #endregion
         private System.Windows.Forms.Label lbl_specific_degreeDescription;
-        private System.Windows.Forms.Label lbl_specific_degreeConcentrations;
         private System.Windows.Forms.Label lbl_Concentrations;
         private MaterialSkin.Controls.MaterialLabel ml_degree_title;
+        private System.Windows.Forms.Label lbl_concentrationList;
     }
 }

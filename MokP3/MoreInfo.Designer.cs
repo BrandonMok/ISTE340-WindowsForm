@@ -73,7 +73,7 @@
             this.panel_stat4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_stat4.Controls.Add(this.lbl_stat4_desc);
             this.panel_stat4.Controls.Add(this.ml_stat4_Value);
-            this.panel_stat4.Location = new System.Drawing.Point(862, 19);
+            this.panel_stat4.Location = new System.Drawing.Point(867, 19);
             this.panel_stat4.Name = "panel_stat4";
             this.panel_stat4.Size = new System.Drawing.Size(247, 248);
             this.panel_stat4.TabIndex = 2;

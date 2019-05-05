@@ -55,7 +55,6 @@ namespace MokP3
         // For each page, have an enter event
         // on enter event check if object is intialized
         // And on enter, load the object info and display all info
-        // All are contained in the if the object is null initially as to not have to remake everything on enter
 
         #region AboutPageEnter
         private void aboutPage_Enter(object sender, EventArgs e)
