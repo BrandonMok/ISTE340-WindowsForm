@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Newtonsoft.Json.Linq;
+using RESTUtil;
 
 namespace MokP3
 {
     public partial class EachMinor : MaterialForm
     {
+        REST rj = new REST("http://ist.rit.edu/api");
+        Course course = null;
+
+
         public EachMinor(UgMinor ugm)
         {
             InitializeComponent();
@@ -30,15 +36,19 @@ namespace MokP3
             // courses section - is a list
             List<string> courses = ugm.courses;
 
-            // loop through all concentrations
-            var sb = new StringBuilder(); // string builder so concentrations aren't stack on top
+            var yCoord = 0;
             foreach (string course in courses)
             {
-                sb.Append(course + "\n");
+                yCoord += 15;
+                LinkLabel linklblCourse = new LinkLabel();
+                linklblCourse.AutoSize = true;
+                linklblCourse.Text = course;
+                linklblCourse.LinkClicked += new LinkLabelLinkClickedEventHandler(findCourse);
+                linklblCourse.Location = new Point(10, yCoord);
+
+                panel_concList.Controls.Add(linklblCourse);
             }
 
-            // set Text
-            lbl_specific_minor_concentrations.Text = sb.ToString();
 
 
             // only add note if there is one
@@ -47,6 +57,24 @@ namespace MokP3
                 lbl_specific_minor_note.Text = "**" + ugm.note;
                 lbl_specific_minor_note.MaximumSize = new Size(550, 0);
             }
+        }
+
+
+        private void findCourse(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LinkLabel linkLbl = sender as LinkLabel;
+            // linkLbl.Text
+
+            string path = "/course/courseID=" + linkLbl.Text + "/";
+            
+
+            // Make another form
+            // ABOUT
+            string coursePath = rj.getRESTDataJSON(path);
+            course = JToken.Parse(coursePath).ToObject<Course>();
+
+            SelectedCourse sc = new SelectedCourse(course);
+            sc.ShowDialog();
         }
 
 

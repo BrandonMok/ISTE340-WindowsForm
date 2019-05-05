@@ -60,6 +60,7 @@
     <Compile Include="CoopEnrollmentForm.Designer.cs">
       <DependentUpon>CoopEnrollmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Course.cs" />
     <Compile Include="Degrees.cs" />
     <Compile Include="EachDegree.cs">
       <SubType>Form</SubType>
@@ -118,6 +119,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Research.cs" />
     <Compile Include="Resources.cs" />
+    <Compile Include="SelectedCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectedCourse.Designer.cs">
+      <DependentUpon>SelectedCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentAmbassadorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +185,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SelectedCourse.resx">
+      <DependentUpon>SelectedCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentAmbassadorsForm.resx">
       <DependentUpon>StudentAmbassadorsForm.cs</DependentUpon>
     </EmbeddedResource>
